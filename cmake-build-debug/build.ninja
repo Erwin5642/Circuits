@@ -56,6 +56,20 @@ build CMakeFiles/Circuits.dir/src/main.cpp.obj: CXX_COMPILER__Circuits_unscanned
   OBJECT_DIR = CMakeFiles\Circuits.dir
   OBJECT_FILE_DIR = CMakeFiles\Circuits.dir\src
 
+build CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.obj: CXX_COMPILER__Circuits_unscanned_Debug C$:/Users/jvgam/CLionProjects/Circuits/include/ANDGateDrawable.cpp || cmake_object_order_depends_target_Circuits
+  DEP_FILE = CMakeFiles\Circuits.dir\include\ANDGateDrawable.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/SFML/include
+  OBJECT_DIR = CMakeFiles\Circuits.dir
+  OBJECT_FILE_DIR = CMakeFiles\Circuits.dir\include
+
+build CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.obj: CXX_COMPILER__Circuits_unscanned_Debug C$:/Users/jvgam/CLionProjects/Circuits/include/ComponentDrawable.cpp || cmake_object_order_depends_target_Circuits
+  DEP_FILE = CMakeFiles\Circuits.dir\include\ComponentDrawable.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/SFML/include
+  OBJECT_DIR = CMakeFiles\Circuits.dir
+  OBJECT_FILE_DIR = CMakeFiles\Circuits.dir\include
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Circuits
@@ -64,7 +78,7 @@ build CMakeFiles/Circuits.dir/src/main.cpp.obj: CXX_COMPILER__Circuits_unscanned
 #############################################
 # Link the executable Circuits.exe
 
-build Circuits.exe: CXX_EXECUTABLE_LINKER__Circuits_Debug CMakeFiles/Circuits.dir/src/main.cpp.obj
+build Circuits.exe: CXX_EXECUTABLE_LINKER__Circuits_Debug CMakeFiles/Circuits.dir/src/main.cpp.obj CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.obj CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lsfml-system-d  -lsfml-window-d  -lsfml-graphics-d  -lsfml-audio-d  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -LC:/SFML/lib

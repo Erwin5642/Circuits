@@ -3,3 +3,9 @@
 //
 
 #include "ANDGateDrawable.h"
+
+ANDGateDrawable::ANDGateDrawable(){
+     m_shape = new RectangleShape;
+
+
+}

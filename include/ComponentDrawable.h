@@ -14,9 +14,11 @@ class ComponentDrawable : private sf::Drawable{
 private:
     sf::Shape* m_shape;
     string name;
-    sf::Vector2f pos;
-    vector<string> output;
-    vector<string> input;
+    float width;
+    float height;
+    sf::Vector2f position;
+    vector<sf::Shape*> outputShape;
+    vector<sf::Shape*> inputShape;
 public:
     ComponentDrawable();
     ComponentDrawable(int x, int y, int w, int h);
@@ -27,7 +29,7 @@ public:
     int getOutputSize() const;
     float getX() const;
     float getY() const;
-    void setPos(sf::Vector2f pos) const;
+    void setPos(sf::Vector2f pos);
     sf::Vector2f getPos() const;
     void setWidth(float w);
     void setHeight(float h);
