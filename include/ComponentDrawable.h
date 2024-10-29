@@ -10,7 +10,7 @@
 #include <string>
 using namespace std;
 
-class ComponentDrawable : private sf::Drawable{
+class ComponentDrawable : public sf::Drawable{
 protected:
     sf::Shape* m_shape;
     string name;

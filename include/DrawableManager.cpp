@@ -9,7 +9,7 @@
 
 #include "DrawableManager.h"
 
-DrawableManager::DrawableManager(): contactPoints{}, inputPoints{}, outputPoints{} {
+DrawableManager::DrawableManager() {
     int i = 0, j = 0;
     numDrawables = 0;
     for (i = 0; i < 8; i++) {
@@ -56,16 +56,16 @@ void DrawableManager::updateValueInOut(bool inOut, unsigned int index, bool onOf
     }
 }
 
-void DrawableManager::draw(sf::RenderTarget &target, sf::RenderStates states) const {
+void DrawableManager::draw(sf::RenderWindow& window) const {
     int i = 0, j = 0;
     for(i = 0; i < 8; i++) {
-        inputPoints[i].draw(target, states);
-        outputPoints[i].draw(target, states);
+        window.draw(inputPoints[i]);
+        window.draw(outputPoints[i]);
         for(j = 0; j < 8; j++) {
-            contactPoints[i][j].draw(target, states);
+            window.draw(contactPoints[i][j]);
         }
     }
     for (i = 0; i < numDrawables; i++) {
-        drawables[i]->draw(target, states);
+        window.draw(*(drawables[i]));
     }
 }
