@@ -7,8 +7,10 @@
 
 #include "../ComponentLogic.h"
 
-class NOTGateLogic : public ComponentLogic {
-
+class NOTGateLogic final : public ComponentLogic {
+public:
+    NOTGateLogic() : ComponentLogic(1) {};
+    bool evaluate() const override;
 };
 
 #endif //NOTGATELOGIC_H

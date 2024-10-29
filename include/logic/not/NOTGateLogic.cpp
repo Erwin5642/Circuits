@@ -3,3 +3,10 @@
 //
 
 #include "NOTGateLogic.h"
+
+bool NOTGateLogic::evaluate() const {
+    if(inputValues[0] == true) {
+        return false;
+    }
+    return true;
+}

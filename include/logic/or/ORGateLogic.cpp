@@ -3,3 +3,10 @@
 //
 
 #include "ORGateLogic.h"
+
+bool ORGateLogic::evaluate() const {
+    for(int i=0; i<inputSize; i++)
+        if(inputValues[i] == true)
+            return true;
+    return false;
+}

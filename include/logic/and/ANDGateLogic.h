@@ -6,6 +6,7 @@
 #define ANDGATELOGIC_H
 
 #include "../ComponentLogic.h"
+
 class ANDGateLogic final : public ComponentLogic {
 public:
     bool evaluate() const override;
