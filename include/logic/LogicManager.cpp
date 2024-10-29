@@ -8,7 +8,7 @@ LogicManager::LogicManager() {
     components.clear();
 }
 LogicManager::~LogicManager() {
-    while(components.size() > 0) {
+    while(!components.empty()) {
         components.pop_back();
     }
 }
