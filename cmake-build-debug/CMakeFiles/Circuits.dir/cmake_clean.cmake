@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj.d"
   "CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj"
   "CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj.d"
+  "CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj"
+  "CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj.d"
   "CMakeFiles/Circuits.dir/src/main.cpp.obj"
   "CMakeFiles/Circuits.dir/src/main.cpp.obj.d"
   "Circuits.exe"

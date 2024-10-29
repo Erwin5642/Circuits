@@ -29,6 +29,8 @@ add_executable(Circuits src/main.cpp
         include/logic/or/ORGateLogic.h
         include/logic/not/NOTGateLogic.cpp
         include/logic/not/NOTGateLogic.h
+        include/logic/wire/WIRELogic.cpp
+        include/logic/wire/WIRELogic.h
 )
 target_link_libraries(Circuits -lsfml-system-d -lsfml-window-d -lsfml-graphics-d -lsfml-audio-d)
 

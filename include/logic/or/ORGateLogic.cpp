@@ -4,9 +4,13 @@
 
 #include "ORGateLogic.h"
 
-bool ORGateLogic::evaluate() const {
-    for(int i=0; i<inputSize; i++)
-        if(inputValues[i] == true)
+bool ORGateLogic::evaluate() {
+    for(int i=0; i<inputSize; i++) {
+        if(inputValues[i] == true) {
+            outputValue = true;
             return true;
+        }
+    }
+    outputValue = false;
     return false;
 }

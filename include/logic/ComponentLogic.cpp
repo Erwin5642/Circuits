@@ -21,13 +21,14 @@ ComponentLogic::ComponentLogic(const int input) {
 int ComponentLogic::getInputSize() const {
     return static_cast<int>(inputValues.size());
 }
-
-void ComponentLogic::setInputValue(unsigned index, bool value) {
+void ComponentLogic::setInputValue(const unsigned index, const bool value) {
     inputValues[index] = value;
 }
-
 void ComponentLogic::setInputValues(vector<bool> values) {
     for(int i = 0; i<inputSize; i++) {
         inputValues[i] = values[i];
     }
+}
+void ComponentLogic::setOutput(const bool value) {
+    outputValue = value;
 }

@@ -9,7 +9,7 @@
 
 class ORGateLogic final : public ComponentLogic {
 public:
-    bool evaluate() const override;
+    bool evaluate() override;
 };
 
 #endif //ORGATELOGIC_H

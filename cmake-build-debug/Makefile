@@ -392,6 +392,30 @@ include/logic/or/ORGateLogic.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.s
 .PHONY : include/logic/or/ORGateLogic.cpp.s
 
+include/logic/wire/WIRELogic.obj: include/logic/wire/WIRELogic.cpp.obj
+.PHONY : include/logic/wire/WIRELogic.obj
+
+# target to build an object file
+include/logic/wire/WIRELogic.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj
+.PHONY : include/logic/wire/WIRELogic.cpp.obj
+
+include/logic/wire/WIRELogic.i: include/logic/wire/WIRELogic.cpp.i
+.PHONY : include/logic/wire/WIRELogic.i
+
+# target to preprocess a source file
+include/logic/wire/WIRELogic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.i
+.PHONY : include/logic/wire/WIRELogic.cpp.i
+
+include/logic/wire/WIRELogic.s: include/logic/wire/WIRELogic.cpp.s
+.PHONY : include/logic/wire/WIRELogic.s
+
+# target to generate assembly for a file
+include/logic/wire/WIRELogic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.s
+.PHONY : include/logic/wire/WIRELogic.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -458,6 +482,9 @@ help:
 	@echo ... include/logic/or/ORGateLogic.obj
 	@echo ... include/logic/or/ORGateLogic.i
 	@echo ... include/logic/or/ORGateLogic.s
+	@echo ... include/logic/wire/WIRELogic.obj
+	@echo ... include/logic/wire/WIRELogic.i
+	@echo ... include/logic/wire/WIRELogic.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

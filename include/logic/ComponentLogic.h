@@ -6,6 +6,7 @@
 #define COMPONENTLOGIC_H
 
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -21,7 +22,8 @@ public:
     int getInputSize() const;
     void setInputValue(unsigned index, bool value);
     void setInputValues(vector<bool> values);
-    virtual bool evaluate() const = 0;
+    void setOutput(bool value);
+    virtual bool evaluate() = 0;
 };
 
 #endif //COMPONENTLOGIC_H

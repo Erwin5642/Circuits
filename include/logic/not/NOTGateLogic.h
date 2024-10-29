@@ -10,7 +10,7 @@
 class NOTGateLogic final : public ComponentLogic {
 public:
     NOTGateLogic() : ComponentLogic(1) {};
-    bool evaluate() const override;
+    bool evaluate() override;
 };
 
 #endif //NOTGATELOGIC_H

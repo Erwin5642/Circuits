@@ -4,9 +4,11 @@
 
 #include "NOTGateLogic.h"
 
-bool NOTGateLogic::evaluate() const {
+bool NOTGateLogic::evaluate() {
     if(inputValues[0] == true) {
+        outputValue = false;
         return false;
     }
+    outputValue = true;
     return true;
 }

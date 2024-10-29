@@ -9,7 +9,7 @@
 
 class ANDGateLogic final : public ComponentLogic {
 public:
-    bool evaluate() const override;
+    bool evaluate() override;
 };
 
 #endif //ANDGATELOGIC_H

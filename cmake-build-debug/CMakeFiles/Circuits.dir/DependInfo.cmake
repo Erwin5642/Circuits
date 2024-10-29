@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Arthur/Documents/Projects/Circuits/include/logic/and/ANDGateLogic.cpp" "CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj.d"
   "C:/Users/Arthur/Documents/Projects/Circuits/include/logic/not/NOTGateLogic.cpp" "CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj.d"
   "C:/Users/Arthur/Documents/Projects/Circuits/include/logic/or/ORGateLogic.cpp" "CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj.d"
+  "C:/Users/Arthur/Documents/Projects/Circuits/include/logic/wire/WIRELogic.cpp" "CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj.d"
   "C:/Users/Arthur/Documents/Projects/Circuits/src/main.cpp" "CMakeFiles/Circuits.dir/src/main.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/src/main.cpp.obj.d"
   )
 

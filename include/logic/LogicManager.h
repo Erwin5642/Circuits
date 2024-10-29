@@ -11,13 +11,18 @@
 using namespace std;
 
 class LogicManager {
-private:
     std::vector<ComponentLogic*> components;
 public:
     LogicManager();
     ~LogicManager();
     void insertComponent(ComponentLogic* component);
     void deleteComponent(int index);
+    void deleteAllComponents();
+    ComponentLogic& getComponent(int index) const;
+    int getSize() const;
+    void setInput(int index, bool input) const;
+    void setInputs(unsigned index, const vector<bool>& inputs) const;
+    void setOutput(int index, bool output) const;
 };
 
 #endif //LOGICMANAGER_H
