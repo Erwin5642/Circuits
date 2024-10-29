@@ -10,7 +10,7 @@
 using namespace std;
 
 class ComponentLogic {
-private:
+protected:
     vector<bool> inputValues;
     bool outputValue;
     int inputSize;
@@ -21,7 +21,7 @@ public:
     int getInputSize() const;
     void setInputValue(unsigned index, bool value);
     void setInputValues(vector<bool> values);
-    virtual void evaluate() const = 0;
+    virtual bool evaluate() const = 0;
 };
 
 #endif //COMPONENTLOGIC_H

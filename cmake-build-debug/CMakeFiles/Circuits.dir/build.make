@@ -218,6 +218,36 @@ CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.s"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arthur\Documents\Projects\Circuits\include\logic\LogicManager.cpp -o CMakeFiles\Circuits.dir\include\logic\LogicManager.cpp.s
 
+CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj: CMakeFiles/Circuits.dir/flags.make
+CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj: CMakeFiles/Circuits.dir/includes_CXX.rsp
+CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj: C:/Users/Arthur/Documents/Projects/Circuits/include/logic/or/ORGateLogic.cpp
+CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj: CMakeFiles/Circuits.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj -MF CMakeFiles\Circuits.dir\include\logic\or\ORGateLogic.cpp.obj.d -o CMakeFiles\Circuits.dir\include\logic\or\ORGateLogic.cpp.obj -c C:\Users\Arthur\Documents\Projects\Circuits\include\logic\or\ORGateLogic.cpp
+
+CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.i"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Arthur\Documents\Projects\Circuits\include\logic\or\ORGateLogic.cpp > CMakeFiles\Circuits.dir\include\logic\or\ORGateLogic.cpp.i
+
+CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.s"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arthur\Documents\Projects\Circuits\include\logic\or\ORGateLogic.cpp -o CMakeFiles\Circuits.dir\include\logic\or\ORGateLogic.cpp.s
+
+CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj: CMakeFiles/Circuits.dir/flags.make
+CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj: CMakeFiles/Circuits.dir/includes_CXX.rsp
+CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj: C:/Users/Arthur/Documents/Projects/Circuits/include/logic/not/NOTGateLogic.cpp
+CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj: CMakeFiles/Circuits.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj -MF CMakeFiles\Circuits.dir\include\logic\not\NOTGateLogic.cpp.obj.d -o CMakeFiles\Circuits.dir\include\logic\not\NOTGateLogic.cpp.obj -c C:\Users\Arthur\Documents\Projects\Circuits\include\logic\not\NOTGateLogic.cpp
+
+CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.i"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Arthur\Documents\Projects\Circuits\include\logic\not\NOTGateLogic.cpp > CMakeFiles\Circuits.dir\include\logic\not\NOTGateLogic.cpp.i
+
+CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.s"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arthur\Documents\Projects\Circuits\include\logic\not\NOTGateLogic.cpp -o CMakeFiles\Circuits.dir\include\logic\not\NOTGateLogic.cpp.s
+
 # Object files for target Circuits
 Circuits_OBJECTS = \
 "CMakeFiles/Circuits.dir/src/main.cpp.obj" \
@@ -229,7 +259,9 @@ Circuits_OBJECTS = \
 "CMakeFiles/Circuits.dir/include/FileManager.cpp.obj" \
 "CMakeFiles/Circuits.dir/include/UIManager.cpp.obj" \
 "CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj" \
-"CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj"
+"CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj" \
+"CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj" \
+"CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj"
 
 # External object files for target Circuits
 Circuits_EXTERNAL_OBJECTS =
@@ -244,11 +276,13 @@ Circuits.exe: CMakeFiles/Circuits.dir/include/FileManager.cpp.obj
 Circuits.exe: CMakeFiles/Circuits.dir/include/UIManager.cpp.obj
 Circuits.exe: CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj
 Circuits.exe: CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj
+Circuits.exe: CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj
+Circuits.exe: CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj
 Circuits.exe: CMakeFiles/Circuits.dir/build.make
 Circuits.exe: CMakeFiles/Circuits.dir/linkLibs.rsp
 Circuits.exe: CMakeFiles/Circuits.dir/objects1.rsp
 Circuits.exe: CMakeFiles/Circuits.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Circuits.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable Circuits.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Circuits.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

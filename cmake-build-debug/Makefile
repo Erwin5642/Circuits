@@ -344,6 +344,54 @@ include/logic/and/ANDGateLogic.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.s
 .PHONY : include/logic/and/ANDGateLogic.cpp.s
 
+include/logic/not/NOTGateLogic.obj: include/logic/not/NOTGateLogic.cpp.obj
+.PHONY : include/logic/not/NOTGateLogic.obj
+
+# target to build an object file
+include/logic/not/NOTGateLogic.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj
+.PHONY : include/logic/not/NOTGateLogic.cpp.obj
+
+include/logic/not/NOTGateLogic.i: include/logic/not/NOTGateLogic.cpp.i
+.PHONY : include/logic/not/NOTGateLogic.i
+
+# target to preprocess a source file
+include/logic/not/NOTGateLogic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.i
+.PHONY : include/logic/not/NOTGateLogic.cpp.i
+
+include/logic/not/NOTGateLogic.s: include/logic/not/NOTGateLogic.cpp.s
+.PHONY : include/logic/not/NOTGateLogic.s
+
+# target to generate assembly for a file
+include/logic/not/NOTGateLogic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.s
+.PHONY : include/logic/not/NOTGateLogic.cpp.s
+
+include/logic/or/ORGateLogic.obj: include/logic/or/ORGateLogic.cpp.obj
+.PHONY : include/logic/or/ORGateLogic.obj
+
+# target to build an object file
+include/logic/or/ORGateLogic.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj
+.PHONY : include/logic/or/ORGateLogic.cpp.obj
+
+include/logic/or/ORGateLogic.i: include/logic/or/ORGateLogic.cpp.i
+.PHONY : include/logic/or/ORGateLogic.i
+
+# target to preprocess a source file
+include/logic/or/ORGateLogic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.i
+.PHONY : include/logic/or/ORGateLogic.cpp.i
+
+include/logic/or/ORGateLogic.s: include/logic/or/ORGateLogic.cpp.s
+.PHONY : include/logic/or/ORGateLogic.s
+
+# target to generate assembly for a file
+include/logic/or/ORGateLogic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.s
+.PHONY : include/logic/or/ORGateLogic.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -404,6 +452,12 @@ help:
 	@echo ... include/logic/and/ANDGateLogic.obj
 	@echo ... include/logic/and/ANDGateLogic.i
 	@echo ... include/logic/and/ANDGateLogic.s
+	@echo ... include/logic/not/NOTGateLogic.obj
+	@echo ... include/logic/not/NOTGateLogic.i
+	@echo ... include/logic/not/NOTGateLogic.s
+	@echo ... include/logic/or/ORGateLogic.obj
+	@echo ... include/logic/or/ORGateLogic.i
+	@echo ... include/logic/or/ORGateLogic.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

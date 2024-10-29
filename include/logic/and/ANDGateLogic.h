@@ -5,15 +5,10 @@
 #ifndef ANDGATELOGIC_H
 #define ANDGATELOGIC_H
 
-#include "ComponentLogic.h"
-class ANDGateLogic : public ComponentLogic {
-private:
-    sf::Vector2f;
+#include "../ComponentLogic.h"
+class ANDGateLogic final : public ComponentLogic {
 public:
-    ANDGateLogic();
-    ANDGateLogic(int x, int y);
-    ~ANDGateLogic();
+    bool evaluate() const override;
 };
-
 
 #endif //ANDGATELOGIC_H

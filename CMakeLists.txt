@@ -25,6 +25,10 @@ add_executable(Circuits src/main.cpp
         include/UIManager.h
         include/logic/LogicManager.cpp
         include/logic/LogicManager.h
+        include/logic/or/ORGateLogic.cpp
+        include/logic/or/ORGateLogic.h
+        include/logic/not/NOTGateLogic.cpp
+        include/logic/not/NOTGateLogic.h
 )
 target_link_libraries(Circuits -lsfml-system-d -lsfml-window-d -lsfml-graphics-d -lsfml-audio-d)
 
