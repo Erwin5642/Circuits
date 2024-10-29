@@ -2,13 +2,22 @@
 // Created by jvgam on 28/10/2024.
 //
 
+#define MATRIX_INIT_X 100
+#define MATRIX_INIT_Y 200
+#define INPUT_POINTS_Y 100
+#define OUTPUT_POINTS_Y 800
+
 #include "DrawableManager.h"
 
-DrawableManager::DrawableManager(const int nDrawables) {
-    int i = 0;
-    numDrawables = nDrawables;
-    for (i = 0; i < numDrawables; i++) {
-        drawables.push_back(nullptr);
+DrawableManager::DrawableManager(): contactPoints{}, inputPoints{}, outputPoints{} {
+    int i = 0, j = 0;
+    numDrawables = 0;
+    for (i = 0; i < 8; i++) {
+        inputPoints[i] = DotDrawable(MATRIX_INIT_X + i * 20, INPUT_POINTS_Y);
+        outputPoints[i] = DotDrawable(MATRIX_INIT_X + i * 20, OUTPUT_POINTS_Y);
+        for (j = 0; j < 8; j++) {
+            contactPoints[i][j] = DotDrawable(MATRIX_INIT_X + i * 20, MATRIX_INIT_Y + j * 20);
+        }
     }
 }
 
@@ -38,16 +47,24 @@ void DrawableManager::updatePosition(const unsigned int index, const sf::Vector2
     drawables[index]->setPosition(position);
 }
 
-void DrawableManager::updateInputLights(const unsigned int index, const unsigned int inputIndex, const bool onOff) const {
-    drawables[index]->setLightInput(inputIndex, onOff);
-}
-
-void DrawableManager::updateOutputLights(unsigned int index, const bool onOff) const {
-    drawables[index]->setLightOutput(onOff);
+void DrawableManager::updateValueInOut(bool inOut, unsigned int index, bool onOff) {
+    if(inOut) {
+        inputPoints[index].setOnOff(onOff);
+    }
+    else {
+        outputPoints[index].setOnOff(onOff);
+    }
 }
 
 void DrawableManager::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-    int i = 0;
+    int i = 0, j = 0;
+    for(i = 0; i < 8; i++) {
+        inputPoints[i].draw(target, states);
+        outputPoints[i].draw(target, states);
+        for(j = 0; j < 8; j++) {
+            contactPoints[i][j].draw(target, states);
+        }
+    }
     for (i = 0; i < numDrawables; i++) {
         drawables[i]->draw(target, states);
     }

@@ -6,7 +6,6 @@
 #define UIMANAGER_H
 
 
-
 class UIManager {
 
 };

@@ -41,9 +41,8 @@ void DotDrawable::setOnOff(bool onOff) {
     }
 }
 
-void draw(sf::RenderTarget& target, sf::RenderStates states) const {
+void DotDrawable::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     target.draw(dot, states);
 }
-
 
 
