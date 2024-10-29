@@ -8,9 +8,10 @@
 #include "ComponentDrawable.h"
 
 class ANDGateDrawable : public ComponentDrawable{
+public:
     ANDGateDrawable();
-    ANDGateDrawable(int x, int y, int width, int height);
-    void draw(sf::RenderTarget &target, sf::RenderStates states) const;
+    void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+    ~ANDGateDrawable() override;
 };
 
 #endif //ANDGATEDRAWABLE_H

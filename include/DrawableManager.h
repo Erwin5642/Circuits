@@ -17,7 +17,9 @@ class DrawableManager {
     void addDrawable(ComponentDrawable* drawable);
     void removeDrawable(unsigned int index);
     void removeAllDrawables();
-    void update();
+    void updatePosition(unsigned int index, sf::Vector2f position) const;
+    void updateInputLights(unsigned int index, unsigned int inputIndex, bool onOff) const;
+    void updateOutputLights(unsigned int index, bool onOff) const;
     void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };
 

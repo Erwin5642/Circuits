@@ -7,8 +7,7 @@
 
 
 
-class ComponentLogic {
-
+class ComponentLogic {    [
 };
 
 

@@ -11,18 +11,19 @@
 using namespace std;
 
 class ComponentDrawable : private sf::Drawable{
-private:
+protected:
     sf::Shape* m_shape;
     string name;
     float width;
     float height;
     int inputSize;
     sf::Vector2f position;
-    vector<sf::Shape*> inputShape;
-    sf::Shape* outputShape;
+    vector<sf::Vector2f> inputPositions;
+    sf::Vector2f outputPosition;
 public:
     ComponentDrawable();
-    ComponentDrawable(float x, float y, float w, float h, int inputSize);
+    ComponentDrawable(float x, float y, float w, float h, int inSize);
+    virtual ~ComponentDrawable();
     void setX(float x);
     void setY(float y);
     float getX() const;
@@ -37,8 +38,6 @@ public:
     float getHeight() const;
     void setName(const string &n);
     string getName() const;
-    void setLightInput(unsigned int index, bool onOff) const;
-    void setLightOutput(bool onOff) const;
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override = 0;
 };
 

@@ -10,6 +10,10 @@ add_executable(Circuits src/main.cpp
         include/ComponentDrawable.h
         include/ANDGateDrawable.cpp
         include/ComponentDrawable.cpp
-        include/DrawableManager.cpp)
+        include/DrawableManager.cpp
+        include/NOTGateDrawable.cpp
+        include/ORGateDrawable.h
+        include/ORGateDrawable.cpp
+        include/App.h)
 target_link_libraries(Circuits -lsfml-system-d -lsfml-window-d -lsfml-graphics-d -lsfml-audio-d)
 

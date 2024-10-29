@@ -6,7 +6,6 @@
 
 ComponentDrawable::ComponentDrawable(){
     m_shape = nullptr;
-    outputShape = nullptr;
     position = sf::Vector2f(0, 0);
     height = 20;
     width = 15;
@@ -15,12 +14,19 @@ ComponentDrawable::ComponentDrawable(){
 
 ComponentDrawable::ComponentDrawable(const float x, const float y, const float w, const float h, const int inSize){
     m_shape = nullptr;
-    outputShape = nullptr;
     position = sf::Vector2f(x, y);
     height = h;
     width = w;
     inputSize = inSize;
 }
+
+ComponentDrawable::~ComponentDrawable() {
+    inputSize = 0;
+    position = sf::Vector2f(0, 0);
+    width = 0;
+    height = 0;
+}
+
 
 void ComponentDrawable::setX(const float x){
     position.x = x;
@@ -76,25 +82,6 @@ void ComponentDrawable::setName(const string &n){
 
 string ComponentDrawable::getName() const {
     return name;
-}
-
-void ComponentDrawable::setLightInput(const unsigned int index, const bool onOff) const{
-    if(onOff) {
-        inputShape[index]->setFillColor(sf::Color::White);
-    }
-    else {
-        inputShape[index]->setFillColor(sf::Color::Black);
-    }
-}
-
-void ComponentDrawable::setLightOutput(const bool onOff) const
-{
-    if(onOff) {
-        outputShape->setFillColor(sf::Color::White);
-    }
-    else {
-        outputShape->setFillColor(sf::Color::Black);
-    }
 }
 
 void ComponentDrawable::draw(sf::RenderTarget& target, sf::RenderStates states) const {
