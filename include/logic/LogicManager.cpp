@@ -6,6 +6,13 @@
 
 LogicManager::LogicManager() {
     components.clear();
+    for(bool& i : entrada)
+        i = false;
+    for(auto & i : mat)
+        for(bool & j : i)
+            j = false;
+    for(bool & i : saida)
+        i = false;
 }
 LogicManager::~LogicManager() {
     components.clear();
@@ -33,4 +40,7 @@ void LogicManager::setInputs(const unsigned index, const vector<bool>& inputs) c
 }
 void LogicManager::setOutput(const int index, const bool output) const {
     components[index]->setOutput(output);
+}
+void LogicManager::setEntrada(int index) const {
+    entrada[index] = !entrada[index];
 }
