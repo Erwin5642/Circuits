@@ -3,3 +3,9 @@
 //
 
 #include "App.h"
+
+#include <iostream>
+
+void App::run() {
+    cout << "Hello World!" << endl;
+}

@@ -128,30 +128,6 @@ Circuits/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/build
 .PHONY : Circuits/fast
 
-include/ANDGateDrawable.obj: include/ANDGateDrawable.cpp.obj
-.PHONY : include/ANDGateDrawable.obj
-
-# target to build an object file
-include/ANDGateDrawable.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.obj
-.PHONY : include/ANDGateDrawable.cpp.obj
-
-include/ANDGateDrawable.i: include/ANDGateDrawable.cpp.i
-.PHONY : include/ANDGateDrawable.i
-
-# target to preprocess a source file
-include/ANDGateDrawable.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.i
-.PHONY : include/ANDGateDrawable.cpp.i
-
-include/ANDGateDrawable.s: include/ANDGateDrawable.cpp.s
-.PHONY : include/ANDGateDrawable.s
-
-# target to generate assembly for a file
-include/ANDGateDrawable.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.s
-.PHONY : include/ANDGateDrawable.cpp.s
-
 include/App.obj: include/App.cpp.obj
 .PHONY : include/App.obj
 
@@ -175,102 +151,6 @@ include/App.s: include/App.cpp.s
 include/App.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/App.cpp.s
 .PHONY : include/App.cpp.s
-
-include/ComponentDrawable.obj: include/ComponentDrawable.cpp.obj
-.PHONY : include/ComponentDrawable.obj
-
-# target to build an object file
-include/ComponentDrawable.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.obj
-.PHONY : include/ComponentDrawable.cpp.obj
-
-include/ComponentDrawable.i: include/ComponentDrawable.cpp.i
-.PHONY : include/ComponentDrawable.i
-
-# target to preprocess a source file
-include/ComponentDrawable.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.i
-.PHONY : include/ComponentDrawable.cpp.i
-
-include/ComponentDrawable.s: include/ComponentDrawable.cpp.s
-.PHONY : include/ComponentDrawable.s
-
-# target to generate assembly for a file
-include/ComponentDrawable.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.s
-.PHONY : include/ComponentDrawable.cpp.s
-
-include/DrawableManager.obj: include/DrawableManager.cpp.obj
-.PHONY : include/DrawableManager.obj
-
-# target to build an object file
-include/DrawableManager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/DrawableManager.cpp.obj
-.PHONY : include/DrawableManager.cpp.obj
-
-include/DrawableManager.i: include/DrawableManager.cpp.i
-.PHONY : include/DrawableManager.i
-
-# target to preprocess a source file
-include/DrawableManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/DrawableManager.cpp.i
-.PHONY : include/DrawableManager.cpp.i
-
-include/DrawableManager.s: include/DrawableManager.cpp.s
-.PHONY : include/DrawableManager.s
-
-# target to generate assembly for a file
-include/DrawableManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/DrawableManager.cpp.s
-.PHONY : include/DrawableManager.cpp.s
-
-include/FileManager.obj: include/FileManager.cpp.obj
-.PHONY : include/FileManager.obj
-
-# target to build an object file
-include/FileManager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/FileManager.cpp.obj
-.PHONY : include/FileManager.cpp.obj
-
-include/FileManager.i: include/FileManager.cpp.i
-.PHONY : include/FileManager.i
-
-# target to preprocess a source file
-include/FileManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/FileManager.cpp.i
-.PHONY : include/FileManager.cpp.i
-
-include/FileManager.s: include/FileManager.cpp.s
-.PHONY : include/FileManager.s
-
-# target to generate assembly for a file
-include/FileManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/FileManager.cpp.s
-.PHONY : include/FileManager.cpp.s
-
-include/UIManager.obj: include/UIManager.cpp.obj
-.PHONY : include/UIManager.obj
-
-# target to build an object file
-include/UIManager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/UIManager.cpp.obj
-.PHONY : include/UIManager.cpp.obj
-
-include/UIManager.i: include/UIManager.cpp.i
-.PHONY : include/UIManager.i
-
-# target to preprocess a source file
-include/UIManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/UIManager.cpp.i
-.PHONY : include/UIManager.cpp.i
-
-include/UIManager.s: include/UIManager.cpp.s
-.PHONY : include/UIManager.s
-
-# target to generate assembly for a file
-include/UIManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/UIManager.cpp.s
-.PHONY : include/UIManager.cpp.s
 
 include/logic/ComponentLogic.obj: include/logic/ComponentLogic.cpp.obj
 .PHONY : include/logic/ComponentLogic.obj
@@ -449,24 +329,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Circuits
-	@echo ... include/ANDGateDrawable.obj
-	@echo ... include/ANDGateDrawable.i
-	@echo ... include/ANDGateDrawable.s
 	@echo ... include/App.obj
 	@echo ... include/App.i
 	@echo ... include/App.s
-	@echo ... include/ComponentDrawable.obj
-	@echo ... include/ComponentDrawable.i
-	@echo ... include/ComponentDrawable.s
-	@echo ... include/DrawableManager.obj
-	@echo ... include/DrawableManager.i
-	@echo ... include/DrawableManager.s
-	@echo ... include/FileManager.obj
-	@echo ... include/FileManager.i
-	@echo ... include/FileManager.s
-	@echo ... include/UIManager.obj
-	@echo ... include/UIManager.i
-	@echo ... include/UIManager.s
 	@echo ... include/logic/ComponentLogic.obj
 	@echo ... include/logic/ComponentLogic.i
 	@echo ... include/logic/ComponentLogic.s

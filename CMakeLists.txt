@@ -7,22 +7,22 @@ include_directories(C:\\SFML\\include)
 link_directories(C:\\SFML\\lib)
 
 add_executable(Circuits src/main.cpp
-        include/ANDGateDrawable.cpp
-        include/ComponentDrawable.cpp
+        #include/ANDGateDrawable.cpp
+        #include/ComponentDrawable.cpp
         include/App.cpp
         include/logic/ComponentLogic.cpp
-        include/DrawableManager.cpp
-        include/FileManager.cpp
-        include/UIManager.cpp
+        #include/DrawableManager.cpp
+        #include/FileManager.cpp
+        #include/UIManager.cpp
         include/logic/and/ANDGateLogic.h
         include/logic/and/ANDGateLogic.cpp
-        include/ANDGateDrawable.h
+        #include/ANDGateDrawable.h
         include/App.h
         include/logic/ComponentLogic.h
-        include/ComponentDrawable.h
-        include/DrawableManager.h
+        #include/ComponentDrawable.h
+        #include/DrawableManager.h
         include/FileManager.h
-        include/UIManager.h
+        #include/UIManager.h
         include/logic/LogicManager.cpp
         include/logic/LogicManager.h
         include/logic/or/ORGateLogic.cpp

@@ -83,41 +83,11 @@ CMakeFiles/Circuits.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Circuits.dir/src/main.cpp.s"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arthur\Documents\Projects\Circuits\src\main.cpp -o CMakeFiles\Circuits.dir\src\main.cpp.s
 
-CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.obj: CMakeFiles/Circuits.dir/flags.make
-CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.obj: CMakeFiles/Circuits.dir/includes_CXX.rsp
-CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.obj: C:/Users/Arthur/Documents/Projects/Circuits/include/ANDGateDrawable.cpp
-CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.obj: CMakeFiles/Circuits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.obj"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.obj -MF CMakeFiles\Circuits.dir\include\ANDGateDrawable.cpp.obj.d -o CMakeFiles\Circuits.dir\include\ANDGateDrawable.cpp.obj -c C:\Users\Arthur\Documents\Projects\Circuits\include\ANDGateDrawable.cpp
-
-CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.i"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Arthur\Documents\Projects\Circuits\include\ANDGateDrawable.cpp > CMakeFiles\Circuits.dir\include\ANDGateDrawable.cpp.i
-
-CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.s"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arthur\Documents\Projects\Circuits\include\ANDGateDrawable.cpp -o CMakeFiles\Circuits.dir\include\ANDGateDrawable.cpp.s
-
-CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.obj: CMakeFiles/Circuits.dir/flags.make
-CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.obj: CMakeFiles/Circuits.dir/includes_CXX.rsp
-CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.obj: C:/Users/Arthur/Documents/Projects/Circuits/include/ComponentDrawable.cpp
-CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.obj: CMakeFiles/Circuits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.obj"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.obj -MF CMakeFiles\Circuits.dir\include\ComponentDrawable.cpp.obj.d -o CMakeFiles\Circuits.dir\include\ComponentDrawable.cpp.obj -c C:\Users\Arthur\Documents\Projects\Circuits\include\ComponentDrawable.cpp
-
-CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.i"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Arthur\Documents\Projects\Circuits\include\ComponentDrawable.cpp > CMakeFiles\Circuits.dir\include\ComponentDrawable.cpp.i
-
-CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.s"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arthur\Documents\Projects\Circuits\include\ComponentDrawable.cpp -o CMakeFiles\Circuits.dir\include\ComponentDrawable.cpp.s
-
 CMakeFiles/Circuits.dir/include/App.cpp.obj: CMakeFiles/Circuits.dir/flags.make
 CMakeFiles/Circuits.dir/include/App.cpp.obj: CMakeFiles/Circuits.dir/includes_CXX.rsp
 CMakeFiles/Circuits.dir/include/App.cpp.obj: C:/Users/Arthur/Documents/Projects/Circuits/include/App.cpp
 CMakeFiles/Circuits.dir/include/App.cpp.obj: CMakeFiles/Circuits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Circuits.dir/include/App.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Circuits.dir/include/App.cpp.obj"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Circuits.dir/include/App.cpp.obj -MF CMakeFiles\Circuits.dir\include\App.cpp.obj.d -o CMakeFiles\Circuits.dir\include\App.cpp.obj -c C:\Users\Arthur\Documents\Projects\Circuits\include\App.cpp
 
 CMakeFiles/Circuits.dir/include/App.cpp.i: cmake_force
@@ -132,7 +102,7 @@ CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj: CMakeFiles/Circuit
 CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj: CMakeFiles/Circuits.dir/includes_CXX.rsp
 CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj: C:/Users/Arthur/Documents/Projects/Circuits/include/logic/ComponentLogic.cpp
 CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj: CMakeFiles/Circuits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj -MF CMakeFiles\Circuits.dir\include\logic\ComponentLogic.cpp.obj.d -o CMakeFiles\Circuits.dir\include\logic\ComponentLogic.cpp.obj -c C:\Users\Arthur\Documents\Projects\Circuits\include\logic\ComponentLogic.cpp
 
 CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.i: cmake_force
@@ -143,56 +113,11 @@ CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.s"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arthur\Documents\Projects\Circuits\include\logic\ComponentLogic.cpp -o CMakeFiles\Circuits.dir\include\logic\ComponentLogic.cpp.s
 
-CMakeFiles/Circuits.dir/include/DrawableManager.cpp.obj: CMakeFiles/Circuits.dir/flags.make
-CMakeFiles/Circuits.dir/include/DrawableManager.cpp.obj: CMakeFiles/Circuits.dir/includes_CXX.rsp
-CMakeFiles/Circuits.dir/include/DrawableManager.cpp.obj: C:/Users/Arthur/Documents/Projects/Circuits/include/DrawableManager.cpp
-CMakeFiles/Circuits.dir/include/DrawableManager.cpp.obj: CMakeFiles/Circuits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Circuits.dir/include/DrawableManager.cpp.obj"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Circuits.dir/include/DrawableManager.cpp.obj -MF CMakeFiles\Circuits.dir\include\DrawableManager.cpp.obj.d -o CMakeFiles\Circuits.dir\include\DrawableManager.cpp.obj -c C:\Users\Arthur\Documents\Projects\Circuits\include\DrawableManager.cpp
-
-CMakeFiles/Circuits.dir/include/DrawableManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Circuits.dir/include/DrawableManager.cpp.i"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Arthur\Documents\Projects\Circuits\include\DrawableManager.cpp > CMakeFiles\Circuits.dir\include\DrawableManager.cpp.i
-
-CMakeFiles/Circuits.dir/include/DrawableManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Circuits.dir/include/DrawableManager.cpp.s"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arthur\Documents\Projects\Circuits\include\DrawableManager.cpp -o CMakeFiles\Circuits.dir\include\DrawableManager.cpp.s
-
-CMakeFiles/Circuits.dir/include/FileManager.cpp.obj: CMakeFiles/Circuits.dir/flags.make
-CMakeFiles/Circuits.dir/include/FileManager.cpp.obj: CMakeFiles/Circuits.dir/includes_CXX.rsp
-CMakeFiles/Circuits.dir/include/FileManager.cpp.obj: C:/Users/Arthur/Documents/Projects/Circuits/include/FileManager.cpp
-CMakeFiles/Circuits.dir/include/FileManager.cpp.obj: CMakeFiles/Circuits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Circuits.dir/include/FileManager.cpp.obj"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Circuits.dir/include/FileManager.cpp.obj -MF CMakeFiles\Circuits.dir\include\FileManager.cpp.obj.d -o CMakeFiles\Circuits.dir\include\FileManager.cpp.obj -c C:\Users\Arthur\Documents\Projects\Circuits\include\FileManager.cpp
-
-CMakeFiles/Circuits.dir/include/FileManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Circuits.dir/include/FileManager.cpp.i"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Arthur\Documents\Projects\Circuits\include\FileManager.cpp > CMakeFiles\Circuits.dir\include\FileManager.cpp.i
-
-CMakeFiles/Circuits.dir/include/FileManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Circuits.dir/include/FileManager.cpp.s"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arthur\Documents\Projects\Circuits\include\FileManager.cpp -o CMakeFiles\Circuits.dir\include\FileManager.cpp.s
-
-CMakeFiles/Circuits.dir/include/UIManager.cpp.obj: CMakeFiles/Circuits.dir/flags.make
-CMakeFiles/Circuits.dir/include/UIManager.cpp.obj: CMakeFiles/Circuits.dir/includes_CXX.rsp
-CMakeFiles/Circuits.dir/include/UIManager.cpp.obj: C:/Users/Arthur/Documents/Projects/Circuits/include/UIManager.cpp
-CMakeFiles/Circuits.dir/include/UIManager.cpp.obj: CMakeFiles/Circuits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Circuits.dir/include/UIManager.cpp.obj"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Circuits.dir/include/UIManager.cpp.obj -MF CMakeFiles\Circuits.dir\include\UIManager.cpp.obj.d -o CMakeFiles\Circuits.dir\include\UIManager.cpp.obj -c C:\Users\Arthur\Documents\Projects\Circuits\include\UIManager.cpp
-
-CMakeFiles/Circuits.dir/include/UIManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Circuits.dir/include/UIManager.cpp.i"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Arthur\Documents\Projects\Circuits\include\UIManager.cpp > CMakeFiles\Circuits.dir\include\UIManager.cpp.i
-
-CMakeFiles/Circuits.dir/include/UIManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Circuits.dir/include/UIManager.cpp.s"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arthur\Documents\Projects\Circuits\include\UIManager.cpp -o CMakeFiles\Circuits.dir\include\UIManager.cpp.s
-
 CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj: CMakeFiles/Circuits.dir/flags.make
 CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj: CMakeFiles/Circuits.dir/includes_CXX.rsp
 CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj: C:/Users/Arthur/Documents/Projects/Circuits/include/logic/and/ANDGateLogic.cpp
 CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj: CMakeFiles/Circuits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj -MF CMakeFiles\Circuits.dir\include\logic\and\ANDGateLogic.cpp.obj.d -o CMakeFiles\Circuits.dir\include\logic\and\ANDGateLogic.cpp.obj -c C:\Users\Arthur\Documents\Projects\Circuits\include\logic\and\ANDGateLogic.cpp
 
 CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.i: cmake_force
@@ -207,7 +132,7 @@ CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj: CMakeFiles/Circuits.
 CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj: CMakeFiles/Circuits.dir/includes_CXX.rsp
 CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj: C:/Users/Arthur/Documents/Projects/Circuits/include/logic/LogicManager.cpp
 CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj: CMakeFiles/Circuits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj -MF CMakeFiles\Circuits.dir\include\logic\LogicManager.cpp.obj.d -o CMakeFiles\Circuits.dir\include\logic\LogicManager.cpp.obj -c C:\Users\Arthur\Documents\Projects\Circuits\include\logic\LogicManager.cpp
 
 CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.i: cmake_force
@@ -222,7 +147,7 @@ CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj: CMakeFiles/Circuit
 CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj: CMakeFiles/Circuits.dir/includes_CXX.rsp
 CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj: C:/Users/Arthur/Documents/Projects/Circuits/include/logic/or/ORGateLogic.cpp
 CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj: CMakeFiles/Circuits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj -MF CMakeFiles\Circuits.dir\include\logic\or\ORGateLogic.cpp.obj.d -o CMakeFiles\Circuits.dir\include\logic\or\ORGateLogic.cpp.obj -c C:\Users\Arthur\Documents\Projects\Circuits\include\logic\or\ORGateLogic.cpp
 
 CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.i: cmake_force
@@ -237,7 +162,7 @@ CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj: CMakeFiles/Circu
 CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj: CMakeFiles/Circuits.dir/includes_CXX.rsp
 CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj: C:/Users/Arthur/Documents/Projects/Circuits/include/logic/not/NOTGateLogic.cpp
 CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj: CMakeFiles/Circuits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj -MF CMakeFiles\Circuits.dir\include\logic\not\NOTGateLogic.cpp.obj.d -o CMakeFiles\Circuits.dir\include\logic\not\NOTGateLogic.cpp.obj -c C:\Users\Arthur\Documents\Projects\Circuits\include\logic\not\NOTGateLogic.cpp
 
 CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.i: cmake_force
@@ -252,7 +177,7 @@ CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj: CMakeFiles/Circuit
 CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj: CMakeFiles/Circuits.dir/includes_CXX.rsp
 CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj: C:/Users/Arthur/Documents/Projects/Circuits/include/logic/wire/WIRELogic.cpp
 CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj: CMakeFiles/Circuits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj -MF CMakeFiles\Circuits.dir\include\logic\wire\WIRELogic.cpp.obj.d -o CMakeFiles\Circuits.dir\include\logic\wire\WIRELogic.cpp.obj -c C:\Users\Arthur\Documents\Projects\Circuits\include\logic\wire\WIRELogic.cpp
 
 CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.i: cmake_force
@@ -266,13 +191,8 @@ CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.s: cmake_force
 # Object files for target Circuits
 Circuits_OBJECTS = \
 "CMakeFiles/Circuits.dir/src/main.cpp.obj" \
-"CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.obj" \
-"CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.obj" \
 "CMakeFiles/Circuits.dir/include/App.cpp.obj" \
 "CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj" \
-"CMakeFiles/Circuits.dir/include/DrawableManager.cpp.obj" \
-"CMakeFiles/Circuits.dir/include/FileManager.cpp.obj" \
-"CMakeFiles/Circuits.dir/include/UIManager.cpp.obj" \
 "CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj" \
 "CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj" \
 "CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj" \
@@ -283,13 +203,8 @@ Circuits_OBJECTS = \
 Circuits_EXTERNAL_OBJECTS =
 
 Circuits.exe: CMakeFiles/Circuits.dir/src/main.cpp.obj
-Circuits.exe: CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.obj
-Circuits.exe: CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.obj
 Circuits.exe: CMakeFiles/Circuits.dir/include/App.cpp.obj
 Circuits.exe: CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj
-Circuits.exe: CMakeFiles/Circuits.dir/include/DrawableManager.cpp.obj
-Circuits.exe: CMakeFiles/Circuits.dir/include/FileManager.cpp.obj
-Circuits.exe: CMakeFiles/Circuits.dir/include/UIManager.cpp.obj
 Circuits.exe: CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj
 Circuits.exe: CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj
 Circuits.exe: CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj
@@ -299,7 +214,7 @@ Circuits.exe: CMakeFiles/Circuits.dir/build.make
 Circuits.exe: CMakeFiles/Circuits.dir/linkLibs.rsp
 Circuits.exe: CMakeFiles/Circuits.dir/objects1.rsp
 Circuits.exe: CMakeFiles/Circuits.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable Circuits.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Circuits.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Circuits.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

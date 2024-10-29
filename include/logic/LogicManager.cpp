@@ -41,6 +41,6 @@ void LogicManager::setInputs(const unsigned index, const vector<bool>& inputs) c
 void LogicManager::setOutput(const int index, const bool output) const {
     components[index]->setOutput(output);
 }
-void LogicManager::setEntrada(int index) const {
+void LogicManager::setEntrada(int index) {
     entrada[index] = !entrada[index];
 }

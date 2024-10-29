@@ -12,8 +12,8 @@ using namespace std;
 
 class ComponentLogic {
 protected:
-    vector<bool> inputValues;
     vector<pair<int, int>> inputConnectedTo;
+    vector<bool> inputValues;
     pair<int, int> outputConnectedTo;
     bool outputValue;
     int inputSize;

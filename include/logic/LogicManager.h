@@ -26,7 +26,7 @@ public:
     void setInput(int index, bool input) const;
     void setInputs(unsigned index, const vector<bool>& inputs) const;
     void setOutput(int index, bool output) const;
-    void setEntrada(int index) const;
+    void setEntrada(int index);
 };
 
 #endif //LOGICMANAGER_H
