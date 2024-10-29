@@ -4,8 +4,6 @@
 
 #include "LogicManager.h"
 
-#include <algorithm>
-
 LogicManager::LogicManager() {
     components.clear();
 }
