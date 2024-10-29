@@ -5,42 +5,80 @@
 #include "ComponentDrawable.h"
 
 ComponentDrawable::ComponentDrawable(){
+    m_shape = nullptr;
+    outputShape = nullptr;
     position = sf::Vector2f(0, 0);
     height = 20;
     width = 15;
+    inputSize = 2;
 }
 
-ComponentDrawable::ComponentDrawable(int x, int y, int w, int h){
+ComponentDrawable::ComponentDrawable(const float x, const float y, const float w, const float h, const int inSize){
+    m_shape = nullptr;
+    outputShape = nullptr;
     position = sf::Vector2f(x, y);
     height = h;
     width = w;
+    inputSize = inSize;
 }
 
-void ComponentDrawable::setPosition(sf::Vector2f pos) {
-    position = pos;
-}
-
-void ComponentDrawable::setHeight(float h){
-    height = h;
-}
-
-void ComponentDrawable::setWidth(float w){
-    width = w;
-}
-
-void ComponentDrawable::setX(float x){
+void ComponentDrawable::setX(const float x){
     position.x = x;
 }
 
-void ComponentDrawable::setY(float y){
+void ComponentDrawable::setY(const float y){
     position.y = y;
 }
 
-void ComponentDrawable::setName(string n){
-    name = name;
+float ComponentDrawable::getX() const {
+    return position.x;
 }
 
-void ComponentDrawable::setLightInput(const int index, const bool onOff) const{
+float ComponentDrawable::getY() const {
+    return position.y;
+}
+
+void ComponentDrawable::setPosition(const sf::Vector2f pos) {
+    position = pos;
+}
+
+sf::Vector2f ComponentDrawable::getPosition() const {
+    return position;
+}
+
+void ComponentDrawable::setInputSize(const int inSize) {
+    inputSize = inSize;
+}
+
+int ComponentDrawable::getInputSize() const {
+    return inputSize;
+}
+
+void ComponentDrawable::setWidth(const float w){
+    width = w;
+}
+
+void ComponentDrawable::setHeight(const float h){
+    height = h;
+}
+
+float ComponentDrawable::getWidth() const {
+    return width;
+}
+
+float ComponentDrawable::getHeight() const {
+    return height;
+}
+
+void ComponentDrawable::setName(const string &n){
+    name = n;
+}
+
+string ComponentDrawable::getName() const {
+    return name;
+}
+
+void ComponentDrawable::setLightInput(const unsigned int index, const bool onOff) const{
     if(onOff) {
         inputShape[index]->setFillColor(sf::Color::White);
     }
@@ -49,4 +87,16 @@ void ComponentDrawable::setLightInput(const int index, const bool onOff) const{
     }
 }
 
+void ComponentDrawable::setLightOutput(const bool onOff) const
+{
+    if(onOff) {
+        outputShape->setFillColor(sf::Color::White);
+    }
+    else {
+        outputShape->setFillColor(sf::Color::Black);
+    }
+}
 
+void ComponentDrawable::draw(sf::RenderTarget& target, sf::RenderStates states) const {
+    target.draw(*m_shape, states);
+}

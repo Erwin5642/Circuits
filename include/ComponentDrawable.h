@@ -16,29 +16,30 @@ private:
     string name;
     float width;
     float height;
+    int inputSize;
     sf::Vector2f position;
-    vector<sf::Shape*> outputShape;
     vector<sf::Shape*> inputShape;
+    sf::Shape* outputShape;
 public:
     ComponentDrawable();
-    ComponentDrawable(int x, int y, int w, int h);
-    void draw(sf::RenderTarget &target, sf::RenderStates states) const = 0;
-    void setX(int x);
+    ComponentDrawable(float x, float y, float w, float h, int inputSize);
+    void setX(float x);
     void setY(float y);
-    int getInputSize() const;
-    int getOutputSize() const;
     float getX() const;
     float getY() const;
     void setPosition(sf::Vector2f pos);
-    sf::Vector2f getPos() const;
+    sf::Vector2f getPosition() const;
+    void setInputSize(int inSize);
+    int getInputSize() const;
     void setWidth(float w);
     void setHeight(float h);
     float getWidth() const;
     float getHeight() const;
+    void setName(const string &n);
     string getName() const;
-    void setName(string name);
-    void setLightInput(int index, bool onOff);
-    void setLightOutput(int index, bool onOff);
+    void setLightInput(unsigned int index, bool onOff) const;
+    void setLightOutput(bool onOff) const;
+    void draw(sf::RenderTarget &target, sf::RenderStates states) const override = 0;
 };
 
 #endif //COMPONENTDRAWABLE_H
