@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Circuits::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Circuits-Debug-bcaf6879bb0cab1da9f4.json",
+					"jsonFile" : "target-Circuits-Debug-f46eae8f9b654b91f6ad.json",
 					"name" : "Circuits",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/jvgam/CLionProjects/Circuits/cmake-build-debug",
-		"source" : "C:/Users/jvgam/CLionProjects/Circuits"
+		"build" : "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/cmake-build-debug",
+		"source" : "C:/Users/murak/OneDrive/Documentos/SFML/Circuits"
 	},
 	"version" : 
 	{
