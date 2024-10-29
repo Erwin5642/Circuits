@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/murak/OneDrive/Documentos/SFML/Circuits
+# Install script for directory: C:/Users/Arthur/Documents/Projects/Circuits
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Arthur/Documents/Projects/Circuits/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

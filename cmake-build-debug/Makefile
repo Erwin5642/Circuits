@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Games e Programas\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2024.2.3\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Games e Programas\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2024.2.3\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\murak\OneDrive\Documentos\SFML\Circuits
+CMAKE_SOURCE_DIR = C:\Users\Arthur\Documents\Projects\Circuits
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\murak\OneDrive\Documentos\SFML\Circuits\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\murak\OneDrive\Documentos\SFML\Circuits\cmake-build-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	"C:\Games e Programas\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2024.2.3\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	"C:\Games e Programas\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2024.2.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\murak\OneDrive\Documentos\SFML\Circuits\cmake-build-debug\CMakeFiles C:\Users\murak\OneDrive\Documentos\SFML\Circuits\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\murak\OneDrive\Documentos\SFML\Circuits\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Arthur\Documents\Projects\Circuits\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -152,30 +152,6 @@ include/ANDGateDrawable.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.s
 .PHONY : include/ANDGateDrawable.cpp.s
 
-include/ANDGateLogic.obj: include/ANDGateLogic.cpp.obj
-.PHONY : include/ANDGateLogic.obj
-
-# target to build an object file
-include/ANDGateLogic.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/ANDGateLogic.cpp.obj
-.PHONY : include/ANDGateLogic.cpp.obj
-
-include/ANDGateLogic.i: include/ANDGateLogic.cpp.i
-.PHONY : include/ANDGateLogic.i
-
-# target to preprocess a source file
-include/ANDGateLogic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/ANDGateLogic.cpp.i
-.PHONY : include/ANDGateLogic.cpp.i
-
-include/ANDGateLogic.s: include/ANDGateLogic.cpp.s
-.PHONY : include/ANDGateLogic.s
-
-# target to generate assembly for a file
-include/ANDGateLogic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/ANDGateLogic.cpp.s
-.PHONY : include/ANDGateLogic.cpp.s
-
 include/App.obj: include/App.cpp.obj
 .PHONY : include/App.obj
 
@@ -223,30 +199,6 @@ include/ComponentDrawable.s: include/ComponentDrawable.cpp.s
 include/ComponentDrawable.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.s
 .PHONY : include/ComponentDrawable.cpp.s
-
-include/ComponentLogic.obj: include/ComponentLogic.cpp.obj
-.PHONY : include/ComponentLogic.obj
-
-# target to build an object file
-include/ComponentLogic.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/ComponentLogic.cpp.obj
-.PHONY : include/ComponentLogic.cpp.obj
-
-include/ComponentLogic.i: include/ComponentLogic.cpp.i
-.PHONY : include/ComponentLogic.i
-
-# target to preprocess a source file
-include/ComponentLogic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/ComponentLogic.cpp.i
-.PHONY : include/ComponentLogic.cpp.i
-
-include/ComponentLogic.s: include/ComponentLogic.cpp.s
-.PHONY : include/ComponentLogic.s
-
-# target to generate assembly for a file
-include/ComponentLogic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/ComponentLogic.cpp.s
-.PHONY : include/ComponentLogic.cpp.s
 
 include/DrawableManager.obj: include/DrawableManager.cpp.obj
 .PHONY : include/DrawableManager.obj
@@ -320,6 +272,78 @@ include/UIManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/UIManager.cpp.s
 .PHONY : include/UIManager.cpp.s
 
+include/logic/ComponentLogic.obj: include/logic/ComponentLogic.cpp.obj
+.PHONY : include/logic/ComponentLogic.obj
+
+# target to build an object file
+include/logic/ComponentLogic.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj
+.PHONY : include/logic/ComponentLogic.cpp.obj
+
+include/logic/ComponentLogic.i: include/logic/ComponentLogic.cpp.i
+.PHONY : include/logic/ComponentLogic.i
+
+# target to preprocess a source file
+include/logic/ComponentLogic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.i
+.PHONY : include/logic/ComponentLogic.cpp.i
+
+include/logic/ComponentLogic.s: include/logic/ComponentLogic.cpp.s
+.PHONY : include/logic/ComponentLogic.s
+
+# target to generate assembly for a file
+include/logic/ComponentLogic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.s
+.PHONY : include/logic/ComponentLogic.cpp.s
+
+include/logic/LogicManager.obj: include/logic/LogicManager.cpp.obj
+.PHONY : include/logic/LogicManager.obj
+
+# target to build an object file
+include/logic/LogicManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj
+.PHONY : include/logic/LogicManager.cpp.obj
+
+include/logic/LogicManager.i: include/logic/LogicManager.cpp.i
+.PHONY : include/logic/LogicManager.i
+
+# target to preprocess a source file
+include/logic/LogicManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.i
+.PHONY : include/logic/LogicManager.cpp.i
+
+include/logic/LogicManager.s: include/logic/LogicManager.cpp.s
+.PHONY : include/logic/LogicManager.s
+
+# target to generate assembly for a file
+include/logic/LogicManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.s
+.PHONY : include/logic/LogicManager.cpp.s
+
+include/logic/and/ANDGateLogic.obj: include/logic/and/ANDGateLogic.cpp.obj
+.PHONY : include/logic/and/ANDGateLogic.obj
+
+# target to build an object file
+include/logic/and/ANDGateLogic.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj
+.PHONY : include/logic/and/ANDGateLogic.cpp.obj
+
+include/logic/and/ANDGateLogic.i: include/logic/and/ANDGateLogic.cpp.i
+.PHONY : include/logic/and/ANDGateLogic.i
+
+# target to preprocess a source file
+include/logic/and/ANDGateLogic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.i
+.PHONY : include/logic/and/ANDGateLogic.cpp.i
+
+include/logic/and/ANDGateLogic.s: include/logic/and/ANDGateLogic.cpp.s
+.PHONY : include/logic/and/ANDGateLogic.s
+
+# target to generate assembly for a file
+include/logic/and/ANDGateLogic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.s
+.PHONY : include/logic/and/ANDGateLogic.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -356,18 +380,12 @@ help:
 	@echo ... include/ANDGateDrawable.obj
 	@echo ... include/ANDGateDrawable.i
 	@echo ... include/ANDGateDrawable.s
-	@echo ... include/ANDGateLogic.obj
-	@echo ... include/ANDGateLogic.i
-	@echo ... include/ANDGateLogic.s
 	@echo ... include/App.obj
 	@echo ... include/App.i
 	@echo ... include/App.s
 	@echo ... include/ComponentDrawable.obj
 	@echo ... include/ComponentDrawable.i
 	@echo ... include/ComponentDrawable.s
-	@echo ... include/ComponentLogic.obj
-	@echo ... include/ComponentLogic.i
-	@echo ... include/ComponentLogic.s
 	@echo ... include/DrawableManager.obj
 	@echo ... include/DrawableManager.i
 	@echo ... include/DrawableManager.s
@@ -377,6 +395,15 @@ help:
 	@echo ... include/UIManager.obj
 	@echo ... include/UIManager.i
 	@echo ... include/UIManager.s
+	@echo ... include/logic/ComponentLogic.obj
+	@echo ... include/logic/ComponentLogic.i
+	@echo ... include/logic/ComponentLogic.s
+	@echo ... include/logic/LogicManager.obj
+	@echo ... include/logic/LogicManager.i
+	@echo ... include/logic/LogicManager.s
+	@echo ... include/logic/and/ANDGateLogic.obj
+	@echo ... include/logic/and/ANDGateLogic.i
+	@echo ... include/logic/and/ANDGateLogic.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

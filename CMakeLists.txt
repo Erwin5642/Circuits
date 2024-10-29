@@ -10,18 +10,21 @@ add_executable(Circuits src/main.cpp
         include/ANDGateDrawable.cpp
         include/ComponentDrawable.cpp
         include/App.cpp
-        include/ComponentLogic.cpp
+        include/logic/ComponentLogic.cpp
         include/DrawableManager.cpp
         include/FileManager.cpp
         include/UIManager.cpp
-        include/ANDGateLogic.h
-        include/ANDGateLogic.cpp
+        include/logic/and/ANDGateLogic.h
+        include/logic/and/ANDGateLogic.cpp
         include/ANDGateDrawable.h
         include/App.h
-        include/ComponentLogic.h
+        include/logic/ComponentLogic.h
         include/ComponentDrawable.h
         include/DrawableManager.h
         include/FileManager.h
-        include/UIManager.h)
+        include/UIManager.h
+        include/logic/LogicManager.cpp
+        include/logic/LogicManager.h
+)
 target_link_libraries(Circuits -lsfml-system-d -lsfml-window-d -lsfml-graphics-d -lsfml-audio-d)
 

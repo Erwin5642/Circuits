@@ -8,15 +8,16 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/ANDGateDrawable.cpp" "CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.obj.d"
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/ANDGateLogic.cpp" "CMakeFiles/Circuits.dir/include/ANDGateLogic.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/ANDGateLogic.cpp.obj.d"
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/App.cpp" "CMakeFiles/Circuits.dir/include/App.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/App.cpp.obj.d"
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/ComponentDrawable.cpp" "CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.obj.d"
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/ComponentLogic.cpp" "CMakeFiles/Circuits.dir/include/ComponentLogic.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/ComponentLogic.cpp.obj.d"
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/DrawableManager.cpp" "CMakeFiles/Circuits.dir/include/DrawableManager.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/DrawableManager.cpp.obj.d"
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/FileManager.cpp" "CMakeFiles/Circuits.dir/include/FileManager.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/FileManager.cpp.obj.d"
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/UIManager.cpp" "CMakeFiles/Circuits.dir/include/UIManager.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/UIManager.cpp.obj.d"
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/src/main.cpp" "CMakeFiles/Circuits.dir/src/main.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/src/main.cpp.obj.d"
+  "C:/Users/Arthur/Documents/Projects/Circuits/include/ANDGateDrawable.cpp" "CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/ANDGateDrawable.cpp.obj.d"
+  "C:/Users/Arthur/Documents/Projects/Circuits/include/App.cpp" "CMakeFiles/Circuits.dir/include/App.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/App.cpp.obj.d"
+  "C:/Users/Arthur/Documents/Projects/Circuits/include/ComponentDrawable.cpp" "CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/ComponentDrawable.cpp.obj.d"
+  "C:/Users/Arthur/Documents/Projects/Circuits/include/DrawableManager.cpp" "CMakeFiles/Circuits.dir/include/DrawableManager.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/DrawableManager.cpp.obj.d"
+  "C:/Users/Arthur/Documents/Projects/Circuits/include/FileManager.cpp" "CMakeFiles/Circuits.dir/include/FileManager.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/FileManager.cpp.obj.d"
+  "C:/Users/Arthur/Documents/Projects/Circuits/include/UIManager.cpp" "CMakeFiles/Circuits.dir/include/UIManager.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/UIManager.cpp.obj.d"
+  "C:/Users/Arthur/Documents/Projects/Circuits/include/logic/ComponentLogic.cpp" "CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj.d"
+  "C:/Users/Arthur/Documents/Projects/Circuits/include/logic/LogicManager.cpp" "CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj.d"
+  "C:/Users/Arthur/Documents/Projects/Circuits/include/logic/and/ANDGateLogic.cpp" "CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj.d"
+  "C:/Users/Arthur/Documents/Projects/Circuits/src/main.cpp" "CMakeFiles/Circuits.dir/src/main.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/src/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
