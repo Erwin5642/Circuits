@@ -14,6 +14,8 @@ add_executable(Circuits src/main.cpp
         include/NOTGateDrawable.cpp
         include/ORGateDrawable.h
         include/ORGateDrawable.cpp
-        include/App.h)
+        include/App.h
+        include/DotDrawable.cpp
+        include/DotDrawable.h)
 target_link_libraries(Circuits -lsfml-system-d -lsfml-window-d -lsfml-graphics-d -lsfml-audio-d)
 

@@ -5,9 +5,8 @@
 #ifndef COMPONENTLOGIC_H
 #define COMPONENTLOGIC_H
 
-
-
 class ComponentLogic {    [
+
 };
 
 
