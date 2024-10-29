@@ -20,19 +20,19 @@ void ComponentDrawable::setPosition(sf::Vector2f pos) {
     position = pos;
 }
 
-void ComponentDrawable::setHeight(int h){
+void ComponentDrawable::setHeight(float h){
     height = h;
 }
 
-void ComponentDrawable::setWidth(int w){
+void ComponentDrawable::setWidth(float w){
     width = w;
 }
 
-void ComponentDrawable::setX(int x){
+void ComponentDrawable::setX(float x){
     position.x = x;
 }
 
-void ComponentDrawable::setY(int y){
+void ComponentDrawable::setY(float y){
     position.y = y;
 }
 

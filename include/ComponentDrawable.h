@@ -29,7 +29,7 @@ public:
     int getOutputSize() const;
     float getX() const;
     float getY() const;
-    void setPos(sf::Vector2f pos);
+    void setPosition(sf::Vector2f pos);
     sf::Vector2f getPos() const;
     void setWidth(float w);
     void setHeight(float h);
