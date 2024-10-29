@@ -12,6 +12,9 @@ using namespace std;
 
 class LogicManager {
     std::vector<ComponentLogic*> components;
+    bool mat[8][8]{};
+    bool entrada[8]{};
+    bool saida[8]{};
 public:
     LogicManager();
     ~LogicManager();

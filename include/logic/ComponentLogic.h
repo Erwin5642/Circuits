@@ -13,6 +13,8 @@ using namespace std;
 class ComponentLogic {
 protected:
     vector<bool> inputValues;
+    vector<pair<int, int>> inputConnectedTo;
+    pair<int, int> outputConnectedTo;
     bool outputValue;
     int inputSize;
 public:
@@ -24,6 +26,10 @@ public:
     void setInputValues(vector<bool> values);
     void setOutput(bool value);
     virtual bool evaluate() = 0;
+    void connectInputTo(const pair<int, int> &value, int index);
+    pair<int, int> getConnectedInputTo(int index) const;
+    void connectOutputTo(const pair<int, int> &value);
+    pair<int, int> getConnectedOutputTo() const;
 };
 
 #endif //COMPONENTLOGIC_H

@@ -6,12 +6,10 @@
 #define FILEMANAGER_H
 
 #include <string>
-#include "logic/LogicManager.h"
 
 using namespace std;
 
 class FileManager {
-    LogicManager logicManager;
     string fileName;
 public:
     FileManager();

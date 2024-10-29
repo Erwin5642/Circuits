@@ -32,3 +32,15 @@ void ComponentLogic::setInputValues(vector<bool> values) {
 void ComponentLogic::setOutput(const bool value) {
     outputValue = value;
 }
+void ComponentLogic::connectInputTo(const pair<int, int> &value, const int index) {
+    inputConnectedTo[index] = value;
+}
+pair<int, int> ComponentLogic::getConnectedInputTo(int index) const {
+    return inputConnectedTo[index];
+}
+void ComponentLogic::connectOutputTo(const pair<int, int> &value) {
+    outputConnectedTo = value;
+}
+pair<int, int> ComponentLogic::getConnectedOutputTo() const {
+    return outputConnectedTo;
+}
