@@ -5,10 +5,19 @@
 #ifndef FILEMANAGER_H
 #define FILEMANAGER_H
 
+#include <string>
 
+using namespace std;
 
 class FileManager {
-
+    string fileName;
+public:
+    FileManager();
+    ~FileManager();
+    void setFileName(const string& name);
+    string getFileName();
+    void readFile();
+    void writeFile();
 };
 
 

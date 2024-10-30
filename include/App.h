@@ -9,18 +9,28 @@
 #include "LogicManager.h"
 #include "FileManager.h"
 #include "UIManager.h"
+#include <iostream>
+#include "logic/LogicManager.h"
+#include "logic/and/ANDGateLogic.h"
+#include "logic/not/NOTGateLogic.h"
 
 class App {
 private:
     DrawableManager drawableManager;
-    LogicManager logicManager;
     FileManager fileManager;
     UIManager uiManager;
+    LogicManager l_Manager;
 
 public:
     App();
     ~App();
     void run();
+    //DrawableManager d_Manager;
+    //FileManager f_Manager;
+    //UIManager u_Manager;
+public:
+    void run();
+    void insertObj();
 };
 
 
