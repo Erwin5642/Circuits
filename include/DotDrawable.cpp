@@ -4,8 +4,18 @@
 
 #include "DotDrawable.h"
 
-DotDrawable::DotDrawable(float x, float y){
+DotDrawable::DotDrawable() {
     dot = sf::CircleShape(15);
+}
+
+DotDrawable::DotDrawable(const float x, const float y){
+    dot = sf::CircleShape(15);
+    dot.setPosition(x, y);
+}
+
+DotDrawable::DotDrawable(const DotDrawable &otherDot) {
+    dot = otherDot.dot;
+    position = otherDot.position;
 }
 
 void DotDrawable::setX(float x) {

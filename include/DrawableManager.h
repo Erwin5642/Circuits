@@ -20,7 +20,9 @@ public:
 
     ~DrawableManager();
 
-    void addDrawable(ComponentDrawable *drawable);
+    void addDrawable(const ComponentDrawable *component);
+
+    void addDrawable(const ComponentDrawable *component, float x, float y, float w, float h, int inSize);
 
     void removeDrawable(unsigned int index);
 
@@ -30,7 +32,7 @@ public:
 
     void updateValueInOut(bool inOut, unsigned int index, bool onOff);
 
-    void draw(sf::RenderWindow& window) const;
+    void draw(sf::RenderWindow&  window) const;
 };
 
 

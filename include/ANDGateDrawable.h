@@ -10,8 +10,11 @@
 class ANDGateDrawable : public ComponentDrawable{
 public:
     ANDGateDrawable();
-    void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+    ANDGateDrawable(float x, float y, float w, float h, int inSize);
     ~ANDGateDrawable() override;
+    void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+    ANDGateDrawable* selfAllocate() const override;
+    ANDGateDrawable* selfAllocate(float x, float y, float w, float h, in inSize) const override;
 };
 
 #endif //ANDGATEDRAWABLE_H

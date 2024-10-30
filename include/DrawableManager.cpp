@@ -9,7 +9,7 @@
 
 #include "DrawableManager.h"
 
-DrawableManager::DrawableManager() {
+DrawableManager::DrawableManager(): contactPoints{}, inputPoints{}, outputPoints{} {
     int i = 0, j = 0;
     numDrawables = 0;
     for (i = 0; i < 8; i++) {
@@ -25,8 +25,12 @@ DrawableManager::~DrawableManager() {
     removeAllDrawables();
 }
 
-void DrawableManager::addDrawable(ComponentDrawable *drawable) {
-    drawables.push_back(drawable);
+void DrawableManager::addDrawable(const ComponentDrawable *component) {
+    drawables.push_back(component->selfAllocate());
+}
+
+void DrawableManager::addDrawable(const ComponentDrawable *component, const float x, const float y, const float w, const float h, const int inSize) {
+    drawables.push_back(component->selfAllocate(x, y, w, h, inSize));
 }
 
 void DrawableManager::removeDrawable(const unsigned int index) {
@@ -47,7 +51,7 @@ void DrawableManager::updatePosition(const unsigned int index, const sf::Vector2
     drawables[index]->setPosition(position);
 }
 
-void DrawableManager::updateValueInOut(bool inOut, unsigned int index, bool onOff) {
+void DrawableManager::updateValueInOut(const bool inOut, const unsigned int index, const bool onOff) {
     if(inOut) {
         inputPoints[index].setOnOff(onOff);
     }

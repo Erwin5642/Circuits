@@ -12,7 +12,9 @@ private:
     sf::CircleShape dot;
     sf::Vector2f position;
 public:
+    DotDrawable();
     DotDrawable(float x, float y);
+    DotDrawable(const DotDrawable& otherDot);
     void setX(float x);
     void setY(float y);
     float getX() const;

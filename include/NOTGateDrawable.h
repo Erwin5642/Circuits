@@ -9,8 +9,11 @@
 
 class NOTGateDrawable : public ComponentDrawable {
     NOTGateDrawable();
-    void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
+    NOTGateDrawable(float x, float y, float w, float h, int inSize);
     ~NOTGateDrawable() override;
+    void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
+    NOTGateDrawable *selfAllocate() const override;
+    NOTGateDrawable *selfAllocate(float x, float y, float w, float h, int inSize) const override;
 };
 
 #endif //NOTGATEDRAWABLE_H

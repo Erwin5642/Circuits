@@ -23,7 +23,7 @@ protected:
 public:
     ComponentDrawable();
     ComponentDrawable(float x, float y, float w, float h, int inSize);
-    virtual ~ComponentDrawable();
+    ~ComponentDrawable() override;
     void setX(float x);
     void setY(float y);
     float getX() const;
@@ -39,6 +39,8 @@ public:
     void setName(const string &n);
     string getName() const;
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override = 0;
+    virtual ComponentDrawable *selfAllocate() const = 0;
+    virtual ComponentDrawable *selfAllocate(float x, float y, float w, float h, int inSize) const = 0;
 };
 
 #endif //COMPONENTDRAWABLE_H

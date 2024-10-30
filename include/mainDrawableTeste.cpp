@@ -4,13 +4,29 @@
 
 #include "ANDGateDrawable.h"
 #include "DrawableManager.h"
+#include "SFML/Window.hpp"
 
-int main(void){
+int main(){
     sf::RenderWindow window(sf::VideoMode(800,800), "Drawables Manager Teste" );
     DrawableManager drawableManager;
 
-    sf::Event event;
+    while(window.isOpen()) {
+        sf::Event event{};
+        while(window.pollEvent(event)) {
+            switch (event.type) {
+                case sf::Event::Closed:
+                    window.close();
+                break;
+                case sf::Event::KeyPressed:
+                    if(event.key.code == sf::Keyboard::Enter) {
+                        drawableManager.addDrawable(new ANDGateDrawable);
+                    }
+                default:
+                    break;
+            }
 
+        }
+    }
 
 
     drawableManager.addDrawable(new ANDGateDrawable);

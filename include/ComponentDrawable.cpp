@@ -84,6 +84,3 @@ string ComponentDrawable::getName() const {
     return name;
 }
 
-void ComponentDrawable::draw(sf::RenderTarget& target, sf::RenderStates states) const {
-    target.draw(*m_shape, states);
-}

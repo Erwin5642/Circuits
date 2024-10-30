@@ -10,9 +10,10 @@ ORGateDrawable::ORGateDrawable() {
     m_shape->setFillColor(sf::Color::Green);
 }
 
-void ORGateDrawable::draw(sf::RenderTarget& target, sf::RenderStates states) const {
-    target.draw(*m_shape, states);
-    // draw text
+ORGateDrawable::ORGateDrawable(const float x, const float y, const float w, const float h, const int inSize) : ComponentDrawable(x, y, w, h, inSize){
+    name = "OR";
+    m_shape = new sf::RectangleShape(sf::Vector2f(width, height));
+    m_shape->setFillColor(sf::Color::Green);
 }
 
 ORGateDrawable::~ORGateDrawable() {
@@ -20,4 +21,17 @@ ORGateDrawable::~ORGateDrawable() {
         delete m_shape;
         m_shape = nullptr;
     }
+}
+
+void ORGateDrawable::draw(sf::RenderTarget& target, sf::RenderStates states) const {
+    target.draw(*m_shape, states);
+    // draw text
+}
+
+ORGateDrawable *ORGateDrawable::selfAllocate() const {
+    return new ORGateDrawable;
+}
+
+ORGateDrawable *ORGateDrawable::selfAllocate(const float x, const float y, const float w, const float h, const int inSize) const {
+    return new ORGateDrawable(x, y, w, h, inSize);
 }
