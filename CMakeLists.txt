@@ -8,7 +8,7 @@ link_directories(C:\\SFML\\lib)
 
 add_executable(Circuits src/main.cpp
         include/ComponentDrawable.h
-        include/ANDGateDrawable.cpp
+        include/graphics/ANDGateDrawable.cpp
         include/ComponentDrawable.cpp
         include/DrawableManager.cpp
         include/NOTGateDrawable.cpp
