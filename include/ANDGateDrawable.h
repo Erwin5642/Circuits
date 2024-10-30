@@ -14,7 +14,7 @@ public:
     ~ANDGateDrawable() override;
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
     ANDGateDrawable* selfAllocate() const override;
-    ANDGateDrawable* selfAllocate(float x, float y, float w, float h, in inSize) const override;
+    ANDGateDrawable* selfAllocate(float x, float y, float w, float h, int inSize) const override;
 };
 
 #endif //ANDGATEDRAWABLE_H

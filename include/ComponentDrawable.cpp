@@ -6,9 +6,9 @@
 
 ComponentDrawable::ComponentDrawable(){
     m_shape = nullptr;
-    position = sf::Vector2f(0, 0);
-    height = 20;
-    width = 15;
+    position = sf::Vector2f(400, 400);
+    height = 30;
+    width = 30;
     inputSize = 2;
 }
 
@@ -30,10 +30,12 @@ ComponentDrawable::~ComponentDrawable() {
 
 void ComponentDrawable::setX(const float x){
     position.x = x;
+    m_shape->setPosition(sf::Vector2f(x, position.y));
 }
 
 void ComponentDrawable::setY(const float y){
     position.y = y;
+    m_shape->setPosition(sf::Vector2f(position.x, y));
 }
 
 float ComponentDrawable::getX() const {
@@ -46,6 +48,7 @@ float ComponentDrawable::getY() const {
 
 void ComponentDrawable::setPosition(const sf::Vector2f pos) {
     position = pos;
+    m_shape->setPosition(position);
 }
 
 sf::Vector2f ComponentDrawable::getPosition() const {
@@ -62,10 +65,12 @@ int ComponentDrawable::getInputSize() const {
 
 void ComponentDrawable::setWidth(const float w){
     width = w;
+    m_shape->scale(sf::Vector2f(w/width, 1));
 }
 
 void ComponentDrawable::setHeight(const float h){
     height = h;
+    m_shape->scale(sf::Vector2f(1, h/height));
 }
 
 float ComponentDrawable::getWidth() const {
@@ -83,4 +88,3 @@ void ComponentDrawable::setName(const string &n){
 string ComponentDrawable::getName() const {
     return name;
 }
-

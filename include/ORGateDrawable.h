@@ -14,7 +14,7 @@ public:
     ~ORGateDrawable() override;
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
     ORGateDrawable *selfAllocate() const override;
-    ORGateDrawable *selfAllocate(float x float y, float w, float h, int inSize) const override;
+    ORGateDrawable *selfAllocate(float x, float y, float w, float h, int inSize) const override;
 };
 
 

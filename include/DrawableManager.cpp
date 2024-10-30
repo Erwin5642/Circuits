@@ -5,7 +5,7 @@
 #define MATRIX_INIT_X 100
 #define MATRIX_INIT_Y 200
 #define INPUT_POINTS_Y 100
-#define OUTPUT_POINTS_Y 800
+#define OUTPUT_POINTS_Y 700
 
 #include "DrawableManager.h"
 
@@ -13,10 +13,10 @@ DrawableManager::DrawableManager(): contactPoints{}, inputPoints{}, outputPoints
     int i = 0, j = 0;
     numDrawables = 0;
     for (i = 0; i < 8; i++) {
-        inputPoints[i] = DotDrawable(MATRIX_INIT_X + i * 20, INPUT_POINTS_Y);
-        outputPoints[i] = DotDrawable(MATRIX_INIT_X + i * 20, OUTPUT_POINTS_Y);
+        inputPoints[i] = DotDrawable(MATRIX_INIT_X + i * 50, INPUT_POINTS_Y);
+        outputPoints[i] = DotDrawable(MATRIX_INIT_X + i * 50, OUTPUT_POINTS_Y);
         for (j = 0; j < 8; j++) {
-            contactPoints[i][j] = DotDrawable(MATRIX_INIT_X + i * 20, MATRIX_INIT_Y + j * 20);
+            contactPoints[i][j] = DotDrawable(MATRIX_INIT_X + i * 50, MATRIX_INIT_Y + j * 50);
         }
     }
 }
@@ -27,10 +27,12 @@ DrawableManager::~DrawableManager() {
 
 void DrawableManager::addDrawable(const ComponentDrawable *component) {
     drawables.push_back(component->selfAllocate());
+    numDrawables++;
 }
 
 void DrawableManager::addDrawable(const ComponentDrawable *component, const float x, const float y, const float w, const float h, const int inSize) {
     drawables.push_back(component->selfAllocate(x, y, w, h, inSize));
+    numDrawables++;
 }
 
 void DrawableManager::removeDrawable(const unsigned int index) {
