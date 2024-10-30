@@ -6,6 +6,9 @@
 #define COMPONENTDRAWABLE_H
 
 #include <SFML\Graphics.hpp>
+#include "ORGateDrawable.h"
+#include "ANDGateDrawable.h"
+#include "NOTGateDrawable.h"
 #include <vector>
 #include <string>
 using namespace std;

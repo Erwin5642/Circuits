@@ -7,12 +7,14 @@
 NOTGateDrawable::NOTGateDrawable() {
     name = "NOT";
     m_shape = new sf::RectangleShape(sf::Vector2f(width, height));
+    m_shape->setPosition(position);
     m_shape->setFillColor(sf::Color::Red);
 }
 
 NOTGateDrawable::NOTGateDrawable(const float x, const float y, const float w, const float h, const int inSize) : ComponentDrawable(x, y, w, h, inSize) {
     name = "NOT";
     m_shape = new sf::RectangleShape(sf::Vector2f(width, height));
+    m_shape->setPosition(position);
     m_shape->setFillColor(sf::Color::Red);
 }
 

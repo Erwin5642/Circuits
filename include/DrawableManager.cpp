@@ -9,7 +9,7 @@
 
 #include "DrawableManager.h"
 
-DrawableManager::DrawableManager(): contactPoints{}, inputPoints{}, outputPoints{} {
+DrawableManager::DrawableManager() {
     int i = 0, j = 0;
     numDrawables = 0;
     for (i = 0; i < 8; i++) {
@@ -23,6 +23,10 @@ DrawableManager::DrawableManager(): contactPoints{}, inputPoints{}, outputPoints
 
 DrawableManager::~DrawableManager() {
     removeAllDrawables();
+}
+
+int DrawableManager::getNumDrawables() const {
+    return numDrawables;
 }
 
 void DrawableManager::addDrawable(const ComponentDrawable *component) {
@@ -51,6 +55,10 @@ void DrawableManager::removeAllDrawables() {
 
 void DrawableManager::updatePosition(const unsigned int index, const sf::Vector2f position) const {
     drawables[index]->setPosition(position);
+}
+
+sf::Vector2f DrawableManager::getPosition(const unsigned int index) const {
+    return drawables[index]->getPosition();
 }
 
 void DrawableManager::updateValueInOut(const bool inOut, const unsigned int index, const bool onOff) {

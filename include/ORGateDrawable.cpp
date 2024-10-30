@@ -13,8 +13,9 @@ ORGateDrawable::ORGateDrawable() {
 
 ORGateDrawable::ORGateDrawable(const float x, const float y, const float w, const float h, const int inSize) : ComponentDrawable(x, y, w, h, inSize){
     name = "OR";
+    position = sf::Vector2f(x, y);
     m_shape = new sf::RectangleShape(sf::Vector2f(width, height));
-    m_shape->setPosition(sf::Vector2f(x, y));
+    m_shape->setPosition(position);
     m_shape->setFillColor(sf::Color::Green);
 }
 

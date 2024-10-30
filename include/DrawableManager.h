@@ -20,6 +20,8 @@ public:
 
     ~DrawableManager();
 
+    int getNumDrawables() const;
+
     void addDrawable(const ComponentDrawable *component);
 
     void addDrawable(const ComponentDrawable *component, float x, float y, float w, float h, int inSize);
@@ -29,6 +31,8 @@ public:
     void removeAllDrawables();
 
     void updatePosition(unsigned int index, sf::Vector2f position) const;
+
+    sf::Vector2f getPosition(unsigned int index) const;
 
     void updateValueInOut(bool inOut, unsigned int index, bool onOff);
 
