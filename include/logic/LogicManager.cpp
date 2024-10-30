@@ -35,12 +35,42 @@ int LogicManager::getSize() const {
 void LogicManager::setInput(const int index, const bool input) const {
     components[index]->setInputValue(index, input);
 }
+void LogicManager::setInput(const int index, const pair<int, int> &par) const {
+    if(par.first == 'e') {
+        components[index]->setInputValue(index, pair<int, int>(-1, par.second));
+    }
+    if (par.second == 's') {
+        components[index]->setInputValue(index, pair<int, int>(9, par.second));
+    }
+}
+void LogicManager::setInput(const int index, const pair<char, int> &par) const {
+    components[index]->setInputValue(index, par);
+}
 void LogicManager::setInputs(const unsigned index, const vector<bool>& inputs) const {
     components[index]->setInputValues(inputs);
 }
 void LogicManager::setOutput(const int index, const bool output) const {
     components[index]->setOutput(output);
 }
-void LogicManager::setEntrada(int index) {
+void LogicManager::setOutput(const int index, const pair<int, int> &par) const {
+    components[index]->setOutput(par);
+}
+void LogicManager::setEntrada(const int index) {
     entrada[index] = !entrada[index];
 }
+bool LogicManager::getEntrada(const int index) const {
+    return entrada[index];
+}
+
+void LogicManager::setSaidas() {
+    for(int i=0; i<components.size(); i++) {
+        saida[components[i]->getConnectedOutputTo().second] = components[i]->getOutput();
+        for(int j=0; j<components[i]->getInputSize(); j++) {
+            components[i]->setInputValue(j, !components[i]->getOutput());
+        }
+    }
+}
+bool LogicManager::getSaida(const int index) const {
+    return saida[index];
+}
+
