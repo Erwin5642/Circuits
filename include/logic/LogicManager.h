@@ -35,8 +35,8 @@ public:
     void setOutput(int index, const pair<int, int> &par) const;
     void setEntrada(int index);
     bool getEntrada(int index) const;
-    void setSaidas();
     bool getSaida(int index) const;
+    void update();
 };
 
 #endif //LOGICMANAGER_H

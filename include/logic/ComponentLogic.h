@@ -25,10 +25,12 @@ public:
     int getInputSize() const;
     void setInputValue(unsigned index, bool value); // NAO USANDO
     void setInputValue(unsigned index, const pair<int, int> &par);
+    void setInputValue(unsigned index, const pair<char, int> &par);
     void setInputValues(vector<bool> values);
 
     void setOutput(bool value); // NAO USANDO
     void setOutput(const pair<int, int> &par);
+    void setOutput(const pair<char, int> &par);
     bool getOutput() const;
 
     virtual bool evaluate() = 0;
@@ -38,6 +40,8 @@ public:
 
     void connectOutputTo(const pair<int, int> &value);
     pair<int, int> getConnectedOutputTo() const;
+
+    void connectOutputTo(const pair<char, int> &value);
 };
 
 #endif //COMPONENTLOGIC_H

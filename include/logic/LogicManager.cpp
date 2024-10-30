@@ -61,16 +61,55 @@ void LogicManager::setEntrada(const int index) {
 bool LogicManager::getEntrada(const int index) const {
     return entrada[index];
 }
-
-void LogicManager::setSaidas() {
-    for(int i=0; i<components.size(); i++) {
-        saida[components[i]->getConnectedOutputTo().second] = components[i]->getOutput();
-        for(int j=0; j<components[i]->getInputSize(); j++) {
-            components[i]->setInputValue(j, !components[i]->getOutput());
-        }
-    }
-}
 bool LogicManager::getSaida(const int index) const {
     return saida[index];
 }
+/*void LogicManager::update() {
+    for(int i=0; i<components.size(); i++) {
+        for(int j=0; j<components[i]->getInputSize(); j++) {
+            components[i]->setInputValue(j, pair<int, int>(components[i]->getConnectedInputTo(j).first, components[i]->getConnectedInputTo(j).second));
+        }
+        components[i]->evaluate();
+        if(components[i]->getConnectedOutputTo().first == 9) {
+            saida[components[i]->getConnectedOutputTo().second] = components[i]->getOutput();
+        }
+        else {
+            mat[components[i]->getConnectedOutputTo().first][components[i]->getConnectedOutputTo().second] = components[i]->getOutput();
+        }
+    }
+}*/
+void LogicManager::update() {
+    for (int i = 0; i < components.size(); i++) {
+        // Atualiza os valores de input
+        for (int j = 0; j < components[i]->getInputSize(); j++) {
+            auto connectedPos = components[i]->getConnectedInputTo(j); // Obtém o índice conectado
+            int connectedComponentIndex = connectedPos.first;
+            int connectedOutputIndex = connectedPos.second;
 
+            // Conexão a uma entrada externa (`entrada`)
+            if (connectedComponentIndex == -1) {
+                components[i]->setInputValue(j, entrada[connectedOutputIndex]);
+            }
+            // Conexão a uma saída (`saida`)
+            else if (connectedComponentIndex == 9) {
+                components[i]->setInputValue(j, saida[connectedOutputIndex]);
+            }
+            // Conexão a outro componente
+            else if (connectedComponentIndex >= 0 && connectedComponentIndex < components.size()) {
+                bool connectedOutputValue = components[connectedComponentIndex]->getOutput();
+                components[i]->setInputValue(j, connectedOutputValue);
+            }
+        }
+
+        // Avalia a saída do componente após atualizar os inputs
+        components[i]->evaluate();
+
+        // Atualiza as matrizes de saída e `saida` com base na conexão
+        auto outputConnection = components[i]->getConnectedOutputTo();
+        if (outputConnection.first == 9) {
+            saida[outputConnection.second] = components[i]->getOutput();
+        } else {
+            mat[outputConnection.first][outputConnection.second] = components[i]->getOutput();
+        }
+    }
+}

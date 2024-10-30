@@ -21,23 +21,7 @@ class App {
     //UIManager u_Manager;
 public:
     void run();
-    void insertObj() {
-        l_Manager.insertComponent(new NOTGateLogic());
-        cout << l_Manager.getSize() << endl;
-        l_Manager.getComponent(0).setInputValue(0, pair<char, int>('e', 0));
-        l_Manager.getComponent(0).setOutput(pair<char, int>('s', 0));
-        l_Manager.getComponent(0).evaluate();
-        l_Manager.setSaidas();
-        cout << "Entrada 0: " << l_Manager.getEntrada(0) << endl;
-        cout << "Saida 0: " << l_Manager.getSaida(0) << endl;
-
-        l_Manager.setEntrada(0);
-        l_Manager.getComponent(0).evaluate();
-        l_Manager.setSaidas();
-        cout << "Entrada 0: " << l_Manager.getEntrada(0) << endl;
-        cout << "Saida 0: " << l_Manager.getSaida(0) << endl;
-
-    }
+    void insertObj();
 };
 
 #endif //APP_H

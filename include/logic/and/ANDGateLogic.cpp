@@ -11,6 +11,6 @@ bool ANDGateLogic::evaluate() {
             return false;
         }
     }
-    outputValue = false;
+    outputValue = true;
     return true;
 }
