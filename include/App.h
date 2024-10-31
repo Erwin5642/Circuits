@@ -5,17 +5,26 @@
 #ifndef APP_H
 #define APP_H
 
+#include "DrawableManager.h"
+#include "LogicManager.h"
+#include "FileManager.h"
+#include "UIManager.h"
 #include <iostream>
-
 #include "logic/LogicManager.h"
 #include "logic/and/ANDGateLogic.h"
 #include "logic/not/NOTGateLogic.h"
-//#include "DrawableManager.h"
-//#include "FileManager.h"
-//#include "UIManager.h"
 
 class App {
+private:
+    DrawableManager drawableManager;
+    FileManager fileManager;
+    UIManager uiManager;
     LogicManager l_Manager;
+
+public:
+    App();
+    ~App();
+    void run();
     //DrawableManager d_Manager;
     //FileManager f_Manager;
     //UIManager u_Manager;
@@ -23,5 +32,7 @@ public:
     void run();
     void insertObj();
 };
+
+
 
 #endif //APP_H
