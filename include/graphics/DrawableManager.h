@@ -6,7 +6,7 @@
 #define DRAWABLEMANAGER_H
 
 #include "ComponentDrawable.h"
-#include "DotDrawable.h"
+#include "dot/DotDrawable.h"
 
 class DrawableManager {
     vector<ComponentDrawable *> drawables;

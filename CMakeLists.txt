@@ -7,13 +7,13 @@ include_directories(C:\\SFML\\include)
 link_directories(C:\\SFML\\lib)
 
 add_executable(Circuits src/main.cpp
-        include/ComponentDrawable.h
-        include/graphics/ANDGateDrawable.cpp
-        include/ComponentDrawable.cpp
-        include/DrawableManager.cpp
-        include/NOTGateDrawable.cpp
-        include/ORGateDrawable.h
-        include/ORGateDrawable.cpp
+        include/graphics/ComponentDrawable.h
+        include/graphics/and/ANDGateDrawable.cpp
+        include/graphics/ComponentDrawable.cpp
+        include/graphics/DrawableManager.cpp
+        include/graphics/not/NOTGateDrawable.cpp
+        include/graphics/or/ORGateDrawable.h
+        include/graphics/or/ORGateDrawable.cpp
         include/App.cpp
         include/logic/ComponentLogic.cpp
         include/logic/and/ANDGateLogic.h
@@ -29,9 +29,10 @@ add_executable(Circuits src/main.cpp
         include/logic/not/NOTGateLogic.h
         include/logic/wire/WIRELogic.cpp
         include/logic/wire/WIRELogic.h
-        include/DotDrawable.cpp
-        include/DotDrawable.h
-        include/DrawableManager.h
-        include/UIManager.cpp)
+        include/graphics/dot/DotDrawable.cpp
+        include/graphics/dot/DotDrawable.h
+        include/graphics/DrawableManager.h
+        include/UIManager.cpp
+        include/graphics/not/NOTGateDrawable.h)
 target_link_libraries(Circuits -lsfml-system-d -lsfml-window-d -lsfml-graphics-d -lsfml-audio-d)
 
