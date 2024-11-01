@@ -5,8 +5,8 @@
 #ifndef APP_H
 #define APP_H
 
-#include "DrawableManager.h"
-#include "LogicManager.h"
+#include "graphics/DrawableManager.h"
+#include "logic/LogicManager.h"
 #include "FileManager.h"
 #include "UIManager.h"
 #include <iostream>
