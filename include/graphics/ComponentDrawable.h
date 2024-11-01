@@ -6,9 +6,9 @@
 #define COMPONENTDRAWABLE_H
 
 #include <SFML\Graphics.hpp>
-#include "or/ORGateDrawable.h"
-#include "and/ANDGateDrawable.h"
-#include "not/NOTGateDrawable.h"
+#include "ORGateDrawable.h"
+#include "ANDGateDrawable.h"
+#include "NOTGateDrawable.h"
 #include <vector>
 #include <string>
 using namespace std;

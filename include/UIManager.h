@@ -5,8 +5,8 @@
 #ifndef UIMANAGER_H
 #define UIMANAGER_H
 
-#include "graphics/DrawableManager.h"
-#include "logic/LogicManager.h"
+#include "DrawableManager.h"
+#include "LogicManager.h"
 
 class UIManager {
     DrawableManager &drawableManagerRef;

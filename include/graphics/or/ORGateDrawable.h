@@ -5,7 +5,7 @@
 #ifndef ORGATEDRAWABLE_H
 #define ORGATEDRAWABLE_H
 
-#include "../ComponentDrawable.h"
+#include "ComponentDrawable.h"
 
 class ORGateDrawable : public ComponentDrawable {
 public:

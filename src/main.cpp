@@ -2,10 +2,10 @@
 // Created by jvgam on 29/10/2024.
 //
 
-#include "../include/graphics/DrawableManager.h"
-#include "../include/graphics/and/ANDGateDrawable.h"
-#include "../include/graphics/not/NOTGateDrawable.h"
-#include "../include/graphics/or/ORGateDrawable.h"
+#include "../include/ANDGateDrawable.h"
+#include "../include/DrawableManager.h"
+#include "../include/NOTGateDrawable.h"
+#include "../include/ORGateDrawable.h"
 #include "SFML/Window.hpp"
 
 int main() {

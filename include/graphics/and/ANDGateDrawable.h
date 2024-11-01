@@ -5,7 +5,7 @@
 #ifndef ANDGATEDRAWABLE_H
 #define ANDGATEDRAWABLE_H
 
-#include "../ComponentDrawable.h"
+#include "ComponentDrawable.h"
 
 class ANDGateDrawable : public ComponentDrawable{
 public:
