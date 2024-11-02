@@ -1,5 +1,5 @@
 # ninja log v6
-2	354	7522921619829823	build.ninja	9d1e6879d5facfea
+2	354	7522925629958144	build.ninja	9d1e6879d5facfea
 381	1295	7522646152852566	CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj	dd41e7ed26066b28
 416	1283	7522646153205037	CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj	31831bb1731aabd4
 11	2041	7522790490557283	CMakeFiles/Circuits.dir/src/main.cpp.obj	674f3d18ef22d7b8
