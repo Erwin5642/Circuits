@@ -1,58 +1,44 @@
-//
-// Created by jvgam on 28/10/2024.
-//
-
 #include "ComponentDrawable.h"
 
-ComponentDrawable::ComponentDrawable(){
-    m_shape = nullptr;
-    position = sf::Vector2f(400, 400);
-    height = 30;
-    width = 30;
-    inputSize = 2;
-}
-
-ComponentDrawable::ComponentDrawable(const float x, const float y, const float w, const float h, const int inSize){
-    m_shape = nullptr;
-    position = sf::Vector2f(x, y);
-    height = h;
-    width = w;
+ComponentDrawable::ComponentDrawable(const sf::Vector2f pos, const int inSize) {
+    int i;
+    m_center_position = pos;
+    positionInGrid = sf::Vector2i(-1, -1);
     inputSize = inSize;
+    for (i = 0; i < inSize; i++) {
+        wiresInput.push_back(nullptr);
+    }
+    wireOutput = nullptr;
+    usedInputs = 0;
+    isOutputUsed = false;
 }
 
 ComponentDrawable::~ComponentDrawable() {
+    int i = 0;
+    m_center_position = sf::Vector2f(0, 0);
+    positionInGrid = sf::Vector2i(-1, -1);
+    for (i = 0; i < inputSize; i++) {
+        wiresInput[i] = nullptr;
+    }
+    wireOutput = nullptr;
     inputSize = 0;
-    position = sf::Vector2f(0, 0);
-    width = 0;
-    height = 0;
+    usedInputs = 0;
 }
 
-
-void ComponentDrawable::setX(const float x){
-    position.x = x;
-    m_shape->setPosition(sf::Vector2f(x, position.y));
+void ComponentDrawable::setGridPosition(sf::Vector2i pos) {
+    positionInGrid = pos;
 }
 
-void ComponentDrawable::setY(const float y){
-    position.y = y;
-    m_shape->setPosition(sf::Vector2f(position.x, y));
+sf::Vector2i ComponentDrawable::getGridPosition() const {
+    return positionInGrid;
 }
 
-float ComponentDrawable::getX() const {
-    return position.x;
+void ComponentDrawable::setCenterPosition(sf::Vector2f pos) {
+    m_center_position = pos;
 }
 
-float ComponentDrawable::getY() const {
-    return position.y;
-}
-
-void ComponentDrawable::setPosition(const sf::Vector2f pos) {
-    position = pos;
-    m_shape->setPosition(position);
-}
-
-sf::Vector2f ComponentDrawable::getPosition() const {
-    return position;
+sf::Vector2f ComponentDrawable::getCenterPosition() const {
+    return m_center_position;
 }
 
 void ComponentDrawable::setInputSize(const int inSize) {
@@ -63,28 +49,56 @@ int ComponentDrawable::getInputSize() const {
     return inputSize;
 }
 
-void ComponentDrawable::setWidth(const float w){
-    width = w;
-    m_shape->scale(sf::Vector2f(w/width, 1));
+void ComponentDrawable::setOutputUsed() {
+    isOutputUsed = true;
 }
 
-void ComponentDrawable::setHeight(const float h){
-    height = h;
-    m_shape->scale(sf::Vector2f(1, h/height));
+bool ComponentDrawable::getOutputUsed() const {
+    return isOutputUsed;
 }
 
-float ComponentDrawable::getWidth() const {
-    return width;
+void ComponentDrawable::setUsedInputSize(const int usedSize) {
+    usedInputs = usedSize;
 }
 
-float ComponentDrawable::getHeight() const {
-    return height;
+int ComponentDrawable::getUsedInputsSize() const {
+    return usedInputs;
 }
 
-void ComponentDrawable::setName(const string &n){
+void ComponentDrawable::setInputPosition(unsigned int index, sf::Vector2f pos) {
+    inputPositions[index] = pos;
+}
+
+void ComponentDrawable::setOutputPosition(sf::Vector2f pos) {
+    outputPosition = pos;
+}
+
+sf::Vector2f ComponentDrawable::getInputPosition(const unsigned int index) const {
+    return inputPositions[index];
+}
+
+sf::Vector2f ComponentDrawable::getOutputPosition() const {
+    return outputPosition;
+}
+
+sf::FloatRect ComponentDrawable::getBounds() const {
+    return m_shape.getBounds();
+}
+
+void ComponentDrawable::setName(const string &n) {
     name = n;
 }
 
 string ComponentDrawable::getName() const {
     return name;
+}
+
+void ComponentDrawable::connectGateOut(ComponentDrawable *outWire) {
+    outWire->connectGateIn(this);
+    wireOutput = outWire;
+}
+
+void ComponentDrawable::connectGateIn(ComponentDrawable *inWire) {
+    inWire->connectGateOut(this);
+    wiresInput[usedInputs - 1] = inWire;
 }

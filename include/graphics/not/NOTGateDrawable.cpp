@@ -4,36 +4,35 @@
 
 #include "NOTGateDrawable.h"
 
-NOTGateDrawable::NOTGateDrawable() {
+NOTGateDrawable::NOTGateDrawable(const sf::Vector2f pos, const int inSize) : ComponentDrawable(pos, inSize) {
+    int i;
     name = "NOT";
-    m_shape = new sf::RectangleShape(sf::Vector2f(width, height));
-    m_shape->setPosition(position);
-    m_shape->setFillColor(sf::Color::Red);
-}
+    m_shape = sf::VertexArray(sf::Triangles, 3);
+    m_center_position = pos;
+    m_shape[0].position = m_center_position + sf::Vector2f(0, -10);
+    m_shape[1].position = m_center_position + sf::Vector2f(-10, 10);
+    m_shape[2].position = m_center_position + sf::Vector2f(10, 10);
+    m_shape[0].color = sf::Color::Red;
+    m_shape[1].color = sf::Color::Red;
+    m_shape[2].color = sf::Color::Red;
 
-NOTGateDrawable::NOTGateDrawable(const float x, const float y, const float w, const float h, const int inSize) : ComponentDrawable(x, y, w, h, inSize) {
-    name = "NOT";
-    m_shape = new sf::RectangleShape(sf::Vector2f(width, height));
-    m_shape->setPosition(position);
-    m_shape->setFillColor(sf::Color::Red);
-}
-
-NOTGateDrawable::~NOTGateDrawable() {
-    if(m_shape != nullptr) {
-        delete m_shape;
-        m_shape = nullptr;
+    for(i = 0; i < inSize; i++) {
+        inputPositions.push_back(m_center_position + sf::Vector2f(20.0f/(inSize + 1.0f) *  (i + 1.0f) - 10.0f, 10.0f));
     }
+    outputPosition = m_center_position + sf::Vector2f(0.0f, -10.0f);
+}
+
+void NOTGateDrawable::update() {
+    m_shape[0].position = m_center_position - sf::Vector2f(0, -10);
+    m_shape[1].position = m_center_position + sf::Vector2f(-10, 10);
+    m_shape[2].position = m_center_position + sf::Vector2f(10, 10);
 }
 
 void NOTGateDrawable::draw(sf::RenderTarget& target, sf::RenderStates states) const {
-    target.draw(*m_shape, states);
+    target.draw(m_shape, states);
     //draw name
 }
 
-NOTGateDrawable *NOTGateDrawable::selfAllocate() const {
-    return new NOTGateDrawable;
-}
-
-NOTGateDrawable *NOTGateDrawable::selfAllocate(const float x, const float y, const float w, const float h, const int inSize) const {
-    return new NOTGateDrawable(x, y, w, h, inSize);
+NOTGateDrawable *NOTGateDrawable::selfAllocate(const sf::Vector2f pos, const int inSize) {
+    return new NOTGateDrawable(pos, inSize);
 }
