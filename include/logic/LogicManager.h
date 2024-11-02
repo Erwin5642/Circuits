@@ -37,6 +37,12 @@ public:
     bool getEntrada(int index) const;
     bool getSaida(int index) const;
     void update();
+
+
+    void printaEntrada() const;
+    void printaMat() const;
+    void printaSaida() const;
+    void printa() const;
 };
 
 #endif //LOGICMANAGER_H

@@ -92,4 +92,49 @@ CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj: \
  C:/MinGW/include/c++/14.2.0/bits/std_abs.h \
  C:/MinGW/include/c++/14.2.0/cstdio C:/MinGW/include/c++/14.2.0/cerrno \
  C:/MinGW/include/c++/14.2.0/bits/charconv.h \
- C:/MinGW/include/c++/14.2.0/bits/basic_string.tcc
+ C:/MinGW/include/c++/14.2.0/bits/basic_string.tcc \
+ C:/MinGW/include/c++/14.2.0/iostream C:/MinGW/include/c++/14.2.0/ostream \
+ C:/MinGW/include/c++/14.2.0/ios C:/MinGW/include/c++/14.2.0/exception \
+ C:/MinGW/include/c++/14.2.0/bits/exception_ptr.h \
+ C:/MinGW/include/c++/14.2.0/bits/cxxabi_init_exception.h \
+ C:/MinGW/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+ C:/MinGW/x86_64-w64-mingw32/include/stddef.h \
+ C:/MinGW/include/c++/14.2.0/typeinfo \
+ C:/MinGW/include/c++/14.2.0/bits/nested_exception.h \
+ C:/MinGW/include/c++/14.2.0/bits/ios_base.h \
+ C:/MinGW/include/c++/14.2.0/ext/atomicity.h \
+ C:/MinGW/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
+ C:/MinGW/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
+ C:/MinGW/x86_64-w64-mingw32/include/pthread.h \
+ C:/MinGW/x86_64-w64-mingw32/include/sys/types.h \
+ C:/MinGW/x86_64-w64-mingw32/include/process.h \
+ C:/MinGW/x86_64-w64-mingw32/include/corecrt_startup.h \
+ C:/MinGW/x86_64-w64-mingw32/include/signal.h \
+ C:/MinGW/x86_64-w64-mingw32/include/pthread_signal.h \
+ C:/MinGW/x86_64-w64-mingw32/include/time.h \
+ C:/MinGW/x86_64-w64-mingw32/include/sys/timeb.h \
+ C:/MinGW/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+ C:/MinGW/x86_64-w64-mingw32/include/_timeval.h \
+ C:/MinGW/x86_64-w64-mingw32/include/pthread_time.h \
+ C:/MinGW/x86_64-w64-mingw32/include/pthread_compat.h \
+ C:/MinGW/x86_64-w64-mingw32/include/pthread_unistd.h \
+ C:/MinGW/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+ C:/MinGW/include/c++/14.2.0/bits/locale_classes.h \
+ C:/MinGW/include/c++/14.2.0/bits/locale_classes.tcc \
+ C:/MinGW/include/c++/14.2.0/system_error \
+ C:/MinGW/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
+ C:/MinGW/include/c++/14.2.0/stdexcept \
+ C:/MinGW/include/c++/14.2.0/streambuf \
+ C:/MinGW/include/c++/14.2.0/bits/streambuf.tcc \
+ C:/MinGW/include/c++/14.2.0/bits/basic_ios.h \
+ C:/MinGW/include/c++/14.2.0/bits/locale_facets.h \
+ C:/MinGW/include/c++/14.2.0/cwctype \
+ C:/MinGW/x86_64-w64-mingw32/include/wctype.h \
+ C:/MinGW/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
+ C:/MinGW/include/c++/14.2.0/bits/streambuf_iterator.h \
+ C:/MinGW/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
+ C:/MinGW/include/c++/14.2.0/bits/locale_facets.tcc \
+ C:/MinGW/include/c++/14.2.0/bits/basic_ios.tcc \
+ C:/MinGW/include/c++/14.2.0/bits/ostream.tcc \
+ C:/MinGW/include/c++/14.2.0/istream \
+ C:/MinGW/include/c++/14.2.0/bits/istream.tcc

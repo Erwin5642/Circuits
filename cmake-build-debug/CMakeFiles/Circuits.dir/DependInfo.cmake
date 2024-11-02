@@ -9,13 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/App.cpp" "CMakeFiles/Circuits.dir/include/App.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/App.cpp.obj.d"
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/UIManager.cpp" "CMakeFiles/Circuits.dir/include/UIManager.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/UIManager.cpp.obj.d"
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/graphics/ComponentDrawable.cpp" "CMakeFiles/Circuits.dir/include/graphics/ComponentDrawable.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/graphics/ComponentDrawable.cpp.obj.d"
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/graphics/DrawableManager.cpp" "CMakeFiles/Circuits.dir/include/graphics/DrawableManager.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/graphics/DrawableManager.cpp.obj.d"
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/graphics/and/ANDGateDrawable.cpp" "CMakeFiles/Circuits.dir/include/graphics/and/ANDGateDrawable.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/graphics/and/ANDGateDrawable.cpp.obj.d"
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/graphics/dot/DotDrawable.cpp" "CMakeFiles/Circuits.dir/include/graphics/dot/DotDrawable.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/graphics/dot/DotDrawable.cpp.obj.d"
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/graphics/not/NOTGateDrawable.cpp" "CMakeFiles/Circuits.dir/include/graphics/not/NOTGateDrawable.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/graphics/not/NOTGateDrawable.cpp.obj.d"
-  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/graphics/or/ORGateDrawable.cpp" "CMakeFiles/Circuits.dir/include/graphics/or/ORGateDrawable.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/graphics/or/ORGateDrawable.cpp.obj.d"
   "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/logic/ComponentLogic.cpp" "CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj.d"
   "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/logic/LogicManager.cpp" "CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj.d"
   "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/logic/and/ANDGateLogic.cpp" "CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj.d"
