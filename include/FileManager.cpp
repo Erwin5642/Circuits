@@ -3,6 +3,7 @@
 //
 
 #include "FileManager.h"
+#include "logic/LogicManager.h"
 
 #include <fstream>
 #include <iostream>
