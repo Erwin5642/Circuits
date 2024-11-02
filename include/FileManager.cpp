@@ -196,7 +196,6 @@ void FileManager::saveComponents(const std::string &filename, LogicManager &logi
             }
             aux2 += to_string(pos2.second);
             line += aux2;
-            cout << logicManager.getComponent(i).getConnectedInputTo(j).first << ' ' << logicManager.getComponent(i).getConnectedInputTo(j).second << endl;
         }
         pair<int, int> pos = logicManager.getComponent(i).getConnectedOutputTo();
         aux += ' ';
@@ -209,7 +208,6 @@ void FileManager::saveComponents(const std::string &filename, LogicManager &logi
         line += aux;
         cout << line << endl;
         file << line << endl;
-        cout << logicManager.getComponent(i).getConnectedOutputTo().first << ' ' << logicManager.getComponent(i).getConnectedOutputTo().second << endl;
     }
     file.close();
 }
