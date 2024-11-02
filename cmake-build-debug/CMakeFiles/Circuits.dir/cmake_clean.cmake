@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Circuits.dir/include/App.cpp.obj"
   "CMakeFiles/Circuits.dir/include/App.cpp.obj.d"
+  "CMakeFiles/Circuits.dir/include/FileManager.cpp.obj"
+  "CMakeFiles/Circuits.dir/include/FileManager.cpp.obj.d"
   "CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj"
   "CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj.d"
   "CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj"

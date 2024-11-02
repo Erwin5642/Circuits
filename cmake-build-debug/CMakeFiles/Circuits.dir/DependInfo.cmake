@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/App.cpp" "CMakeFiles/Circuits.dir/include/App.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/App.cpp.obj.d"
+  "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/FileManager.cpp" "CMakeFiles/Circuits.dir/include/FileManager.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/FileManager.cpp.obj.d"
   "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/logic/ComponentLogic.cpp" "CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj.d"
   "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/logic/LogicManager.cpp" "CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj.d"
   "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/logic/and/ANDGateLogic.cpp" "CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj" "gcc" "CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj.d"

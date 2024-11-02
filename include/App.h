@@ -17,22 +17,24 @@
 class App {
 private:
     //DrawableManager drawableManager;
-    //FileManager fileManager;
     //UIManager uiManager;
     LogicManager l_Manager;
+    FileManager* f_Manager;
 
 public:
     App();
     ~App();
-    //DrawableManager d_Manager;
-    //FileManager f_Manager;
-    //UIManager u_Manager;
-public:
+
     void run();
     void insert(const string& c_name);
     void getIndex();
     void remove(int index);
     void insertObj();
+    void leArq();
+    void gravaArq();
+    void printa();
+    void listComps();
+    int getSize();
 };
 
 

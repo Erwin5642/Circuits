@@ -8,9 +8,11 @@
 
 #include "logic/or/ORGateLogic.h"
 #include "logic/wire/WIRELogic.h"
-App::App() = default;
+App::App() {
+    f_Manager = new FileManager();
+}
 App::~App() {
-
+    delete f_Manager;
 }
 
 void App::run() {
@@ -93,4 +95,33 @@ void App::insertObj() {
     cout << "Entrada 1: " << l_Manager.getEntrada(1) << endl;
     cout << "Saida 0: " << l_Manager.getSaida(0) << endl;
     l_Manager.printa();
+}
+void App::leArq() {
+    if (!f_Manager) {
+        std::cerr << "Erro: FileManager não inicializado." << std::endl;
+        return;
+    }
+    std::string arq_name;
+    std::cout << "Digite o nome do arquivo: ";
+    std::cin >> arq_name;
+    f_Manager->loadComponents(arq_name, l_Manager);
+}
+void App::gravaArq() {
+    if (!f_Manager) {
+        std::cerr << "Erro: FileManager não inicializado." << std::endl;
+        return;
+    }
+    std::string arq_name;
+    std::cout << "Digite o nome do arquivo: ";
+    std::cin >> arq_name;
+    f_Manager->saveComponents(arq_name, l_Manager);
+}
+void App::printa() {
+    l_Manager.printa();
+}
+void App::listComps() {
+    l_Manager.listComponents();
+}
+int App::getSize() {
+    return l_Manager.getSize();
 }

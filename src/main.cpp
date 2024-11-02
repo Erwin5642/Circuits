@@ -70,13 +70,17 @@ int main() {
     //         window.display();
     //     }
     // }
-    LogicManager logicManager;
-    ORGateLogic orGateLogic;
-    ANDGateLogic andGateLogic;
-    NOTGateLogic notGateLogic;
-    WIRELogic wireLogic;
+    // LogicManager logicManager;
+    // ORGateLogic orGateLogic;
+    // ANDGateLogic andGateLogic;
+    // NOTGateLogic notGateLogic;
+    // WIRELogic wireLogic;
 
     App app;
-    app.insertObj();
+    app.leArq();
+    app.printa();
+    cout << "Quantidade de componentes: " << app.getSize() << endl;
+    app.listComps();
+    app.gravaArq();
     return 0;
 }

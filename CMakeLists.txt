@@ -20,7 +20,8 @@ add_executable(Circuits src/main.cpp
         include/logic/and/ANDGateLogic.cpp
         include/App.h
         include/logic/ComponentLogic.h
-        #include/FileManager.h
+        include/FileManager.h
+        include/FileManager.cpp
         include/logic/LogicManager.cpp
         include/logic/LogicManager.h
         include/logic/or/ORGateLogic.cpp

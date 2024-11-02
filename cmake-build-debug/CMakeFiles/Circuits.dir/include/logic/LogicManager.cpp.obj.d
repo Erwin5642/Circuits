@@ -137,4 +137,12 @@ CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj: \
  C:/MinGW/include/c++/14.2.0/bits/basic_ios.tcc \
  C:/MinGW/include/c++/14.2.0/bits/ostream.tcc \
  C:/MinGW/include/c++/14.2.0/istream \
- C:/MinGW/include/c++/14.2.0/bits/istream.tcc
+ C:/MinGW/include/c++/14.2.0/bits/istream.tcc \
+ C:\Users\murak\OneDrive\Documentos\SFML\Circuits\include\logic\and/ANDGateLogic.h \
+ C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/logic/ComponentLogic.h \
+ C:\Users\murak\OneDrive\Documentos\SFML\Circuits\include\logic\not/NOTGateLogic.h \
+ C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/logic/ComponentLogic.h \
+ C:\Users\murak\OneDrive\Documentos\SFML\Circuits\include\logic\or/ORGateLogic.h \
+ C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/logic/ComponentLogic.h \
+ C:\Users\murak\OneDrive\Documentos\SFML\Circuits\include\logic\wire/WIRELogic.h \
+ C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/logic/ComponentLogic.h

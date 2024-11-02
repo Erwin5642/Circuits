@@ -14,3 +14,6 @@ bool ANDGateLogic::evaluate() {
     outputValue = true;
     return true;
 }
+string ANDGateLogic::getType() {
+    return "AND";
+}

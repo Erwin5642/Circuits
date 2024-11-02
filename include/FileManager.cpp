@@ -1,47 +1,171 @@
-//
-// Created by jvgam on 28/10/2024.
-//
-
 #include "FileManager.h"
-#include "logic/LogicManager.h"
-
+#include "logic/and/ANDGateLogic.h"
+#include "logic/not/NOTGateLogic.h"
+#include "logic/or/ORGateLogic.h"
+#include "logic/wire/WIRELogic.h"
 #include <fstream>
+#include <sstream>
 #include <iostream>
 
-FileManager::FileManager() {
-    fileName.clear();
-}
-FileManager::~FileManager() {
-    fileName.clear();
-}
-void FileManager::setFileName(const string& name) {
-    fileName = name;
-}
-string FileManager::getFileName() {
-    return fileName;
-}
-void FileManager::readFile() {
-    ifstream arquivo(fileName);
-    if(arquivo.is_open()) {
-        string line;
-        while (getline(arquivo, line)) {
+// void FileManager::loadComponents(const std::string &filename, LogicManager &logicManager) {
+//     std::ifstream file(filename);
+//     if (!file.is_open()) {
+//         std::cerr << "Erro ao abrir o arquivo: " << filename << std::endl;
+//         return;
+//     }
+//
+//     std::string line;
+//     while (std::getline(file, line)) {
+//         std::istringstream iss(line);
+//         std::string type;
+//         iss >> type;
+//
+//         if (type == "wire") {
+//             std::string input, output;
+//             iss >> input >> output;
+//             int inputIndex = std::stoi(input.substr(1));
+//             int outputIndex = std::stoi(output);
+//             auto *wire = new WIRELogic();
+//             wire->connectInputTo(pair<int, int>(-1, inputIndex), 0);  // Conectando entrada 'e'
+//             wire->connectOutputTo(pair<int, int>(outputIndex, 0));    // Conectando saída 's'
+//             logicManager.insertComponent(wire);
+//
+//         } else if (type == "and") {
+//             int input1, input2, output;
+//             iss >> input1 >> input2 >> output;
+//             auto *andGate = new ANDGateLogic();
+//             andGate->connectInputTo(pair<int, int>(input1, 0), 0);        // Conectando primeira entrada
+//             andGate->connectInputTo(pair<int, int>(input2, 0), 1);        // Conectando segunda entrada
+//             andGate->connectOutputTo(pair<int, int>(output, 0));   // Conectando saída
+//             logicManager.insertComponent(andGate);
+//
+//         } else if (type == "not") {
+//             std::string input;
+//             int output;
+//             iss >> input >> output;
+//             int inputIndex = std::stoi(input.substr(1));
+//             auto *notGate = new NOTGateLogic();
+//             notGate->connectInputTo(pair<int, int>(-1, inputIndex), 0);   // Conectando entrada 'e'
+//             notGate->connectOutputTo(pair<int, int>(output, 0));   // Conectando saída
+//             logicManager.insertComponent(notGate);
+//
+//         } else if (type == "or") {
+//             int input1, input2;
+//             std::string output;
+//             iss >> input1 >> input2 >> output;
+//             int outputIndex = std::stoi(output.substr(1));
+//             auto *orGate = new ORGateLogic();
+//             orGate->connectInputTo(pair<int, int>(input1, 0), 0);        // Conectando primeira entrada
+//             orGate->connectInputTo(pair<int, int>(input2, 0), 1);        // Conectando segunda entrada
+//             orGate->connectOutputTo(pair<int, int>(9, outputIndex));     // Conectando saída 's'
+//             logicManager.insertComponent(orGate);
+//         }
+//     }
+// }
+void FileManager::loadComponents(const std::string &filename, LogicManager &logicManager) {
+    std::ifstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "Erro ao abrir o arquivo: " << filename << std::endl;
+        return;
+    }
 
+    std::string line;
+    while (std::getline(file, line)) {
+        std::istringstream iss(line);
+        std::string type;
+        iss >> type;
+
+        if (type == "wire") {
+            std::string input, output;
+            iss >> input >> output;
+
+            auto *wire = new WIRELogic();
+            if (input[0] == 'e') {
+                int inputIndex = std::stoi(input.substr(1));
+                wire->connectInputTo(pair<int, int>(-1, inputIndex), 0);  // Entrada 'e'
+            } else {
+                int in1 = std::stoi(input.substr(0));
+                int in2 = std::stoi(input.substr(1));
+                wire->connectInputTo(pair<int, int>(in1, in2), 0);  // Conexão direta
+            }
+
+            if (output[0] == 's') {
+                int outputIndex = std::stoi(output.substr(1));
+                wire->connectOutputTo(pair<int, int>(9, outputIndex));  // Saída 's'
+            } else {
+                int out1 = std::stoi(output.substr(0));
+                int out2 = std::stoi(output.substr(1));
+                wire->connectOutputTo(pair<int, int>(out1, out2));  // Conexão direta
+            }
+            logicManager.insertComponent(wire);
+
+        } else if (type == "not") {
+            std::string input, output;
+            iss >> input >> output;
+
+            auto *notGate = new NOTGateLogic();
+            if (input[0] == 'e') {
+                int inputIndex = std::stoi(input.substr(1));
+                notGate->connectInputTo(pair<int, int>(-1, inputIndex), 0);  // Entrada 'e'
+            } else {
+                int in1 = std::stoi(input.substr(0));
+                int in2 = std::stoi(input.substr(1));
+                notGate->connectInputTo(pair<int, int>(in1, in2), 0);  // Conexão direta
+            }
+
+            if (output[0] == 's') {
+                int outputIndex = std::stoi(output.substr(1));
+                notGate->connectOutputTo(pair<int, int>(9, outputIndex));  // Saída 's'
+            } else {
+                int out1 = std::stoi(output.substr(0));
+                int out2 = std::stoi(output.substr(1));
+                notGate->connectOutputTo(pair<int, int>(out1, out2));  // Conexão direta
+            }
+            logicManager.insertComponent(notGate);
+
+        } else if (type == "and" || type == "or") {
+            string input1, input2;
+            std::string output;
+            iss >> input1 >> input2 >> output;
+
+            ComponentLogic *gate = nullptr;
+            if (type == "and") {
+                gate = new ANDGateLogic();
+            } else if (type == "or") {
+                gate = new ORGateLogic();
+            }
+
+            // Configuração das entradas
+            if (input1[0] == 'e') {
+                int outputIndex = std::stoi(input1.substr(1));
+                gate->connectInputTo(pair<int, int>(-1,outputIndex), 0);  // Entrada 'e'
+            } else {
+                int in1 = std::stoi(input1.substr(0));
+                int in2 = std::stoi(input1.substr(1));
+                gate->connectInputTo(pair<int, int>(in1, in2), 0);  // Conexão direta
+            }
+
+            if (input2[0] == 'e') {
+                int outputIndex = std::stoi(input2.substr(1));
+                gate->connectInputTo(pair<int, int>(-1, outputIndex), 1);  // Entrada 'e'
+            } else {
+                int in1 = std::stoi(input2.substr(0));
+                int in2 = std::stoi(input2.substr(1));
+                gate->connectInputTo(pair<int, int>(in1, in2), 1);  // Conexão direta
+            }
+
+            // Configuração da saída
+            if (output[0] == 's') {
+                int outputIndex = std::stoi(output.substr(1));
+                gate->connectOutputTo(pair<int ,int>(9, outputIndex));  // Saída 's'
+            } else {
+                int out1 = std::stoi(input2.substr(0));
+                int out2 = std::stoi(input2.substr(1));
+                gate->connectOutputTo(pair<int, int>(out1, out2));  // Conexão direta
+            }
+            logicManager.insertComponent(gate);
+        } else {
+            std::cerr << "Tipo desconhecido: " << type << std::endl;
         }
-    }
-    else {
-        cerr << "Error opening file " << fileName << endl;
-    }
-}
-void FileManager::writeFile() {
-    ofstream arquivo(fileName);
-    if(arquivo.is_open()) {
-        string line;
-        line.clear();
-        for(int i=0; i<logicManager.getSize(); i++) {
-            line += logicManager.getComponent(i);
-        }
-    }
-    else {
-        cerr << "Error opening file " << fileName << endl;
     }
 }
