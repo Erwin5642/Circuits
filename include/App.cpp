@@ -17,22 +17,15 @@ void App::run() {
     cout << "Hello World!" << endl;
 }
 void App::insert(const string& c_name) {
-    switch(c_name) {
-        case "AND":
-            l_Manager.insertComponent(new ANDGateLogic);
-            break;
-        case "OR":
-            l_Manager.insertComponent(new ORGateLogic);
-            break;
-        case "NOT":
-            l_Manager.insertComponent(new NOTGateLogic);
-            break;
-        case "WIRE":
-            l_Manager.insertComponent(new WIRELogic);
-            break;
-        default:
-            break;
-    }
+    if(c_name == "AND")
+        l_Manager.insertComponent(new ANDGateLogic);
+    if(c_name == "OR")
+        l_Manager.insertComponent(new ORGateLogic);
+    if(c_name == "NOT")
+        l_Manager.insertComponent(new NOTGateLogic);
+    if(c_name == "WIRE")
+        l_Manager.insertComponent(new WIRELogic);
+
 }
 void App::insertObj() {
     l_Manager.printa();
