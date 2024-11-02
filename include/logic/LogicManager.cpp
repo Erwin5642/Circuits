@@ -138,3 +138,11 @@ void LogicManager::printa() const {
     LogicManager::printaSaida();
     cout << endl;
 }
+void LogicManager::connectComponents(int outputIndex, int inputIndex, int inputPosition) const {
+    if (outputIndex >= 0 && outputIndex < getSize() && inputIndex >= 0 && inputIndex < getSize()) {
+        // Conectar a saída do componente de índice outputIndex à entrada do componente de índice inputIndex
+        components[inputIndex]->connectInputTo(pair<int, int>(outputIndex, 0), inputPosition);
+        // Conectar a saída do componente
+        components[outputIndex]->connectOutputTo(pair<int, int>(inputIndex, inputPosition));
+    }
+}

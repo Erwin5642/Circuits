@@ -29,6 +29,9 @@ public:
     //UIManager u_Manager;
 public:
     void run();
+    void insert(const string& c_name);
+    void getIndex();
+    void remove(int index);
     void insertObj();
 };
 

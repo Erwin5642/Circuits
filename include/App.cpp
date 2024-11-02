@@ -16,6 +16,24 @@ App::~App() {
 void App::run() {
     cout << "Hello World!" << endl;
 }
+void App::insert(const string& c_name) {
+    switch(c_name) {
+        case "AND":
+            l_Manager.insertComponent(new ANDGateLogic);
+            break;
+        case "OR":
+            l_Manager.insertComponent(new ORGateLogic);
+            break;
+        case "NOT":
+            l_Manager.insertComponent(new NOTGateLogic);
+            break;
+        case "WIRE":
+            l_Manager.insertComponent(new WIRELogic);
+            break;
+        default:
+            break;
+    }
+}
 void App::insertObj() {
     l_Manager.printa();
     //      //      //      //      //      NOT

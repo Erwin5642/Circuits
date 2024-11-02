@@ -43,6 +43,8 @@ public:
     void printaMat() const;
     void printaSaida() const;
     void printa() const;
+
+    void connectComponents(int outputIndex, int inputIndex, int inputPosition) const;
 };
 
 #endif //LOGICMANAGER_H
