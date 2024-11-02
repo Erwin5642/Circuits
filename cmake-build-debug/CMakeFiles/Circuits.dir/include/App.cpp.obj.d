@@ -95,6 +95,12 @@ CMakeFiles/Circuits.dir/include/App.cpp.obj: \
  C:/MinGW/include/c++/14.2.0/bits/charconv.h \
  C:/MinGW/include/c++/14.2.0/bits/basic_string.tcc \
  C:\Users\murak\OneDrive\Documentos\SFML\Circuits\include\FileManager.h \
+ C:/MinGW/include/c++/14.2.0/algorithm \
+ C:/MinGW/include/c++/14.2.0/bits/stl_algo.h \
+ C:/MinGW/include/c++/14.2.0/bits/algorithmfwd.h \
+ C:/MinGW/include/c++/14.2.0/bits/stl_heap.h \
+ C:/MinGW/include/c++/14.2.0/bits/uniform_int_dist.h \
+ C:/MinGW/include/c++/14.2.0/bits/stl_tempbuf.h \
  C:/MinGW/include/c++/14.2.0/iostream C:/MinGW/include/c++/14.2.0/ostream \
  C:/MinGW/include/c++/14.2.0/ios C:/MinGW/include/c++/14.2.0/exception \
  C:/MinGW/include/c++/14.2.0/bits/exception_ptr.h \

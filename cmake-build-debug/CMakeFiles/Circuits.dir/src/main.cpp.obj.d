@@ -95,6 +95,12 @@ CMakeFiles/Circuits.dir/src/main.cpp.obj: \
  C:/MinGW/include/c++/14.2.0/bits/charconv.h \
  C:/MinGW/include/c++/14.2.0/bits/basic_string.tcc \
  C:/Users/murak/OneDrive/Documentos/SFML/Circuits/include/FileManager.h \
+ C:/MinGW/include/c++/14.2.0/algorithm \
+ C:/MinGW/include/c++/14.2.0/bits/stl_algo.h \
+ C:/MinGW/include/c++/14.2.0/bits/algorithmfwd.h \
+ C:/MinGW/include/c++/14.2.0/bits/stl_heap.h \
+ C:/MinGW/include/c++/14.2.0/bits/uniform_int_dist.h \
+ C:/MinGW/include/c++/14.2.0/bits/stl_tempbuf.h \
  C:/MinGW/include/c++/14.2.0/iostream C:/MinGW/include/c++/14.2.0/ostream \
  C:/MinGW/include/c++/14.2.0/ios C:/MinGW/include/c++/14.2.0/exception \
  C:/MinGW/include/c++/14.2.0/bits/exception_ptr.h \
@@ -162,14 +168,7 @@ CMakeFiles/Circuits.dir/src/main.cpp.obj: \
  C:/SFML/include/SFML/System/Mutex.hpp \
  C:/SFML/include/SFML/System/Sleep.hpp \
  C:/SFML/include/SFML/System/String.hpp \
- C:/SFML/include/SFML/System/Utf.hpp \
- C:/MinGW/include/c++/14.2.0/algorithm \
- C:/MinGW/include/c++/14.2.0/bits/stl_algo.h \
- C:/MinGW/include/c++/14.2.0/bits/algorithmfwd.h \
- C:/MinGW/include/c++/14.2.0/bits/stl_heap.h \
- C:/MinGW/include/c++/14.2.0/bits/uniform_int_dist.h \
- C:/MinGW/include/c++/14.2.0/bits/stl_tempbuf.h \
- C:/MinGW/include/c++/14.2.0/locale \
+ C:/SFML/include/SFML/System/Utf.hpp C:/MinGW/include/c++/14.2.0/locale \
  C:/MinGW/include/c++/14.2.0/bits/locale_facets_nonio.h \
  C:/MinGW/include/c++/14.2.0/ctime \
  C:/MinGW/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
