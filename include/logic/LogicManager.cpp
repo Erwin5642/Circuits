@@ -1,7 +1,3 @@
-//
-// Created by Arthur on 29/10/2024.
-//
-
 #include "LogicManager.h"
 
 LogicManager::LogicManager() {

@@ -5,8 +5,8 @@
 #define GRID_SIZE 8
 #define MATRIX_INIT_X 200
 #define MATRIX_INIT_Y 200
-#define INPUT_POINTS_Y 100
-#define OUTPUT_POINTS_Y 700
+#define INPUT_POINTS_Y 700
+#define OUTPUT_POINTS_Y 100
 #define AND_SPAWN {100, 100}
 #define OR_SPAWN {100, 200}
 #define NOT_SPAWN {100, 300}
@@ -40,9 +40,9 @@ public:
 
     void updateDrawables() const;
 
-    void setGridPosition(unsigned int index, sf::Vector2i position) const;
+    void setGridPosition(unsigned int index, sf::Vector2f position) const;
 
-    sf::Vector2i getGridPosition(unsigned int index) const;
+    sf::Vector2f getGridPosition(unsigned int index) const;
 
     void setCenterPosition(unsigned int index, sf::Vector2f position) const;
 
@@ -58,11 +58,11 @@ public:
 
     sf::Vector2f getOutputPosition(unsigned int index) const;
 
-    void setUsedInputSize(unsigned int index, int usedSize);
+    void setUsedInputSize(unsigned int index, int usedSize) const;
 
     int getUsedInputsSize(unsigned int index) const;
 
-    void setUsedOutputUsed(unsigned int index);
+    void setUsedOutputUsed(unsigned int index) const;
 
     bool getOutputUsed(unsigned int index) const;
 
@@ -74,9 +74,21 @@ public:
 
     sf::Vector2f getPointPosition(unsigned int i, unsigned j, int area) const;
 
-    void connectGatesOut(unsigned int i, ComponentDrawable *outWire);
+    void connectGatesOut(unsigned int i, ComponentDrawable *outWire) const;
 
-    void connectGatesIn(unsigned int i, ComponentDrawable *inWire);
+    void connectGatesIn(unsigned int i, ComponentDrawable *inWire) const;
+
+    void connectGatesIn(unsigned int i, const DotDrawable *dotIn) const;
+
+    void connectGatesOut(unsigned int i, const DotDrawable *dotOut) const;
+
+    ComponentDrawable *getInputsWires(unsigned int i, unsigned int inputIndex) const;
+
+    ComponentDrawable *getOutputsWire(unsigned i) const;
+
+    const DotDrawable *getPointReference(unsigned int i, unsigned j, unsigned int area) const;
+
+    ComponentDrawable *getComponentReference(unsigned int i) const;
 
     void draw(sf::RenderWindow&  window) const;
 };

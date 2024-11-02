@@ -7,7 +7,7 @@ DotDrawable::DotDrawable() {
 }
 
 DotDrawable::DotDrawable(const sf::Vector2f pos, const bool isIO){
-    dot = sf::CircleShape(15);
+    dot = sf::CircleShape(DOT_SIZE);
     dot.setPosition(pos);
     position = pos;
     this->isIO = isIO;
@@ -15,19 +15,21 @@ DotDrawable::DotDrawable(const sf::Vector2f pos, const bool isIO){
         dot.setFillColor(sf::Color::Red);
     }
     else {
-        dot.setFillColor(sf::Color::White);
+        dot.setFillColor(sf::Color::Yellow);
     }
+    isOn = false;
 }
 
 DotDrawable::DotDrawable(const DotDrawable &otherDot) {
     dot = otherDot.dot;
     dot.setPosition(otherDot.position);
     isIO = otherDot.isIO;
+    isOn = otherDot.isOn;
     if(isIO) {
         dot.setFillColor(sf::Color::Red);
     }
     else {
-        dot.setFillColor(sf::Color::White);
+        dot.setFillColor(sf::Color::Yellow);
     }
 }
 
@@ -36,7 +38,7 @@ void DotDrawable::setPosition(sf::Vector2f pos) {
 }
 
 sf::Vector2f DotDrawable::getPosition() const {
-    return position;
+    return position + sf::Vector2f(dot.getRadius(), dot.getRadius());
 }
 
 void DotDrawable::changeOnOff() {

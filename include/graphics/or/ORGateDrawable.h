@@ -1,9 +1,7 @@
-//
-// Created by jvgam on 29/10/2024.
-//
-
 #ifndef ORGATEDRAWABLE_H
 #define ORGATEDRAWABLE_H
+
+#define ORGATESIZE 15.0f
 
 #include "../ComponentDrawable.h"
 

@@ -9,16 +9,18 @@
 #include "../dot/DotDrawable.h"
 
 class WireDrawable : public ComponentDrawable{
-    DotDrawable *dotOut;
-    DotDrawable *dotIn;
+    const DotDrawable *dotOut;
+    const DotDrawable *dotIn;
+    sf::Vector2i gridInputPosition;
+    sf::Vector2i gridOutputPosition;
 
     public:
     WireDrawable(sf::Vector2f posIn, sf::Vector2f posOut);
     ~WireDrawable() override;
     void connectGateIn(ComponentDrawable *inWire) override;
     void connectGateOut(ComponentDrawable *outWire) override;
-    void connectGateIn(DotDrawable *inDot);
-    void connectGateOut(DotDrawable *outDot);
+    void connectGateIn(const DotDrawable *inDot) override;
+    void connectGateOut(const DotDrawable *outDot) override;
     void update() override;
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
     WireDrawable *selfAllocate(sf::Vector2f posIn, sf::Vector2f posOut);

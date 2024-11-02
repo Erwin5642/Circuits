@@ -3,7 +3,7 @@
 ComponentDrawable::ComponentDrawable(const sf::Vector2f pos, const int inSize) {
     int i;
     m_center_position = pos;
-    positionInGrid = sf::Vector2i(-1, -1);
+    positionGrid = sf::Vector2f(-1, -1);
     inputSize = inSize;
     for (i = 0; i < inSize; i++) {
         wiresInput.push_back(nullptr);
@@ -16,7 +16,7 @@ ComponentDrawable::ComponentDrawable(const sf::Vector2f pos, const int inSize) {
 ComponentDrawable::~ComponentDrawable() {
     int i = 0;
     m_center_position = sf::Vector2f(0, 0);
-    positionInGrid = sf::Vector2i(-1, -1);
+    positionGrid = sf::Vector2f(-1, -1);
     for (i = 0; i < inputSize; i++) {
         wiresInput[i] = nullptr;
     }
@@ -25,12 +25,12 @@ ComponentDrawable::~ComponentDrawable() {
     usedInputs = 0;
 }
 
-void ComponentDrawable::setGridPosition(sf::Vector2i pos) {
-    positionInGrid = pos;
+void ComponentDrawable::setGridPosition(sf::Vector2f pos) {
+    positionGrid = pos;
 }
 
-sf::Vector2i ComponentDrawable::getGridPosition() const {
-    return positionInGrid;
+sf::Vector2f ComponentDrawable::getGridPosition() const {
+    return positionGrid;
 }
 
 void ComponentDrawable::setCenterPosition(sf::Vector2f pos) {
@@ -94,11 +94,26 @@ string ComponentDrawable::getName() const {
 }
 
 void ComponentDrawable::connectGateOut(ComponentDrawable *outWire) {
-    outWire->connectGateIn(this);
     wireOutput = outWire;
+    isOutputUsed = true;
 }
 
 void ComponentDrawable::connectGateIn(ComponentDrawable *inWire) {
-    inWire->connectGateOut(this);
-    wiresInput[usedInputs - 1] = inWire;
+    wiresInput[usedInputs-1] = inWire;
+}
+
+void ComponentDrawable::connectGateIn(const DotDrawable *inDot) {
+
+}
+
+void ComponentDrawable::connectGateOut(const DotDrawable *outDot) {
+
+}
+
+ComponentDrawable *ComponentDrawable::getWireInput(unsigned int i) const {
+    return wiresInput[i];
+}
+
+ComponentDrawable *ComponentDrawable::getWireOutput() const {
+    return wireOutput;
 }

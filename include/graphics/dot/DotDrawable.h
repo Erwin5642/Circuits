@@ -1,6 +1,8 @@
 #ifndef DOT_H
 #define DOT_H
 
+#define DOT_SIZE 10
+
 #include "SFML\Graphics.hpp"
 
 class DotDrawable : public sf::Drawable {

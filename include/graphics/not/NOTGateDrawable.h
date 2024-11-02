@@ -5,6 +5,8 @@
 #ifndef NOTGATEDRAWABLE_H
 #define NOTGATEDRAWABLE_H
 
+#define NOTGATESIZE 15.0f
+
 #include "../ComponentDrawable.h"
 
 class NOTGateDrawable : public ComponentDrawable {

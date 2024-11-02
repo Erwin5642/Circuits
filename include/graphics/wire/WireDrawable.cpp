@@ -25,30 +25,34 @@ WireDrawable::~WireDrawable() {
 
 void WireDrawable::connectGateIn(ComponentDrawable *inWire) {
     inputPositions[0] = inWire->getOutputPosition();
+    wiresInput[0] = inWire;
     usedInputs = 1;
 }
 
 void WireDrawable::connectGateOut(ComponentDrawable *outWire) {
     const int s = outWire->getUsedInputsSize();
     outputPosition = outWire->getInputPosition(s);
+    wireOutput = outWire;
+    isOutputUsed = true;
     outWire->setUsedInputSize(s + 1);
 }
 
-void WireDrawable::connectGateIn(DotDrawable *inDot) {
-    dotIn = inDot;
-    usedInputs = 1;
+void WireDrawable::connectGateIn(const DotDrawable *inDot) {
     inputPositions[0] = inDot->getPosition();
+    usedInputs = 1;
+    dotIn = inDot;
 }
 
-void WireDrawable::connectGateOut(DotDrawable *outDot) {
-    dotOut = outDot;
+void WireDrawable::connectGateOut(const DotDrawable *outDot) {
     outputPosition = outDot->getPosition();
+    isOutputUsed = true;
+    dotOut = outDot;
 }
 
 void WireDrawable::update() {
-    m_shape[1] = outputPosition;
+    m_shape[0].position = inputPositions[0];
+    m_shape[1].position = outputPosition;
 }
-
 
 void WireDrawable::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(m_shape, states);

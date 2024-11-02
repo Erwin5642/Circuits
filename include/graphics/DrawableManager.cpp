@@ -54,11 +54,11 @@ void DrawableManager::updateDrawables()const  {
     }
 }
 
-void DrawableManager::setGridPosition(const unsigned int index, const sf::Vector2i position) const {
+void DrawableManager::setGridPosition(const unsigned int index, const sf::Vector2f position) const {
     drawables[index]->setGridPosition(position);
 }
 
-sf::Vector2i DrawableManager::getGridPosition(const unsigned int index) const {
+sf::Vector2f DrawableManager::getGridPosition(const unsigned int index) const {
     return drawables[index]->getGridPosition();
 }
 
@@ -87,11 +87,11 @@ int DrawableManager::getUsedInputsSize(unsigned int index) const {
     return drawables[index]->getUsedInputsSize();
 }
 
-void DrawableManager::setUsedInputSize(unsigned int index, int usedSize) {
+void DrawableManager::setUsedInputSize(unsigned int index, int usedSize) const {
     drawables[index]->setUsedInputSize(usedSize);
 }
 
-void DrawableManager::setUsedOutputUsed(unsigned int index) {
+void DrawableManager::setUsedOutputUsed(unsigned int index) const {
     drawables[index]->setOutputUsed();
 }
 
@@ -156,12 +156,46 @@ sf::Vector2f DrawableManager::getPointPosition(unsigned int i, unsigned j, int a
     return {0, 0};
 }
 
-void DrawableManager::connectGatesIn(unsigned int i, ComponentDrawable *inWire) {
+void DrawableManager::connectGatesIn(unsigned int i, ComponentDrawable *inWire) const {
     drawables[i]->connectGateIn(inWire);
 }
 
-void DrawableManager::connectGatesOut(unsigned int i, ComponentDrawable *outWire) {
+void DrawableManager::connectGatesOut(unsigned int i, ComponentDrawable *outWire) const {
     drawables[i]->connectGateOut(outWire);
+}
+
+void DrawableManager::connectGatesIn(unsigned int i, const DotDrawable *dotIn) const {
+    drawables[i]->connectGateIn(dotIn);
+}
+
+void DrawableManager::connectGatesOut(unsigned int i, const DotDrawable *dotOut) const {
+    drawables[i]->connectGateOut(dotOut);
+}
+
+ComponentDrawable *DrawableManager::getOutputsWire(unsigned i) const {
+    return drawables[i]->getWireOutput();
+}
+
+ComponentDrawable *DrawableManager::getInputsWires(unsigned int i, unsigned int inputIndex) const {
+    return drawables[i]->getWireInput(inputIndex);
+}
+
+const DotDrawable *DrawableManager::getPointReference(unsigned int i, unsigned j, unsigned int area) const {
+    switch (area) {
+        case 1:
+            return  &inputPoints[i];
+        case 2:
+            return &contactPoints[i][j];
+        case 3:
+            return  &outputPoints[i];
+        default:
+            break;;
+    }
+    return nullptr;
+}
+
+ComponentDrawable *DrawableManager::getComponentReference(unsigned int i) const {
+    return drawables[i];
 }
 
 void DrawableManager::draw(sf::RenderWindow& window) const {

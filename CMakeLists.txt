@@ -22,6 +22,18 @@ add_executable(Circuits src/main.cpp
         include/graphics/wire/WireDrawable.h
         include/graphics/wire/WireDrawable.cpp
         include/UIManager.cpp
-        include/UIManager.h)
+        include/UIManager.h
+        include/logic/LogicManager.cpp
+        include/logic/LogicManager.h
+        include/logic/ComponentLogic.cpp
+        include/logic/ComponentLogic.h
+        include/logic/and/ANDGateLogic.h
+        include/logic/and/ANDGateLogic.cpp
+        include/logic/or/ORGateLogic.h
+        include/logic/or/ORGateLogic.cpp
+        include/logic/not/NOTGateLogic.h
+        include/logic/not/NOTGateLogic.cpp
+        include/logic/wire/WIRELogic.h
+        include/logic/wire/WIRELogic.cpp)
 target_link_libraries(Circuits -lsfml-system-d -lsfml-window-d -lsfml-graphics-d -lsfml-audio-d)
 

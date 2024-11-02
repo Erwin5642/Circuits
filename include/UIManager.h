@@ -14,15 +14,19 @@ class UIManager {
     sf::RenderWindow &windowRef;
     bool inMoveMode;
     bool isHoldingComponent;
-    unsigned int componentHold;
-    bool connectingWire;
-    unsigned int wireConnecting;
+    int componentSelected;
+    bool isConnectingWire;
+    int wireConnecting;
     bool isInsideBoundaries(sf::Vector2f pos, sf::FloatRect bounds) const;
-    void checkConnectionGrid(sf::Vector2f mousePos,void(*callback)(sf::Vector2f, sf::Vector2f));
-    void checkConnectionComponent(sf::Vector2f mousePos ,void(*callback)(sf::Vector2f, sf::Vector2f));
-    void checkBoundariesForConnection(sf::Vector2f pos, sf::FloatRect bounds, void(*callback)(sf::Vector2f, sf::Vector2f));
-    void enteringConnection(sf::Vector2f posIn, sf::Vector2f posOut);
-    void exitingConnection(sf::Vector2f posIn, sf::Vector2f posOut);
+    int findComponentIntersecting(sf::Vector2f mousePos);
+    sf::Vector2i findGridPointIntersection(sf::Vector2f mousePos) const;
+    int findInputPointIntersection(sf::Vector2f mousePos) const;
+    int findOutputPointIntersection(sf::Vector2f mousePos) const;
+    sf::Vector2f findGridSlotIntersection(sf::Vector2f mousePos) const;
+    void connectGridPoint(sf::Vector2i posGrid, sf::Vector2f mousePos);
+    void connectInputPoint(unsigned int i, sf::Vector2f mousePos);
+    void connectOutputPoint(unsigned int i, sf::Vector2f mousePos);
+    void connectComponent(unsigned int i, sf::Vector2f mousePos);
 
 public:
     UIManager(sf::RenderWindow &window, DrawableManager &drawableManager, LogicManager &logicManager);

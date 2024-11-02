@@ -1,6 +1,8 @@
 #ifndef ANDGATEDRAWABLE_H
 #define ANDGATEDRAWABLE_H
 
+#define ANDGATESIZE 15.0f
+
 #include "../ComponentDrawable.h"
 
 class ANDGateDrawable : public ComponentDrawable {
