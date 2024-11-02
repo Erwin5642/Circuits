@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/murak/OneDrive/Documentos/SFML/Circuits/cmake-build-debug",
-		"source" : "C:/Users/murak/OneDrive/Documentos/SFML/Circuits"
+		"build" : "C:/Users/jvgam/CLionProjects/Circuits/cmake-build-debug",
+		"source" : "C:/Users/jvgam/CLionProjects/Circuits"
 	},
 	"version" : 
 	{
