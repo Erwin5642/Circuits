@@ -1,20 +1,16 @@
-//
-// Created by jvgam on 29/10/2024.
-//
-
 #ifndef ORGATEDRAWABLE_H
 #define ORGATEDRAWABLE_H
+
+#define ORGATESIZE 15.0f
 
 #include "../ComponentDrawable.h"
 
 class ORGateDrawable : public ComponentDrawable {
 public:
-    ORGateDrawable();
-    ORGateDrawable(float x, float y, float w, float h, int inSize);
-    ~ORGateDrawable() override;
+    ORGateDrawable(sf::Vector2f pos, int inSize);
+    void update() override;
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
-    ORGateDrawable *selfAllocate() const override;
-    ORGateDrawable *selfAllocate(float x, float y, float w, float h, int inSize) const override;
+    ORGateDrawable *selfAllocate(sf::Vector2f pos, int inSize) override;
 };
 
 
