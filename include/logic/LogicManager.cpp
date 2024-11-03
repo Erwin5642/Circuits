@@ -67,7 +67,7 @@ bool LogicManager::getSaida(const int index) const {
 }
 void LogicManager::update() {
     for(int i=0; i<components.size(); i++) {
-        for(int j=0; j<components[i]->getInputSize(); j++) {
+        for(int j=0; j<components[i]->getUsedInputs(); j++) {
             components[i]->setInputValue(j, pair<int, int>(components[i]->getConnectedInputTo(j).first, components[i]->getConnectedInputTo(j).second));
         }
         components[i]->evaluate();
@@ -79,65 +79,7 @@ void LogicManager::update() {
         }
     }
 }
-// void LogicManager::update() {
-//     for (int i = 0; i < components.size(); i++) {
-//         for (int j = 0; j < components[i]->getInputSize(); j++) {
-//             auto connectedPos = components[i]->getConnectedInputTo(j);
-//             int connectedComponentIndex = connectedPos.first;
-//             int connectedOutputIndex = connectedPos.second;
-//
-//             if (connectedComponentIndex == -1) {
-//                 components[i]->setInputValue(j, entrada[connectedOutputIndex]);
-//             }
-//             else if (connectedComponentIndex == 9) {
-//                 components[i]->setInputValue(j, saida[connectedOutputIndex]);
-//             }
-//             else if (connectedComponentIndex >= 0 && connectedComponentIndex < components.size()) {
-//                 bool connectedOutputValue = components[connectedComponentIndex]->getOutput();
-//                 components[i]->setInputValue(j, connectedOutputValue);
-//             }
-//         }
-//
-//         components[i]->evaluate();
-//
-//         auto outputConnection = components[i]->getConnectedOutputTo();
-//         if (outputConnection.first == 9) {
-//             saida[outputConnection.second] = components[i]->getOutput();
-//         } else {
-//             mat[outputConnection.first][outputConnection.second] = components[i]->getOutput();
-//         }
-//     }
-// }
 
-void LogicManager::printaEntrada() const {
-    for(int i=0; i<8; i++) {
-        cout << entrada[i] << ' ';
-    }
-    cout << endl;
-}
-void LogicManager::printaMat() const {
-    for(int i=0; i<8; i++) {
-        for(int j=0; j<8; j++) {
-            cout << mat[i][j] << ' ';
-        }
-        cout << endl;
-    }
-    cout << endl;
-}
-void LogicManager::printaSaida() const {
-    for(int i=0; i<8; i++) {
-        cout << saida[i] << ' ';
-    }
-    cout << endl;
-}
-void LogicManager::printa() const {
-    LogicManager::printaEntrada();
-    cout << endl;
-    LogicManager::printaMat();
-    cout << endl;
-    LogicManager::printaSaida();
-    cout << endl;
-}
 void LogicManager::connectComponents(int outputIndex, int inputIndex, int inputPosition) const {
     if (outputIndex >= 0 && outputIndex < getSize() && inputIndex >= 0 && inputIndex < getSize()) {
         // Conectar a saída do componente de índice outputIndex à entrada do componente de índice inputIndex
