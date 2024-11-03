@@ -32,6 +32,11 @@ public:
     void setEntrada(int index);
     bool getEntrada(int index) const;
     bool getSaida(int index) const;
+
+    bool getPointValue(pair<int, int> &par) const;
+
+    bool getPointValue(pair<int, int> par) const;
+
     void update();
 
     void connectComponents(int outputIndex, int inputIndex, int inputPosition) const;

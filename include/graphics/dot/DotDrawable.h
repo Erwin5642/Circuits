@@ -25,6 +25,7 @@ public:
     sf::Vector2f getPosition() const;
 
     void changeOnOff();
+    void changeOnOff(bool onOff);
 
     sf::FloatRect getGlobalBounds() const;
 

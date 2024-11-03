@@ -22,7 +22,10 @@ void App::run() {
         drawableManager.draw(window);
         for(int i = 0; i < GRID_SIZE; i++) {
             if(logicManager.getSaida(i)) {
-                drawableManager.changePointOnOff(i, 3);
+                drawableManager.changePointOnOff(i, 3, true);
+            }
+            else {
+                drawableManager.changePointOnOff(i, 3, false);
             }
         }
         window.display();

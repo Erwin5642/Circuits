@@ -66,10 +66,22 @@ bool LogicManager::getEntrada(const int index) const {
 bool LogicManager::getSaida(const int index) const {
     return saida[index];
 }
+
+bool LogicManager::getPointValue(pair<int, int> par) const {
+    if(par.first == -1) {
+        return entrada[par.second];
+    }
+    if(par.first == 9) {
+        return saida[par.second];
+    }
+    return mat[par.first][par.second];
+}
+
+
 void LogicManager::update() {
     for(int i=0; i<components.size(); i++) {
         for(int j=0; j<components[i]->getUsedInputs(); j++) {
-            components[i]->setInputValue(j, pair<int, int>(components[i]->getConnectedInputTo(j).first, components[i]->getConnectedInputTo(j).second));
+            components[i]->setInputValue(j, getPointValue(pair<int, int>(components[i]->getConnectedInputTo(j).first, components[i]->getConnectedInputTo(j).second)));
         }
         if((components[i]->getIsOutputUsed()) || (components[i]->getUsedInputs() > 0)) {
             components[i]->evaluate();

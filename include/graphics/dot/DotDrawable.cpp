@@ -52,6 +52,17 @@ void DotDrawable::changeOnOff() {
     }
 }
 
+void DotDrawable::changeOnOff(const bool onOff) {
+    if(onOff) {
+        dot.setFillColor(sf::Color::Green);
+        isOn = true;
+    }
+    else {
+        dot.setFillColor(sf::Color::Red);
+        isOn = false;
+    }
+}
+
 sf::FloatRect DotDrawable::getGlobalBounds() const {
     return dot.getGlobalBounds();
 }

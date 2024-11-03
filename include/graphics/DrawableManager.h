@@ -72,6 +72,8 @@ public:
 
     void changePointOnOff(unsigned int index, unsigned int area);
 
+    void changePointOnOff(unsigned int index, unsigned int area, bool value);
+
     sf::Vector2f getPointPosition(unsigned int i, unsigned j, int area) const;
 
     void connectGatesOut(unsigned int i, ComponentDrawable *outWire) const;

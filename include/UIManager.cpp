@@ -211,7 +211,7 @@ void UIManager::handleKeyPress(const sf::Keyboard::Key key) {
             logicManagerRef.deleteAllComponents();
             break;
         case sf::Keyboard::I:
-            drawableManagerRef.addDrawable(&tempANDD, AND_SPAWN, 2);
+            drawableManagerRef.addDrawable(&tempANDD, AND_SPAWN, 2);drawableManagerRef.addDrawable(&tempANDD, AND_SPAWN, 2);
             logicManagerRef.insertComponent(&tempANDL);
             break;
         case sf::Keyboard::O:

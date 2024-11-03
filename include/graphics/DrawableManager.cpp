@@ -137,8 +137,17 @@ void DrawableManager::changePointOnOff(unsigned int index, unsigned int area) {
     if(area == 1) {
         inputPoints[index].changeOnOff();
     }
-    else if(area == 2) {
+    else if(area == 3) {
         outputPoints[index].changeOnOff();
+    }
+}
+
+void DrawableManager::changePointOnOff(unsigned int index, unsigned int area, const bool onOff) {
+    if(area == 1) {
+        inputPoints[index].changeOnOff(onOff);
+    }
+    else if(area == 3) {
+        outputPoints[index].changeOnOff(onOff);
     }
 }
 
