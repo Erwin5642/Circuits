@@ -5,31 +5,38 @@
 #ifndef APP_H
 #define APP_H
 
-#include "graphics/DrawableManager.h"
+//#include "graphics/DrawableManager.h"
 #include "logic/LogicManager.h"
 #include "FileManager.h"
-#include "UIManager.h"
+//#include "UIManager.h"
 #include <iostream>
 #include "logic/LogicManager.h"
 #include "logic/and/ANDGateLogic.h"
 #include "logic/not/NOTGateLogic.h"
 
 class App {
-    DrawableManager drawableManager;
-    FileManager fileManager;
-    UIManager uiManager;
-    LogicManager logicManager;
-    sf::RenderWindow window;
-
-    void insert(const string& c_name);
-    void getIndex();
-    void remove(int index);
-    void insertObj();
+private:
+    //DrawableManager drawableManager;
+    //UIManager uiManager;
+    LogicManager l_Manager;
+    FileManager* f_Manager;
 
 public:
     App();
     ~App();
+
     void run();
+    void insert(const string& c_name);
+    void getIndex();
+    void remove(int index);
+    void insertObj();
+    void leArq();
+    void gravaArq();
+    void printa();
+    void listComps();
+    int getSize();
 };
+
+
 
 #endif //APP_H

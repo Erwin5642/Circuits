@@ -1,3 +1,7 @@
+//
+// Created by Arthur on 29/10/2024.
+//
+
 #include "LogicManager.h"
 #include <iostream>
 #include "and/ANDGateLogic.h"

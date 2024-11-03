@@ -1,49 +1,39 @@
+//
+// Created by jvgam on 29/10/2024.
+//
+
 #include "NOTGateDrawable.h"
 
-NOTGateDrawable::NOTGateDrawable(const sf::Vector2f pos, const int inSize) : ComponentDrawable(pos, inSize) {
-    int i;
+NOTGateDrawable::NOTGateDrawable() {
     name = "NOT";
-    m_shape = sf::VertexArray(sf::Triangles, 6);
-    m_center_position = pos;
-    m_shape[0].position = m_center_position + sf::Vector2f(0, -NOTGATESIZE);
-    m_shape[1].position = m_center_position + sf::Vector2f(-NOTGATESIZE, NOTGATESIZE);
-    m_shape[2].position = m_center_position + sf::Vector2f(NOTGATESIZE, NOTGATESIZE);
-    m_shape[3].position = m_center_position + sf::Vector2f(0, -NOTGATESIZE);
-    m_shape[4].position = m_center_position + sf::Vector2f(-NOTGATESIZE, NOTGATESIZE);
-    m_shape[5].position = m_center_position + sf::Vector2f(NOTGATESIZE, NOTGATESIZE);
-    m_shape[0].color = sf::Color::Red;
-    m_shape[1].color = sf::Color::Red;
-    m_shape[2].color = sf::Color::Red;
-    m_shape[3].color = sf::Color::Red;
-    m_shape[4].color = sf::Color::Red;
-    m_shape[5].color = sf::Color::Red;
-
-    for(i = 0; i < inSize; i++) {
-        inputPositions.push_back(m_center_position + sf::Vector2f((2 * NOTGATESIZE)/(inSize + 1.0f) *  (i + 1.0f) - NOTGATESIZE, NOTGATESIZE));
-    }
-    outputPosition = m_center_position + sf::Vector2f(0.0f, -NOTGATESIZE);
+    m_shape = new sf::RectangleShape(sf::Vector2f(width, height));
+    m_shape->setPosition(position);
+    m_shape->setFillColor(sf::Color::Red);
 }
 
-void NOTGateDrawable::update() {
-    int i;
-    m_shape[0].position = m_center_position + sf::Vector2f(0, -NOTGATESIZE);
-    m_shape[1].position = m_center_position + sf::Vector2f(-NOTGATESIZE, NOTGATESIZE);
-    m_shape[2].position = m_center_position + sf::Vector2f(NOTGATESIZE, NOTGATESIZE);
-    m_shape[3].position = m_center_position + sf::Vector2f(0, -NOTGATESIZE);
-    m_shape[4].position = m_center_position + sf::Vector2f(-NOTGATESIZE, NOTGATESIZE);
-    m_shape[5].position = m_center_position + sf::Vector2f(NOTGATESIZE, NOTGATESIZE);
+NOTGateDrawable::NOTGateDrawable(const float x, const float y, const float w, const float h, const int inSize) : ComponentDrawable(x, y, w, h, inSize) {
+    name = "NOT";
+    m_shape = new sf::RectangleShape(sf::Vector2f(width, height));
+    m_shape->setPosition(position);
+    m_shape->setFillColor(sf::Color::Red);
+}
 
-    for(i = 0; i < inputSize; i++) {
-        inputPositions[i] = (m_center_position + sf::Vector2f((2 * NOTGATESIZE)/(inputSize + 1.0f) *  (i + 1.0f) - NOTGATESIZE, NOTGATESIZE));
+NOTGateDrawable::~NOTGateDrawable() {
+    if(m_shape != nullptr) {
+        delete m_shape;
+        m_shape = nullptr;
     }
-    outputPosition = m_center_position + sf::Vector2f(0.0f, -NOTGATESIZE);
 }
 
 void NOTGateDrawable::draw(sf::RenderTarget& target, sf::RenderStates states) const {
-    target.draw(m_shape, states);
+    target.draw(*m_shape, states);
     //draw name
 }
 
-NOTGateDrawable *NOTGateDrawable::selfAllocate(const sf::Vector2f pos, const int inSize) {
-    return new NOTGateDrawable(pos, inSize);
+NOTGateDrawable *NOTGateDrawable::selfAllocate() const {
+    return new NOTGateDrawable;
+}
+
+NOTGateDrawable *NOTGateDrawable::selfAllocate(const float x, const float y, const float w, const float h, const int inSize) const {
+    return new NOTGateDrawable(x, y, w, h, inSize);
 }
