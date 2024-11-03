@@ -5,11 +5,9 @@
 #include "App.h"
 
 #include <iostream>
-
 #include "logic/and/ANDGateLogic.h"
 #include "logic/or/ORGateLogic.h"
 #include "logic/wire/WIRELogic.h"
-
 
 App::App()
 {

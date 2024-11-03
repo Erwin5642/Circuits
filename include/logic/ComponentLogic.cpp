@@ -11,7 +11,7 @@ ComponentLogic::ComponentLogic() {
     outputValue = false;
     inputSize = 2;
     for(int i = 0; i<2; i++)  {
-        inputConnectedTo.emplace_back(0, 0);
+        inputConnectedTo.push_back(pair<int, int>(0, 0));
     }
     outputConnectedTo = pair<int, int>(0, 0);
 }
@@ -22,7 +22,7 @@ ComponentLogic::ComponentLogic(const int input) {
     }
     outputValue = false;
     for(int i = 0; i<input; i++)  {
-        inputConnectedTo.emplace_back(0, 0);
+        inputConnectedTo.push_back(pair<int, int>(0, 0));
     }
     outputConnectedTo = pair<int, int>(0, 0);
 }
@@ -57,7 +57,6 @@ void ComponentLogic::setOutput(const pair<char, int> &par) {
 bool ComponentLogic::getOutput() const {
     return outputValue;
 }
-
 void ComponentLogic::connectInputTo(const pair<int, int> &value, const int index) {
     inputConnectedTo[index] = value;
 }
