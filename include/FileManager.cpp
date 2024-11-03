@@ -7,61 +7,6 @@
 #include <sstream>
 #include <iostream>
 
-// void FileManager::loadComponents(const std::string &filename, LogicManager &logicManager) {
-//     std::ifstream file(filename);
-//     if (!file.is_open()) {
-//         std::cerr << "Erro ao abrir o arquivo: " << filename << std::endl;
-//         return;
-//     }
-//
-//     std::string line;
-//     while (std::getline(file, line)) {
-//         std::istringstream iss(line);
-//         std::string type;
-//         iss >> type;
-//
-//         if (type == "wire") {
-//             std::string input, output;
-//             iss >> input >> output;
-//             int inputIndex = std::stoi(input.substr(1));
-//             int outputIndex = std::stoi(output);
-//             auto *wire = new WIRELogic();
-//             wire->connectInputTo(pair<int, int>(-1, inputIndex), 0);  // Conectando entrada 'e'
-//             wire->connectOutputTo(pair<int, int>(outputIndex, 0));    // Conectando saída 's'
-//             logicManager.insertComponent(wire);
-//
-//         } else if (type == "and") {
-//             int input1, input2, output;
-//             iss >> input1 >> input2 >> output;
-//             auto *andGate = new ANDGateLogic();
-//             andGate->connectInputTo(pair<int, int>(input1, 0), 0);        // Conectando primeira entrada
-//             andGate->connectInputTo(pair<int, int>(input2, 0), 1);        // Conectando segunda entrada
-//             andGate->connectOutputTo(pair<int, int>(output, 0));   // Conectando saída
-//             logicManager.insertComponent(andGate);
-//
-//         } else if (type == "not") {
-//             std::string input;
-//             int output;
-//             iss >> input >> output;
-//             int inputIndex = std::stoi(input.substr(1));
-//             auto *notGate = new NOTGateLogic();
-//             notGate->connectInputTo(pair<int, int>(-1, inputIndex), 0);   // Conectando entrada 'e'
-//             notGate->connectOutputTo(pair<int, int>(output, 0));   // Conectando saída
-//             logicManager.insertComponent(notGate);
-//
-//         } else if (type == "or") {
-//             int input1, input2;
-//             std::string output;
-//             iss >> input1 >> input2 >> output;
-//             int outputIndex = std::stoi(output.substr(1));
-//             auto *orGate = new ORGateLogic();
-//             orGate->connectInputTo(pair<int, int>(input1, 0), 0);        // Conectando primeira entrada
-//             orGate->connectInputTo(pair<int, int>(input2, 0), 1);        // Conectando segunda entrada
-//             orGate->connectOutputTo(pair<int, int>(9, outputIndex));     // Conectando saída 's'
-//             logicManager.insertComponent(orGate);
-//         }
-//     }
-// }
 std::string FileManager::toLowerCase(const std::string& str) {
     std::string lowerStr = str;
     std::transform(lowerStr.begin(), lowerStr.end(), lowerStr.begin(),

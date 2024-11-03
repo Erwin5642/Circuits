@@ -1,31 +1,19 @@
-//
-// Created by jvgam on 28/10/2024.
-//
-
 #ifndef APP_H
 #define APP_H
 
-//#include "graphics/DrawableManager.h"
+#include "graphics/DrawableManager.h"
 #include "logic/LogicManager.h"
 #include "FileManager.h"
-//#include "UIManager.h"
+#include "UIManager.h"
 #include <iostream>
-#include "logic/LogicManager.h"
-#include "logic/and/ANDGateLogic.h"
-#include "logic/not/NOTGateLogic.h"
 
 class App {
-private:
-    //DrawableManager drawableManager;
-    //UIManager uiManager;
-    LogicManager l_Manager;
-    FileManager* f_Manager;
+    DrawableManager drawableManager;
+    FileManager fileManager;
+    UIManager uiManager;
+    LogicManager logicManager;
+    sf::RenderWindow window;
 
-public:
-    App();
-    ~App();
-
-    void run();
     void insert(const string& c_name);
     void getIndex();
     void remove(int index);
@@ -35,8 +23,12 @@ public:
     void printa();
     void listComps();
     int getSize();
+
+public:
+    App();
+    ~App();
+
+    void run();
 };
-
-
 
 #endif //APP_H
