@@ -4,6 +4,10 @@
 #include "graphics/or/ORGateDrawable.h"
 #include "graphics/not/NOTGateDrawable.h"
 #include "graphics/wire/WireDrawable.h"
+#include "logic/and/ANDGateLogic.h"
+#include "logic/not/NOTGateLogic.h"
+#include "logic/or/ORGateLogic.h"
+#include "logic/wire/WIRELogic.h"
 
 bool UIManager::isInsideBoundaries(sf::Vector2f pos, sf::FloatRect bounds) const {
     return bounds.contains(pos);
@@ -72,62 +76,76 @@ sf::Vector2f UIManager::findGridSlotIntersection(sf::Vector2f mousePos) const {
 
 
 void UIManager::connectGridPoint(sf::Vector2i posGrid, sf::Vector2f mousePos) {
-    WireDrawable temp({0, 0}, {0, 0});
-
+    WireDrawable tempD({0, 0}, {0, 0});
+    WIRELogic tempL;
     if (isConnectingWire) {
         drawableManagerRef.connectGatesOut(wireConnecting,
                                            drawableManagerRef.getPointReference(posGrid.x, posGrid.y, 2));
+        //logicManagerRef.connectComponents();
         isConnectingWire = false;
     } else {
-        drawableManagerRef.addWire(&temp, drawableManagerRef.getPointPosition(posGrid.x, posGrid.y, 2), mousePos);
+        drawableManagerRef.addWire(&tempD, drawableManagerRef.getPointPosition(posGrid.x, posGrid.y, 2), mousePos);
+        logicManagerRef.insertComponent(&tempL);
         wireConnecting = drawableManagerRef.getNumDrawables() - 1;
         drawableManagerRef.connectGatesIn(wireConnecting,
                                           drawableManagerRef.getPointReference(posGrid.x, posGrid.y, 2));
+        //logicManagerRef.connectComponents();
         isConnectingWire = true;
     }
 }
 
 void UIManager::connectInputPoint(unsigned int i, sf::Vector2f mousePos) {
-    WireDrawable temp({0, 0}, {0, 0});
+    WireDrawable tempD({0, 0}, {0, 0});
+    WIRELogic tempL;
     if (isConnectingWire) {
         drawableManagerRef.connectGatesOut(wireConnecting, drawableManagerRef.getPointReference(i, 0, 1));
+        //logicManagerRef.connectComponents();
         isConnectingWire = false;
     } else {
-        drawableManagerRef.addWire(&temp, drawableManagerRef.getPointPosition(i, 0, 1), mousePos);
+        drawableManagerRef.addWire(&tempD, drawableManagerRef.getPointPosition(i, 0, 1), mousePos);
+        logicManagerRef.insertComponent(&tempL);
         wireConnecting = drawableManagerRef.getNumDrawables() - 1;
         drawableManagerRef.connectGatesIn(wireConnecting, drawableManagerRef.getPointReference(i, 0, 1));
+        //logicManagerRef.connectComponents();
         isConnectingWire = true;
     }
 }
 
 void UIManager::connectOutputPoint(unsigned int i, sf::Vector2f mousePos) {
-    WireDrawable temp({0, 0}, {0, 0});
-
+    WireDrawable tempD({0, 0}, {0, 0});
+    WIRELogic tempL;
     if (isConnectingWire) {
         drawableManagerRef.connectGatesOut(wireConnecting, drawableManagerRef.getPointReference(i, 0, 3));
+        //logicManagerRef.connectComponents();
         isConnectingWire = false;
     } else {
-        drawableManagerRef.addWire(&temp, drawableManagerRef.getPointPosition(i, 0, 3), mousePos);
+        drawableManagerRef.addWire(&tempD, drawableManagerRef.getPointPosition(i, 0, 3), mousePos);
+        logicManagerRef.insertComponent(&tempL);
         wireConnecting = drawableManagerRef.getNumDrawables() - 1;
         drawableManagerRef.connectGatesIn(wireConnecting, drawableManagerRef.getPointReference(i, 0, 3));
+        //logicManagerRef.connectComponents();
         isConnectingWire = true;
     }
 }
 
 void UIManager::connectComponent(unsigned int i, sf::Vector2f mousePos) {
-    WireDrawable temp({0, 0}, {0, 0});
+    WireDrawable tempD({0, 0}, {0, 0});
+    WIRELogic tempL;
     if (!isConnectingWire) {
         if (!drawableManagerRef.getOutputUsed(i)) {
-            drawableManagerRef.addWire(&temp, drawableManagerRef.getOutputPosition(i), mousePos);
+            drawableManagerRef.addWire(&tempD, drawableManagerRef.getOutputPosition(i), mousePos);
+            logicManagerRef.insertComponent(&tempL);
             wireConnecting = drawableManagerRef.getNumDrawables() - 1;
             drawableManagerRef.connectGatesIn(
                 wireConnecting, drawableManagerRef.getComponentReference(i));
             drawableManagerRef.connectGatesOut(i, drawableManagerRef.getComponentReference(wireConnecting));
+            //logicManagerRef.connectComponents();
             isConnectingWire = true;
         }
     } else {
         if (drawableManagerRef.getUsedInputsSize(i) != drawableManagerRef.getInputSize(i)) {
             isConnectingWire = false;
+            //logicManagerRef.connectComponents();
             drawableManagerRef.connectGatesOut(wireConnecting, drawableManagerRef.getComponentReference(i));
             drawableManagerRef.connectGatesIn(i, drawableManagerRef.getComponentReference(wireConnecting));
             wireConnecting = -1;
@@ -175,21 +193,29 @@ void UIManager::processEvent() {
 }
 
 void UIManager::handleKeyPress(const sf::Keyboard::Key key) {
-    ANDGateDrawable tempAND({0, 0}, 2);
-    NOTGateDrawable tempNOT({0, 0}, 2);
-    ORGateDrawable tempOR({0, 0}, 1);
+    ANDGateDrawable tempANDD({0, 0}, 2);
+    NOTGateDrawable tempNOTD({0, 0}, 2);
+    ORGateDrawable tempORD({0, 0}, 1);
+    ANDGateLogic tempANDL;
+    NOTGateLogic tempNOTL;
+    ORGateLogic tempORL;
+
     switch (key) {
         case sf::Keyboard::Escape:
             drawableManagerRef.removeAllDrawables();
+            logicManagerRef.deleteAllComponents();
             break;
         case sf::Keyboard::Numpad1:
-            drawableManagerRef.addDrawable(&tempAND, AND_SPAWN, 2);
+            drawableManagerRef.addDrawable(&tempANDD, AND_SPAWN, 2);
+            logicManagerRef.insertComponent(&tempANDL);
             break;
         case sf::Keyboard::Numpad2:
-            drawableManagerRef.addDrawable(&tempOR, OR_SPAWN, 2);
+            drawableManagerRef.addDrawable(&tempORD, OR_SPAWN, 2);
+            logicManagerRef.insertComponent(&tempORL);
             break;
         case sf::Keyboard::Numpad3:
-            drawableManagerRef.addDrawable(&tempNOT, NOT_SPAWN, 1);
+            drawableManagerRef.addDrawable(&tempNOTD, NOT_SPAWN, 1);
+            logicManagerRef.insertComponent(&tempNOTL);
             break;
         case sf::Keyboard::W:
             inMoveMode = false;
@@ -212,6 +238,7 @@ void UIManager::handleMouseClick(sf::Vector2i mousePosition, sf::Mouse::Button b
         i = findInputPointIntersection(mousePositionF);
         if (i != -1) {
             drawableManagerRef.changePointOnOff(i, 1);
+            logicManagerRef.setEntrada(i);
         }
     } else if (button == sf::Mouse::Button::Left) {
         if (inMoveMode) {

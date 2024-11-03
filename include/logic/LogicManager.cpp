@@ -1,5 +1,13 @@
+//
+// Created by Arthur on 29/10/2024.
+//
+
 #include "LogicManager.h"
 #include <iostream>
+#include "and/ANDGateLogic.h"
+#include "not/NOTGateLogic.h"
+#include "or/ORGateLogic.h"
+#include "wire/WIRELogic.h"
 
 LogicManager::LogicManager() {
     components.clear();
@@ -140,5 +148,22 @@ void LogicManager::connectComponents(int outputIndex, int inputIndex, int inputP
         components[inputIndex]->connectInputTo(pair<int, int>(outputIndex, 0), inputPosition);
         // Conectar a saída do componente
         components[outputIndex]->connectOutputTo(pair<int, int>(inputIndex, inputPosition));
+    }
+}
+
+void LogicManager::listComponents() const {
+    std::cout << "Lista de Componentes:" << endl;
+    for (size_t i = 0; i < components.size(); i++) {
+        std::cout << "Componente " << i << ": ";
+        if (components[i]->getType() == "AND") {
+            std::cout << "AND Gate";
+        } else if (components[i]->getType() == "OR") {
+            std::cout << "OR Gate";
+        } else if (components[i]->getType() == "NOT") {
+            std::cout << "NOT Gate";
+        } else if (components[i]->getType() == "WIRE") {
+            std::cout << "WIRE";
+        }
+        std::cout << std::endl;
     }
 }

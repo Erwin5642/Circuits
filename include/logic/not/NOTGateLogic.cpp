@@ -12,3 +12,7 @@ bool NOTGateLogic::evaluate() {
     outputValue = true;
     return true;
 }
+string NOTGateLogic::getType() {
+    return "NOT";
+}
+

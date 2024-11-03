@@ -42,6 +42,7 @@ public:
     pair<int, int> getConnectedOutputTo() const;
 
     void connectOutputTo(const pair<char, int> &value);
+    virtual string getType() = 0;
 };
 
 #endif //COMPONENTLOGIC_H

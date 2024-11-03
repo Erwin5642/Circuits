@@ -14,3 +14,6 @@ bool ORGateLogic::evaluate() {
     outputValue = false;
     return false;
 }
+string ORGateLogic::getType() {
+    return "OR";
+}

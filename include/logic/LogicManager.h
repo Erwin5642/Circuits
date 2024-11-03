@@ -1,3 +1,7 @@
+//
+// Created by Arthur on 29/10/2024.
+//
+
 #ifndef LOGICMANAGER_H
 #define LOGICMANAGER_H
 
@@ -41,6 +45,8 @@ public:
     void printa() const;
 
     void connectComponents(int outputIndex, int inputIndex, int inputPosition) const;
+
+    void listComponents() const;
 };
 
 #endif //LOGICMANAGER_H
