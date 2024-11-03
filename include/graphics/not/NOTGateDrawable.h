@@ -5,21 +5,20 @@
 #ifndef NOTGATEDRAWABLE_H
 #define NOTGATEDRAWABLE_H
 
+#define NOTGATESIZE 15.0f
+
 #include "../ComponentDrawable.h"
 
 class NOTGateDrawable : public ComponentDrawable {
 public:
-    NOTGateDrawable();
 
-    NOTGateDrawable(float x, float y, float w, float h, int inSize);
+    NOTGateDrawable(sf::Vector2f pos, int inSize);
 
-    ~NOTGateDrawable() override;
+    void update() override;
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-    NOTGateDrawable *selfAllocate() const override;
-
-    NOTGateDrawable *selfAllocate(float x, float y, float w, float h, int inSize) const override;
+    NOTGateDrawable *selfAllocate(sf::Vector2f pos, int inSize) override;
 };
 
 #endif //NOTGATEDRAWABLE_H

@@ -176,6 +176,198 @@ include/FileManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/FileManager.cpp.s
 .PHONY : include/FileManager.cpp.s
 
+include/UIManager.obj: include/UIManager.cpp.obj
+.PHONY : include/UIManager.obj
+
+# target to build an object file
+include/UIManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/UIManager.cpp.obj
+.PHONY : include/UIManager.cpp.obj
+
+include/UIManager.i: include/UIManager.cpp.i
+.PHONY : include/UIManager.i
+
+# target to preprocess a source file
+include/UIManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/UIManager.cpp.i
+.PHONY : include/UIManager.cpp.i
+
+include/UIManager.s: include/UIManager.cpp.s
+.PHONY : include/UIManager.s
+
+# target to generate assembly for a file
+include/UIManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/UIManager.cpp.s
+.PHONY : include/UIManager.cpp.s
+
+include/graphics/ComponentDrawable.obj: include/graphics/ComponentDrawable.cpp.obj
+.PHONY : include/graphics/ComponentDrawable.obj
+
+# target to build an object file
+include/graphics/ComponentDrawable.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/ComponentDrawable.cpp.obj
+.PHONY : include/graphics/ComponentDrawable.cpp.obj
+
+include/graphics/ComponentDrawable.i: include/graphics/ComponentDrawable.cpp.i
+.PHONY : include/graphics/ComponentDrawable.i
+
+# target to preprocess a source file
+include/graphics/ComponentDrawable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/ComponentDrawable.cpp.i
+.PHONY : include/graphics/ComponentDrawable.cpp.i
+
+include/graphics/ComponentDrawable.s: include/graphics/ComponentDrawable.cpp.s
+.PHONY : include/graphics/ComponentDrawable.s
+
+# target to generate assembly for a file
+include/graphics/ComponentDrawable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/ComponentDrawable.cpp.s
+.PHONY : include/graphics/ComponentDrawable.cpp.s
+
+include/graphics/DrawableManager.obj: include/graphics/DrawableManager.cpp.obj
+.PHONY : include/graphics/DrawableManager.obj
+
+# target to build an object file
+include/graphics/DrawableManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/DrawableManager.cpp.obj
+.PHONY : include/graphics/DrawableManager.cpp.obj
+
+include/graphics/DrawableManager.i: include/graphics/DrawableManager.cpp.i
+.PHONY : include/graphics/DrawableManager.i
+
+# target to preprocess a source file
+include/graphics/DrawableManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/DrawableManager.cpp.i
+.PHONY : include/graphics/DrawableManager.cpp.i
+
+include/graphics/DrawableManager.s: include/graphics/DrawableManager.cpp.s
+.PHONY : include/graphics/DrawableManager.s
+
+# target to generate assembly for a file
+include/graphics/DrawableManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/DrawableManager.cpp.s
+.PHONY : include/graphics/DrawableManager.cpp.s
+
+include/graphics/and/ANDGateDrawable.obj: include/graphics/and/ANDGateDrawable.cpp.obj
+.PHONY : include/graphics/and/ANDGateDrawable.obj
+
+# target to build an object file
+include/graphics/and/ANDGateDrawable.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/and/ANDGateDrawable.cpp.obj
+.PHONY : include/graphics/and/ANDGateDrawable.cpp.obj
+
+include/graphics/and/ANDGateDrawable.i: include/graphics/and/ANDGateDrawable.cpp.i
+.PHONY : include/graphics/and/ANDGateDrawable.i
+
+# target to preprocess a source file
+include/graphics/and/ANDGateDrawable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/and/ANDGateDrawable.cpp.i
+.PHONY : include/graphics/and/ANDGateDrawable.cpp.i
+
+include/graphics/and/ANDGateDrawable.s: include/graphics/and/ANDGateDrawable.cpp.s
+.PHONY : include/graphics/and/ANDGateDrawable.s
+
+# target to generate assembly for a file
+include/graphics/and/ANDGateDrawable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/and/ANDGateDrawable.cpp.s
+.PHONY : include/graphics/and/ANDGateDrawable.cpp.s
+
+include/graphics/dot/DotDrawable.obj: include/graphics/dot/DotDrawable.cpp.obj
+.PHONY : include/graphics/dot/DotDrawable.obj
+
+# target to build an object file
+include/graphics/dot/DotDrawable.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/dot/DotDrawable.cpp.obj
+.PHONY : include/graphics/dot/DotDrawable.cpp.obj
+
+include/graphics/dot/DotDrawable.i: include/graphics/dot/DotDrawable.cpp.i
+.PHONY : include/graphics/dot/DotDrawable.i
+
+# target to preprocess a source file
+include/graphics/dot/DotDrawable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/dot/DotDrawable.cpp.i
+.PHONY : include/graphics/dot/DotDrawable.cpp.i
+
+include/graphics/dot/DotDrawable.s: include/graphics/dot/DotDrawable.cpp.s
+.PHONY : include/graphics/dot/DotDrawable.s
+
+# target to generate assembly for a file
+include/graphics/dot/DotDrawable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/dot/DotDrawable.cpp.s
+.PHONY : include/graphics/dot/DotDrawable.cpp.s
+
+include/graphics/not/NOTGateDrawable.obj: include/graphics/not/NOTGateDrawable.cpp.obj
+.PHONY : include/graphics/not/NOTGateDrawable.obj
+
+# target to build an object file
+include/graphics/not/NOTGateDrawable.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/not/NOTGateDrawable.cpp.obj
+.PHONY : include/graphics/not/NOTGateDrawable.cpp.obj
+
+include/graphics/not/NOTGateDrawable.i: include/graphics/not/NOTGateDrawable.cpp.i
+.PHONY : include/graphics/not/NOTGateDrawable.i
+
+# target to preprocess a source file
+include/graphics/not/NOTGateDrawable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/not/NOTGateDrawable.cpp.i
+.PHONY : include/graphics/not/NOTGateDrawable.cpp.i
+
+include/graphics/not/NOTGateDrawable.s: include/graphics/not/NOTGateDrawable.cpp.s
+.PHONY : include/graphics/not/NOTGateDrawable.s
+
+# target to generate assembly for a file
+include/graphics/not/NOTGateDrawable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/not/NOTGateDrawable.cpp.s
+.PHONY : include/graphics/not/NOTGateDrawable.cpp.s
+
+include/graphics/or/ORGateDrawable.obj: include/graphics/or/ORGateDrawable.cpp.obj
+.PHONY : include/graphics/or/ORGateDrawable.obj
+
+# target to build an object file
+include/graphics/or/ORGateDrawable.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/or/ORGateDrawable.cpp.obj
+.PHONY : include/graphics/or/ORGateDrawable.cpp.obj
+
+include/graphics/or/ORGateDrawable.i: include/graphics/or/ORGateDrawable.cpp.i
+.PHONY : include/graphics/or/ORGateDrawable.i
+
+# target to preprocess a source file
+include/graphics/or/ORGateDrawable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/or/ORGateDrawable.cpp.i
+.PHONY : include/graphics/or/ORGateDrawable.cpp.i
+
+include/graphics/or/ORGateDrawable.s: include/graphics/or/ORGateDrawable.cpp.s
+.PHONY : include/graphics/or/ORGateDrawable.s
+
+# target to generate assembly for a file
+include/graphics/or/ORGateDrawable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/or/ORGateDrawable.cpp.s
+.PHONY : include/graphics/or/ORGateDrawable.cpp.s
+
+include/graphics/wire/WireDrawable.obj: include/graphics/wire/WireDrawable.cpp.obj
+.PHONY : include/graphics/wire/WireDrawable.obj
+
+# target to build an object file
+include/graphics/wire/WireDrawable.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/wire/WireDrawable.cpp.obj
+.PHONY : include/graphics/wire/WireDrawable.cpp.obj
+
+include/graphics/wire/WireDrawable.i: include/graphics/wire/WireDrawable.cpp.i
+.PHONY : include/graphics/wire/WireDrawable.i
+
+# target to preprocess a source file
+include/graphics/wire/WireDrawable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/wire/WireDrawable.cpp.i
+.PHONY : include/graphics/wire/WireDrawable.cpp.i
+
+include/graphics/wire/WireDrawable.s: include/graphics/wire/WireDrawable.cpp.s
+.PHONY : include/graphics/wire/WireDrawable.s
+
+# target to generate assembly for a file
+include/graphics/wire/WireDrawable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/wire/WireDrawable.cpp.s
+.PHONY : include/graphics/wire/WireDrawable.cpp.s
+
 include/logic/ComponentLogic.obj: include/logic/ComponentLogic.cpp.obj
 .PHONY : include/logic/ComponentLogic.obj
 
@@ -359,6 +551,30 @@ help:
 	@echo ... include/FileManager.obj
 	@echo ... include/FileManager.i
 	@echo ... include/FileManager.s
+	@echo ... include/UIManager.obj
+	@echo ... include/UIManager.i
+	@echo ... include/UIManager.s
+	@echo ... include/graphics/ComponentDrawable.obj
+	@echo ... include/graphics/ComponentDrawable.i
+	@echo ... include/graphics/ComponentDrawable.s
+	@echo ... include/graphics/DrawableManager.obj
+	@echo ... include/graphics/DrawableManager.i
+	@echo ... include/graphics/DrawableManager.s
+	@echo ... include/graphics/and/ANDGateDrawable.obj
+	@echo ... include/graphics/and/ANDGateDrawable.i
+	@echo ... include/graphics/and/ANDGateDrawable.s
+	@echo ... include/graphics/dot/DotDrawable.obj
+	@echo ... include/graphics/dot/DotDrawable.i
+	@echo ... include/graphics/dot/DotDrawable.s
+	@echo ... include/graphics/not/NOTGateDrawable.obj
+	@echo ... include/graphics/not/NOTGateDrawable.i
+	@echo ... include/graphics/not/NOTGateDrawable.s
+	@echo ... include/graphics/or/ORGateDrawable.obj
+	@echo ... include/graphics/or/ORGateDrawable.i
+	@echo ... include/graphics/or/ORGateDrawable.s
+	@echo ... include/graphics/wire/WireDrawable.obj
+	@echo ... include/graphics/wire/WireDrawable.i
+	@echo ... include/graphics/wire/WireDrawable.s
 	@echo ... include/logic/ComponentLogic.obj
 	@echo ... include/logic/ComponentLogic.i
 	@echo ... include/logic/ComponentLogic.s
