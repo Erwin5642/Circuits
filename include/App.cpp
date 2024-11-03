@@ -6,15 +6,18 @@
 
 #include <iostream>
 
+#include "logic/and/ANDGateLogic.h"
 #include "logic/or/ORGateLogic.h"
 #include "logic/wire/WIRELogic.h"
+
+
 App::App()
 {
-    f_Manager = new FileManager();
+    fileManager = new FileManager();
 }
 
 App::~App() {
-    delete f_Manager;
+    delete fileManager;
 }
 
 void App::run() {

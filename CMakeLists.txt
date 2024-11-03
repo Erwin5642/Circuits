@@ -7,22 +7,24 @@ include_directories(C:\\SFML\\include)
 link_directories(C:\\SFML\\lib)
 
 add_executable(Circuits src/main.cpp
-        include/graphics/ComponentDrawable.cpp
-        include/graphics/ComponentDrawable.h
-        include/graphics/DrawableManager.cpp
-        include/graphics/DrawableManager.h
-        include/graphics/or/ORGateDrawable.cpp
-        include/graphics/or/ORGateDrawable.h
-        include/graphics/not/NOTGateDrawable.cpp
-        include/graphics/not/NOTGateDrawable.h
-        include/graphics/and/ANDGateDrawable.cpp
-        include/graphics/and/ANDGateDrawable.h
-        include/graphics/dot/DotDrawable.cpp
-        include/graphics/dot/DotDrawable.h
-        include/graphics/wire/WireDrawable.h
-        include/graphics/wire/WireDrawable.cpp
+        #include/graphics/ComponentDrawable.cpp
+        #include/graphics/ComponentDrawable.h
+        #include/graphics/DrawableManager.cpp
+        #include/graphics/DrawableManager.h
+        #include/graphics/or/ORGateDrawable.cpp
+        #include/graphics/or/ORGateDrawable.h
+        #include/graphics/not/NOTGateDrawable.cpp
+        #include/graphics/not/NOTGateDrawable.h
+        #include/graphics/and/ANDGateDrawable.cpp
+        #include/graphics/and/ANDGateDrawable.h
+        #include/graphics/dot/DotDrawable.cpp
+        #include/graphics/dot/DotDrawable.h
+        #include/graphics/wire/WireDrawable.h
+        #include/graphics/wire/WireDrawable.cpp
         include/UIManager.cpp
         include/UIManager.h
+        include/FileManager.h
+        include/FileManager.cpp
         include/logic/LogicManager.cpp
         include/logic/LogicManager.h
         include/logic/ComponentLogic.cpp

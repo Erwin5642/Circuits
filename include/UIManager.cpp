@@ -3,7 +3,7 @@
 #include "graphics/and/ANDGateDrawable.h"
 #include "graphics/or/ORGateDrawable.h"
 #include "graphics/not/NOTGateDrawable.h"
-#include "graphics/wire/WireDrawable.h"
+//#include "graphics/wire/WireDrawable.h"
 #include "logic/and/ANDGateLogic.h"
 #include "logic/not/NOTGateLogic.h"
 #include "logic/or/ORGateLogic.h"

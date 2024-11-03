@@ -6,6 +6,7 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <algorithm>
 
 std::string FileManager::toLowerCase(const std::string& str) {
     std::string lowerStr = str;

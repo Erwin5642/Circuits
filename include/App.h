@@ -5,8 +5,14 @@
 #include "logic/LogicManager.h"
 #include "UIManager.h"
 #include <iostream>
+#include "FileManager.h"
 
 class App {
+    DrawableManager drawableManager;
+    FileManager* fileManager;
+    UIManager uiManager;
+    LogicManager logicManager;
+    sf::RenderWindow window;
 
     void insert(const string& c_name);
     void getIndex();
