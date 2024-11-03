@@ -41,6 +41,8 @@ public:
     void printa() const;
 
     void connectComponents(int outputIndex, int inputIndex, int inputPosition) const;
+
+    void listComponents() const;
 };
 
 #endif //LOGICMANAGER_H

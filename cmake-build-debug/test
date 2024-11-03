@@ -1,0 +1,4 @@
+wire e5 04
+and 04 05 25
+not e6 05
+or 25 e7 s7
