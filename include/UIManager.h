@@ -30,10 +30,6 @@ class UIManager {
     void connectInputPoint(unsigned int i, sf::Vector2f mousePos);
     void connectOutputPoint(unsigned int i, sf::Vector2f mousePos);
     void connectComponent(unsigned int i, sf::Vector2f mousePos);
-    NOTGateLogic tempNOTL;
-    ANDGateLogic tempANDL;
-    ORGateLogic tempORL;
-    WIRELogic tempWIREL;
 
 public:
     UIManager(sf::RenderWindow &window, DrawableManager &drawableManager, LogicManager &logicManager);

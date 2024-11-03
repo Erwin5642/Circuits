@@ -1,7 +1,7 @@
 #ifndef DOT_H
 #define DOT_H
 
-#define DOT_SIZE 10
+#define DOT_SIZE 13
 
 #include "SFML\Graphics.hpp"
 

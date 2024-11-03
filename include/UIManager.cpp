@@ -92,7 +92,7 @@ void UIManager::connectGridPoint(sf::Vector2i posGrid, sf::Vector2f mousePos) {
         isConnectingWire = false;
     } else {
         drawableManagerRef.addWire(&tempD, drawableManagerRef.getPointPosition(posGrid.x, posGrid.y, 2), mousePos);
-        logicManagerRef.insertComponent(&tempWIREL);
+        logicManagerRef.insertComponent(new WIRELogic);
         wireConnectingDraw = drawableManagerRef.getNumDrawables() - 1;
         drawableManagerRef.connectGatesIn(wireConnectingDraw,
                                           drawableManagerRef.getPointReference(posGrid.x, posGrid.y, 2));
@@ -106,7 +106,7 @@ void UIManager::connectInputPoint(unsigned int i, sf::Vector2f mousePos) {
     WireDrawable tempD({0, 0}, {0, 0});
     if (!isConnectingWire) {
         drawableManagerRef.addWire(&tempD, drawableManagerRef.getPointPosition(i, 0, 1), mousePos);
-        logicManagerRef.insertComponent(&tempWIREL);
+        logicManagerRef.insertComponent(new WIRELogic);
         wireConnectingDraw = drawableManagerRef.getNumDrawables() - 1;
         drawableManagerRef.connectGatesIn(wireConnectingDraw, drawableManagerRef.getPointReference(i, 0, 1));
         isConnectingWire = true;
@@ -139,7 +139,7 @@ void UIManager::connectComponent(unsigned int i, sf::Vector2f mousePos) {
     if (!isConnectingWire) {
         if (!drawableManagerRef.getOutputUsed(i)) {
             drawableManagerRef.addWire(&tempD, drawableManagerRef.getOutputPosition(i), mousePos);
-            logicManagerRef.insertComponent(&tempWIREL);
+            logicManagerRef.insertComponent(new WIRELogic);
             wireConnectingDraw = drawableManagerRef.getNumDrawables() - 1;
             drawableManagerRef.connectGatesIn(
                 wireConnectingDraw, drawableManagerRef.getComponentReference(i));
@@ -212,15 +212,15 @@ void UIManager::handleKeyPress(const sf::Keyboard::Key key) {
             break;
         case sf::Keyboard::I:
             drawableManagerRef.addDrawable(&tempANDD, AND_SPAWN, 2);drawableManagerRef.addDrawable(&tempANDD, AND_SPAWN, 2);
-            logicManagerRef.insertComponent(&tempANDL);
+            logicManagerRef.insertComponent(new ANDGateLogic);
             break;
         case sf::Keyboard::O:
             drawableManagerRef.addDrawable(&tempORD, OR_SPAWN, 2);
-            logicManagerRef.insertComponent(&tempORL);
+            logicManagerRef.insertComponent(new ORGateLogic);
             break;
         case sf::Keyboard::P:
             drawableManagerRef.addDrawable(&tempNOTD, NOT_SPAWN, 1);
-            logicManagerRef.insertComponent(&tempNOTL);
+            logicManagerRef.insertComponent(new NOTGateLogic);
             break;
         case sf::Keyboard::W:
             inMoveMode = false;
