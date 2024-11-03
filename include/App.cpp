@@ -55,10 +55,6 @@ void App::gravaArq() {
     fileManager->saveComponents(arq_name, logicManager);
 }
 
-void App::printa() {
-    logicManager.printa();
-}
-
 void App::listComps() {
     logicManager.listComponents();
 }

@@ -1,7 +1,7 @@
 #include "ORGateLogic.h"
 
 bool ORGateLogic::evaluate() {
-    for(int i=0; i< usedInputs; i++) {
+    for(int i=0; i<inputSize; i++) {
         if(inputValues[i] == true) {
             outputValue = true;
             return true;

@@ -34,12 +34,6 @@ public:
     bool getSaida(int index) const;
     void update();
 
-
-    void printaEntrada() const;
-    void printaMat() const;
-    void printaSaida() const;
-    void printa() const;
-
     void connectComponents(int outputIndex, int inputIndex, int inputPosition) const;
 
     void listComponents() const;
