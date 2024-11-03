@@ -2,22 +2,21 @@
 #define FILEMANAGER_H
 
 #include "logic/LogicManager.h"
+#include <string>
+#include "logic/and/ANDGateLogic.h"
+#include "logic/not/NOTGateLogic.h"
+#include "logic/or/ORGateLogic.h"
+#include "logic/wire/WIRELogic.h"
 #include <fstream>
+#include <sstream>
 #include <iostream>
-
-using namespace std;
+#include <algorithm>
 
 class FileManager {
-    string fileName;
+    string toLowerCase(const std::string &str);
 public:
-    FileManager();
-    ~FileManager();
-    void setFileName(const string& name);
-    string getFileName();
-    void readFile();
-    void writeFile();
+    void loadComponents(const std::string &filename, LogicManager &logicManager);
+    void saveComponents(const std::string &filename, LogicManager &logicManager);
 };
 
-
-
-#endif //FILEMANAGER_H
+#endif // FILEMANAGER_H

@@ -1,7 +1,3 @@
-//
-// Created by Arthur on 29/10/2024.
-//
-
 #include "NOTGateLogic.h"
 
 bool NOTGateLogic::evaluate() {
@@ -11,4 +7,7 @@ bool NOTGateLogic::evaluate() {
     }
     outputValue = true;
     return true;
+}
+string NOTGateLogic::getType() {
+    return "NOT";
 }

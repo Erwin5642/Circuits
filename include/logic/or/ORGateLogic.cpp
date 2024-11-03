@@ -1,7 +1,3 @@
-//
-// Created by Arthur on 29/10/2024.
-//
-
 #include "ORGateLogic.h"
 
 bool ORGateLogic::evaluate() {
@@ -13,4 +9,7 @@ bool ORGateLogic::evaluate() {
     }
     outputValue = false;
     return false;
+}
+string ORGateLogic::getType() {
+    return "OR";
 }
