@@ -1,12 +1,4 @@
-//
-// Created by jvgam on 28/10/2024.
-//
-
 #include "FileManager.h"
-#include "logic/LogicManager.h"
-
-#include <fstream>
-#include <iostream>
 
 FileManager::FileManager() {
     fileName.clear();
