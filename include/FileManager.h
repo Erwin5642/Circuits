@@ -9,8 +9,9 @@ using namespace std;
 
 class FileManager {
     string fileName;
+    LogicManager &logicManagerRef;
 public:
-    FileManager();
+    FileManager(LogicManager &logic_manager);
     ~FileManager();
     void setFileName(const string& name);
     string getFileName();

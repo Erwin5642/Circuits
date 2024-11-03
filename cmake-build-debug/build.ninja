@@ -154,13 +154,6 @@ build CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj: CXX_COMPILER
   OBJECT_DIR = CMakeFiles\Circuits.dir
   OBJECT_FILE_DIR = CMakeFiles\Circuits.dir\include\logic\wire
 
-build CMakeFiles/Circuits.dir/include/FileManager.cpp.obj: CXX_COMPILER__Circuits_unscanned_Debug C$:/Users/jvgam/CLionProjects/Circuits/include/FileManager.cpp || cmake_object_order_depends_target_Circuits
-  DEP_FILE = CMakeFiles\Circuits.dir\include\FileManager.cpp.obj.d
-  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
-  INCLUDES = -IC:/SFML/include
-  OBJECT_DIR = CMakeFiles\Circuits.dir
-  OBJECT_FILE_DIR = CMakeFiles\Circuits.dir\include
-
 build CMakeFiles/Circuits.dir/include/App.cpp.obj: CXX_COMPILER__Circuits_unscanned_Debug C$:/Users/jvgam/CLionProjects/Circuits/include/App.cpp || cmake_object_order_depends_target_Circuits
   DEP_FILE = CMakeFiles\Circuits.dir\include\App.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
@@ -176,7 +169,7 @@ build CMakeFiles/Circuits.dir/include/App.cpp.obj: CXX_COMPILER__Circuits_unscan
 #############################################
 # Link the executable Circuits.exe
 
-build Circuits.exe: CXX_EXECUTABLE_LINKER__Circuits_Debug CMakeFiles/Circuits.dir/src/main.cpp.obj CMakeFiles/Circuits.dir/include/graphics/ComponentDrawable.cpp.obj CMakeFiles/Circuits.dir/include/graphics/DrawableManager.cpp.obj CMakeFiles/Circuits.dir/include/graphics/or/ORGateDrawable.cpp.obj CMakeFiles/Circuits.dir/include/graphics/not/NOTGateDrawable.cpp.obj CMakeFiles/Circuits.dir/include/graphics/and/ANDGateDrawable.cpp.obj CMakeFiles/Circuits.dir/include/graphics/dot/DotDrawable.cpp.obj CMakeFiles/Circuits.dir/include/graphics/wire/WireDrawable.cpp.obj CMakeFiles/Circuits.dir/include/UIManager.cpp.obj CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj CMakeFiles/Circuits.dir/include/FileManager.cpp.obj CMakeFiles/Circuits.dir/include/App.cpp.obj
+build Circuits.exe: CXX_EXECUTABLE_LINKER__Circuits_Debug CMakeFiles/Circuits.dir/src/main.cpp.obj CMakeFiles/Circuits.dir/include/graphics/ComponentDrawable.cpp.obj CMakeFiles/Circuits.dir/include/graphics/DrawableManager.cpp.obj CMakeFiles/Circuits.dir/include/graphics/or/ORGateDrawable.cpp.obj CMakeFiles/Circuits.dir/include/graphics/not/NOTGateDrawable.cpp.obj CMakeFiles/Circuits.dir/include/graphics/and/ANDGateDrawable.cpp.obj CMakeFiles/Circuits.dir/include/graphics/dot/DotDrawable.cpp.obj CMakeFiles/Circuits.dir/include/graphics/wire/WireDrawable.cpp.obj CMakeFiles/Circuits.dir/include/UIManager.cpp.obj CMakeFiles/Circuits.dir/include/logic/LogicManager.cpp.obj CMakeFiles/Circuits.dir/include/logic/ComponentLogic.cpp.obj CMakeFiles/Circuits.dir/include/logic/and/ANDGateLogic.cpp.obj CMakeFiles/Circuits.dir/include/logic/or/ORGateLogic.cpp.obj CMakeFiles/Circuits.dir/include/logic/not/NOTGateLogic.cpp.obj CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.obj CMakeFiles/Circuits.dir/include/App.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lsfml-system-d  -lsfml-window-d  -lsfml-graphics-d  -lsfml-audio-d  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -LC:/SFML/lib

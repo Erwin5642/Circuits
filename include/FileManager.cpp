@@ -1,6 +1,6 @@
 #include "FileManager.h"
 
-FileManager::FileManager() {
+FileManager::FileManager(LogicManager &logic_manager) : logicManagerRef(logic_manager){
     fileName.clear();
 }
 FileManager::~FileManager() {
@@ -29,8 +29,8 @@ void FileManager::writeFile() {
     if(arquivo.is_open()) {
         string line;
         line.clear();
-        for(int i=0; i<logicManager.getSize(); i++) {
-            line += logicManager.getComponent(i);
+        for(int i=0; i<logicManagerRef.getSize(); i++) {
+            line += logicManagerRef.getComponent(i);
         }
     }
     else {

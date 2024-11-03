@@ -7,7 +7,6 @@
 
 #include "graphics/DrawableManager.h"
 #include "logic/LogicManager.h"
-#include "FileManager.h"
 #include "UIManager.h"
 #include <iostream>
 #include "logic/LogicManager.h"
@@ -15,11 +14,6 @@
 #include "logic/not/NOTGateLogic.h"
 
 class App {
-    DrawableManager drawableManager;
-    FileManager fileManager;
-    UIManager uiManager;
-    LogicManager logicManager;
-    sf::RenderWindow window;
 
     void insert(const string& c_name);
     void getIndex();

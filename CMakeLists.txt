@@ -35,8 +35,6 @@ add_executable(Circuits src/main.cpp
         include/logic/not/NOTGateLogic.cpp
         include/logic/wire/WIRELogic.h
         include/logic/wire/WIRELogic.cpp
-        include/FileManager.h
-        include/FileManager.cpp
         include/App.cpp
         include/App.h)
 target_link_libraries(Circuits -lsfml-system-d -lsfml-window-d -lsfml-graphics-d -lsfml-audio-d)
