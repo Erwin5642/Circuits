@@ -169,6 +169,7 @@ UIManager::UIManager(sf::RenderWindow &window, DrawableManager &drawableManager,
     componentSelected = -1;
     wireConnectingDraw = -1;
     isConnectingFromDot = false;
+    wireConnectingLogic = -1;
     dotConnectingFrom = pair<int, int>(-2, -2);
 }
 
@@ -211,7 +212,7 @@ void UIManager::handleKeyPress(const sf::Keyboard::Key key) {
             logicManagerRef.deleteAllComponents();
             break;
         case sf::Keyboard::I:
-            drawableManagerRef.addDrawable(&tempANDD, AND_SPAWN, 2);drawableManagerRef.addDrawable(&tempANDD, AND_SPAWN, 2);
+            drawableManagerRef.addDrawable(&tempANDD, AND_SPAWN, 2);
             logicManagerRef.insertComponent(new ANDGateLogic);
             break;
         case sf::Keyboard::O:

@@ -46,3 +46,5 @@
 54	2536	7523803015355730	CMakeFiles/Circuits.dir/include/graphics/DrawableManager.cpp.obj	1ef2b9feb6bbc2be
 438	2607	7523803019184636	CMakeFiles/Circuits.dir/include/App.cpp.obj	ec9989881f9c8b25
 2608	2927	7523803040884640	Circuits.exe	17d391e7e318ba0e
+8	1119	7523804904809584	CMakeFiles/Circuits.dir/include/UIManager.cpp.obj	3861e8d2f9560142
+1119	1338	7523804915928186	Circuits.exe	17d391e7e318ba0e
