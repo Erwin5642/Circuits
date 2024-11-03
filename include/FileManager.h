@@ -2,23 +2,13 @@
 #define FILEMANAGER_H
 
 #include "logic/LogicManager.h"
-#include <fstream>
-#include <iostream>
-
-using namespace std;
+#include <string>
 
 class FileManager {
-    string fileName;
-    LogicManager &logicManagerRef;
+    string toLowerCase(const std::string &str);
 public:
-    FileManager(LogicManager &logic_manager);
-    ~FileManager();
-    void setFileName(const string& name);
-    string getFileName();
-    void readFile();
-    void writeFile();
+    void loadComponents(const std::string &filename, LogicManager &logicManager);
+    void saveComponents(const std::string &filename, LogicManager &logicManager);
 };
 
-
-
-#endif //FILEMANAGER_H
+#endif // FILEMANAGER_H
