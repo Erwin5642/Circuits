@@ -15,8 +15,10 @@ void App::run() {
     while (window.isOpen()) {
         window.clear();
         uiManager.processEvent();
-        drawableManager.updateDrawables();
-        logicManager.update();
+        if(drawableManager.getNumDrawables() > 0) {
+            drawableManager.updateDrawables();
+            logicManager.update();
+        }
         drawableManager.draw(window);
         window.display();
     }
@@ -53,10 +55,6 @@ void App::gravaArq() {
     std::cout << "Digite o nome do arquivo: ";
     std::cin >> arq_name;
     fileManager->saveComponents(arq_name, logicManager);
-}
-
-void App::listComps() {
-    logicManager.listComponents();
 }
 
 int App::getSize() {

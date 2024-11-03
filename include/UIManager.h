@@ -3,6 +3,10 @@
 
 #include "graphics/DrawableManager.h"
 #include "logic/LogicManager.h"
+#include "logic/wire/WIRELogic.h"
+#include "logic/and/ANDGateLogic.h"
+#include "logic/or/ORGateLogic.h"
+#include "logic/not/NOTGateLogic.h"
 
 class UIManager {
     DrawableManager &drawableManagerRef;
@@ -13,16 +17,22 @@ class UIManager {
     int componentSelected;
     bool isConnectingWire;
     int wireConnecting;
+    pair<int, int> dotConnectingTo;
+    pair<int, int> dotConnectedTo;
     bool isInsideBoundaries(sf::Vector2f pos, sf::FloatRect bounds) const;
     int findComponentIntersecting(sf::Vector2f mousePos);
-    sf::Vector2i findGridPointIntersection(sf::Vector2f mousePos) const;
-    int findInputPointIntersection(sf::Vector2f mousePos) const;
-    int findOutputPointIntersection(sf::Vector2f mousePos) const;
+    sf::Vector2i findGridPointIntersection(sf::Vector2f mousePos);
+    int findInputPointIntersection(sf::Vector2f mousePos);
+    int findOutputPointIntersection(sf::Vector2f mousePos);
     sf::Vector2f findGridSlotIntersection(sf::Vector2f mousePos) const;
     void connectGridPoint(sf::Vector2i posGrid, sf::Vector2f mousePos);
     void connectInputPoint(unsigned int i, sf::Vector2f mousePos);
     void connectOutputPoint(unsigned int i, sf::Vector2f mousePos);
     void connectComponent(unsigned int i, sf::Vector2f mousePos);
+    NOTGateLogic tempNOTL;
+    ANDGateLogic tempANDL;
+    ORGateLogic tempORL;
+    WIRELogic tempWIREL;
 
 public:
     UIManager(sf::RenderWindow &window, DrawableManager &drawableManager, LogicManager &logicManager);

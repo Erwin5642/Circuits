@@ -33,6 +33,7 @@ ComponentLogic& LogicManager::getComponent(const int index) const {
 int LogicManager::getSize() const {
     return static_cast<int>(components.size());
 }
+
 void LogicManager::setInput(const int index, const bool input) const {
     components[index]->setInputValue(index, input);
 }
@@ -70,38 +71,17 @@ void LogicManager::update() {
         for(int j=0; j<components[i]->getUsedInputs(); j++) {
             components[i]->setInputValue(j, pair<int, int>(components[i]->getConnectedInputTo(j).first, components[i]->getConnectedInputTo(j).second));
         }
-        components[i]->evaluate();
-        if(components[i]->getConnectedOutputTo().first == 9) {
-            saida[components[i]->getConnectedOutputTo().second] = components[i]->getOutput();
+        if((components[i]->getIsOutputUsed()) || (components[i]->getUsedInputs() > 0)) {
+            components[i]->evaluate();
         }
-        else {
-            mat[components[i]->getConnectedOutputTo().first][components[i]->getConnectedOutputTo().second] = components[i]->getOutput();
+        if(components[i]->getIsOutputUsed()) {
+            if(components[i]->getConnectedOutputTo().first == 9) {
+                saida[components[i]->getConnectedOutputTo().second] = components[i]->getOutput();
+            }
+            else {
+                mat[components[i]->getConnectedOutputTo().first][components[i]->getConnectedOutputTo().second] = components[i]->getOutput();
+            }
         }
     }
 }
 
-void LogicManager::connectComponents(int outputIndex, int inputIndex, int inputPosition) const {
-    if (outputIndex >= 0 && outputIndex < getSize() && inputIndex >= 0 && inputIndex < getSize()) {
-        // Conectar a saída do componente de índice outputIndex à entrada do componente de índice inputIndex
-        components[inputIndex]->connectInputTo(pair<int, int>(outputIndex, 0), inputPosition);
-        // Conectar a saída do componente
-        components[outputIndex]->connectOutputTo(pair<int, int>(inputIndex, inputPosition));
-    }
-}
-
-void LogicManager::listComponents() const {
-    std::cout << "Lista de Componentes:" << endl;
-    for (size_t i = 0; i < components.size(); i++) {
-        std::cout << "Componente " << i << ": ";
-        if (components[i]->getType() == "AND") {
-            std::cout << "AND Gate";
-        } else if (components[i]->getType() == "OR") {
-            std::cout << "OR Gate";
-        } else if (components[i]->getType() == "NOT") {
-            std::cout << "NOT Gate";
-        } else if (components[i]->getType() == "WIRE") {
-            std::cout << "WIRE";
-        }
-        std::cout << std::endl;
-    }
-}
