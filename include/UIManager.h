@@ -16,9 +16,10 @@ class UIManager {
     bool isHoldingComponent;
     int componentSelected;
     bool isConnectingWire;
-    int wireConnecting;
-    pair<int, int> dotConnectingTo;
-    pair<int, int> dotConnectedTo;
+    int wireConnectingLogic;
+    int wireConnectingDraw;
+    bool isConnectingFromDot;
+    pair<int, int> dotConnectingFrom;
     bool isInsideBoundaries(sf::Vector2f pos, sf::FloatRect bounds) const;
     int findComponentIntersecting(sf::Vector2f mousePos);
     sf::Vector2i findGridPointIntersection(sf::Vector2f mousePos);

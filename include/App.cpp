@@ -11,7 +11,7 @@ App::~App() {
 void App::run() {
     sf::RenderWindow window(sf::VideoMode(800, 800), "Circuits");
     UIManager uiManager(window, drawableManager, logicManager);
-
+    int i;
     while (window.isOpen()) {
         window.clear();
         uiManager.processEvent();
@@ -20,6 +20,11 @@ void App::run() {
             logicManager.update();
         }
         drawableManager.draw(window);
+        for(int i = 0; i < GRID_SIZE; i++) {
+            if(logicManager.getSaida(i)) {
+                drawableManager.changePointOnOff(i, 3);
+            }
+        }
         window.display();
     }
 }
