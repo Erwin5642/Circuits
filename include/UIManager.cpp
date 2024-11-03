@@ -111,7 +111,7 @@ void UIManager::connectInputPoint(unsigned int i, sf::Vector2f mousePos) {
         drawableManagerRef.connectGatesIn(wireConnectingDraw, drawableManagerRef.getPointReference(i, 0, 1));
         isConnectingWire = true;
         isConnectingFromDot = true;
-        dotConnectingFrom = pair<char, int>('e', i);
+        dotConnectingFrom = pair<int, int>('e', i);
     }
 }
 
@@ -123,11 +123,11 @@ void UIManager::connectOutputPoint(unsigned int i, sf::Vector2f mousePos) {
                                            drawableManagerRef.getPointReference(i, 0, 3));
         if(isConnectingFromDot) {
             j = logicManagerRef.getSize() - 1;
-            logicManagerRef.getComponent(j).setOutput(pair<char, int>('s', i));
+            logicManagerRef.getComponent(j).setOutput(pair<int, int>('s', i));
             logicManagerRef.getComponent(j).setInputValue(0, dotConnectingFrom);
         }
         else {
-            logicManagerRef.getComponent(wireConnectingLogic).setOutput(pair<char, int>('s', i));
+            logicManagerRef.getComponent(wireConnectingLogic).setOutput(pair<int, int>('s', i));
         }
         isConnectingWire = false;
     }
