@@ -140,6 +140,7 @@ void UIManager::connectComponent(unsigned int i, sf::Vector2f mousePos) {
         if (!drawableManagerRef.getOutputUsed(i)) {
             drawableManagerRef.addWire(&tempD, drawableManagerRef.getOutputPosition(i), mousePos);
             logicManagerRef.insertComponent(new WIRELogic);
+            wireConnectingLogic = i;
             wireConnectingDraw = drawableManagerRef.getNumDrawables() - 1;
             drawableManagerRef.connectGatesIn(
                 wireConnectingDraw, drawableManagerRef.getComponentReference(i));
