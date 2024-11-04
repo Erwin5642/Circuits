@@ -3,10 +3,13 @@
 
 #include "../ComponentLogic.h"
 
-class WIRELogic final :  public ComponentLogic {
+class WIRELogic final : public ComponentLogic {
 public:
-    WIRELogic() : ComponentLogic(1) {};
+    WIRELogic() : ComponentLogic(1) {
+    };
+
     bool evaluate() override;
+
     string getType() override;
 };
 

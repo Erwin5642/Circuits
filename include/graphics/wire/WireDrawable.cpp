@@ -1,11 +1,7 @@
-//
-// Created by jvgam on 31/10/2024.
-//
-
 #include "WireDrawable.h"
 
 WireDrawable::WireDrawable(const sf::Vector2f posIn, const sf::Vector2f posOut) : ComponentDrawable(
-sf::Vector2f((posIn.x + posIn.x) / 2.0f, (posIn.y + posOut.y) / 2.0f), 1) {
+    sf::Vector2f((posIn.x + posIn.x) / 2.0f, (posIn.y + posOut.y) / 2.0f), 1) {
     name = "Wire";
     m_shape = sf::VertexArray(sf::Lines, 2);
     outputPosition = posOut;

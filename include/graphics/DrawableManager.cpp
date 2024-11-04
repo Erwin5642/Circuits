@@ -1,12 +1,10 @@
 #include "DrawableManager.h"
-
 #include "wire/WireDrawable.h"
 
-DrawableManager::DrawableManager(){
+DrawableManager::DrawableManager() {
     int i = 0, j = 0;
     numDrawables = 0;
     for (i = 0; i < 8; i++) {
-
         inputPoints[i] = DotDrawable(sf::Vector2f(MATRIX_INIT_X + i * 50, INPUT_POINTS_Y), true);
         outputPoints[i] = DotDrawable(sf::Vector2f(MATRIX_INIT_X + i * 50, OUTPUT_POINTS_Y), true);
         for (j = 0; j < 8; j++) {
@@ -47,9 +45,9 @@ void DrawableManager::removeAllDrawables() {
     drawables.clear();
 }
 
-void DrawableManager::updateDrawables()const  {
+void DrawableManager::updateDrawables() const {
     int i = 0;
-    for(i = 0; i < numDrawables; i++) {
+    for (i = 0; i < numDrawables; i++) {
         drawables[i]->update();
     }
 }
@@ -63,16 +61,16 @@ sf::Vector2f DrawableManager::getGridPosition(const unsigned int index) const {
 }
 
 void DrawableManager::setCenterPosition(unsigned int index, sf::Vector2f position) const {
-    if(numDrawables > index) {
+    if (numDrawables > index) {
         drawables[index]->setCenterPosition(position);
     }
 }
 
 sf::Vector2f DrawableManager::getCenterPosition(unsigned int index) const {
-    if(numDrawables > index) {
+    if (numDrawables > index) {
         return drawables[index]->getCenterPosition();
     }
-    return  {0, 0};
+    return {0, 0};
 }
 
 void DrawableManager::setInputPosition(unsigned int index, unsigned int inputIndex, sf::Vector2f position) const {
@@ -113,7 +111,7 @@ int DrawableManager::getInputSize(unsigned int index) const {
 
 
 sf::FloatRect DrawableManager::getBoundariesComponent(unsigned int index) const {
-    if(numDrawables > index) {
+    if (numDrawables > index) {
         return drawables[index]->getBounds();
     }
     return {};
@@ -122,11 +120,11 @@ sf::FloatRect DrawableManager::getBoundariesComponent(unsigned int index) const 
 sf::FloatRect DrawableManager::getBoundariesGrid(unsigned int i, unsigned j, unsigned int area) const {
     switch (area) {
         case 1:
-            return  inputPoints[i].getGlobalBounds();
+            return inputPoints[i].getGlobalBounds();
         case 2:
             return contactPoints[i][j].getGlobalBounds();
         case 3:
-            return  outputPoints[i].getGlobalBounds();
+            return outputPoints[i].getGlobalBounds();
         default:
             break;;
     }
@@ -134,19 +132,17 @@ sf::FloatRect DrawableManager::getBoundariesGrid(unsigned int i, unsigned j, uns
 }
 
 void DrawableManager::changePointOnOff(unsigned int index, unsigned int area) {
-    if(area == 1) {
+    if (area == 1) {
         inputPoints[index].changeOnOff();
-    }
-    else if(area == 3) {
+    } else if (area == 3) {
         outputPoints[index].changeOnOff();
     }
 }
 
 void DrawableManager::changePointOnOff(unsigned int index, unsigned int area, const bool onOff) {
-    if(area == 1) {
+    if (area == 1) {
         inputPoints[index].changeOnOff(onOff);
-    }
-    else if(area == 3) {
+    } else if (area == 3) {
         outputPoints[index].changeOnOff(onOff);
     }
 }
@@ -154,11 +150,11 @@ void DrawableManager::changePointOnOff(unsigned int index, unsigned int area, co
 sf::Vector2f DrawableManager::getPointPosition(unsigned int i, unsigned j, int area) const {
     switch (area) {
         case 1:
-            return  inputPoints[i].getPosition();
+            return inputPoints[i].getPosition();
         case 2:
             return contactPoints[i][j].getPosition();
         case 3:
-            return  outputPoints[i].getPosition();
+            return outputPoints[i].getPosition();
         default:
             break;;
     }
@@ -192,11 +188,11 @@ ComponentDrawable *DrawableManager::getInputsWires(unsigned int i, unsigned int 
 const DotDrawable *DrawableManager::getPointReference(unsigned int i, unsigned j, unsigned int area) const {
     switch (area) {
         case 1:
-            return  &inputPoints[i];
+            return &inputPoints[i];
         case 2:
             return &contactPoints[i][j];
         case 3:
-            return  &outputPoints[i];
+            return &outputPoints[i];
         default:
             break;;
     }
@@ -207,12 +203,12 @@ ComponentDrawable *DrawableManager::getComponentReference(unsigned int i) const 
     return drawables[i];
 }
 
-void DrawableManager::draw(sf::RenderWindow& window) const {
+void DrawableManager::draw(sf::RenderWindow &window) const {
     int i = 0, j = 0;
-    for(i = 0; i < 8; i++) {
+    for (i = 0; i < 8; i++) {
         window.draw(inputPoints[i]);
         window.draw(outputPoints[i]);
-        for(j = 0; j < 8; j++) {
+        for (j = 0; j < 8; j++) {
             window.draw(contactPoints[i][j]);
         }
     }

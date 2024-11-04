@@ -18,7 +18,9 @@ ANDGateDrawable::ANDGateDrawable(const sf::Vector2f pos, const int inSize) : Com
     m_shape[4].color = sf::Color::Green;
     m_shape[5].color = sf::Color::Green;
     for (i = 0; i < inSize; i++) {
-        inputPositions.push_back(m_center_position + sf::Vector2f((2 * ANDGATESIZE) / (inSize + 1.0f) * (i + 1.0f) - ANDGATESIZE, ANDGATESIZE));
+        inputPositions.push_back(
+            m_center_position + sf::Vector2f((2 * ANDGATESIZE) / (inSize + 1.0f) * (i + 1.0f) - ANDGATESIZE,
+                                             ANDGATESIZE));
     }
     outputPosition = m_center_position + sf::Vector2f(0.0f, -ANDGATESIZE);
 }
@@ -32,7 +34,8 @@ void ANDGateDrawable::update() {
     m_shape[4].position = m_center_position + sf::Vector2f(-ANDGATESIZE, ANDGATESIZE);
     m_shape[5].position = m_center_position + sf::Vector2f(ANDGATESIZE, ANDGATESIZE);
     for (i = 0; i < inSize; i++) {
-        inputPositions[i] = m_center_position + sf::Vector2f((2 * ANDGATESIZE) / (inSize + 1.0f) * (i + 1.0f) - ANDGATESIZE, ANDGATESIZE);
+        inputPositions[i] = m_center_position + sf::Vector2f(
+                                (2 * ANDGATESIZE) / (inSize + 1.0f) * (i + 1.0f) - ANDGATESIZE, ANDGATESIZE);
     }
     outputPosition = m_center_position + sf::Vector2f(0.0f, -ANDGATESIZE);
 }

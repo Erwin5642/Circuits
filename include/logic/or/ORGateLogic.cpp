@@ -1,8 +1,8 @@
 #include "ORGateLogic.h"
 
 bool ORGateLogic::evaluate() {
-    for(int i=0; i<inputSize; i++) {
-        if(inputValues[i] == true) {
+    for (int i = 0; i < inputSize; i++) {
+        if (inputValues[i] == true) {
             outputValue = true;
             return true;
         }
@@ -10,6 +10,7 @@ bool ORGateLogic::evaluate() {
     outputValue = false;
     return false;
 }
+
 string ORGateLogic::getType() {
     return "OR";
 }

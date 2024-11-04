@@ -5,8 +5,11 @@
 
 class NOTGateLogic final : public ComponentLogic {
 public:
-    NOTGateLogic() : ComponentLogic(1) {};
+    NOTGateLogic() : ComponentLogic(1) {
+    };
+
     bool evaluate() override;
+
     string getType() override;
 };
 

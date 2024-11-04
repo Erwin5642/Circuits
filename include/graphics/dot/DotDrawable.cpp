@@ -6,15 +6,14 @@ DotDrawable::DotDrawable() {
     isOn = false;
 }
 
-DotDrawable::DotDrawable(const sf::Vector2f pos, const bool isIO){
+DotDrawable::DotDrawable(const sf::Vector2f pos, const bool isIO) {
     dot = sf::CircleShape(DOT_SIZE);
     dot.setPosition(pos);
     position = pos;
     this->isIO = isIO;
-    if(isIO) {
+    if (isIO) {
         dot.setFillColor(sf::Color::Red);
-    }
-    else {
+    } else {
         dot.setFillColor(sf::Color::Yellow);
     }
     isOn = false;
@@ -25,10 +24,9 @@ DotDrawable::DotDrawable(const DotDrawable &otherDot) {
     dot.setPosition(otherDot.position);
     isIO = otherDot.isIO;
     isOn = otherDot.isOn;
-    if(isIO) {
+    if (isIO) {
         dot.setFillColor(sf::Color::Red);
-    }
-    else {
+    } else {
         dot.setFillColor(sf::Color::Yellow);
     }
 }
@@ -42,22 +40,20 @@ sf::Vector2f DotDrawable::getPosition() const {
 }
 
 void DotDrawable::changeOnOff() {
-    if(isOn) {
+    if (isOn) {
         dot.setFillColor(sf::Color::Red);
         isOn = false;
-    }
-    else {
+    } else {
         dot.setFillColor(sf::Color::Green);
         isOn = true;
     }
 }
 
 void DotDrawable::changeOnOff(const bool onOff) {
-    if(onOff) {
+    if (onOff) {
         dot.setFillColor(sf::Color::Green);
         isOn = true;
-    }
-    else {
+    } else {
         dot.setFillColor(sf::Color::Red);
         isOn = false;
     }
@@ -67,8 +63,6 @@ sf::FloatRect DotDrawable::getGlobalBounds() const {
     return dot.getGlobalBounds();
 }
 
-void DotDrawable::draw(sf::RenderTarget& target, sf::RenderStates states) const {
+void DotDrawable::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(dot, states);
 }
-
-

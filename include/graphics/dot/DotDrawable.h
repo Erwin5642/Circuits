@@ -13,7 +13,6 @@ private:
     bool isOn;
 
 public:
-
     DotDrawable();
 
     DotDrawable(sf::Vector2f pos, bool isIO);
@@ -25,6 +24,7 @@ public:
     sf::Vector2f getPosition() const;
 
     void changeOnOff();
+
     void changeOnOff(bool onOff);
 
     sf::FloatRect getGlobalBounds() const;

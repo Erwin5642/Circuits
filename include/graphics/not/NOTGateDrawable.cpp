@@ -18,8 +18,10 @@ NOTGateDrawable::NOTGateDrawable(const sf::Vector2f pos, const int inSize) : Com
     m_shape[4].color = sf::Color::Red;
     m_shape[5].color = sf::Color::Red;
 
-    for(i = 0; i < inSize; i++) {
-        inputPositions.push_back(m_center_position + sf::Vector2f((2 * NOTGATESIZE)/(inSize + 1.0f) *  (i + 1.0f) - NOTGATESIZE, NOTGATESIZE));
+    for (i = 0; i < inSize; i++) {
+        inputPositions.push_back(
+            m_center_position + sf::Vector2f((2 * NOTGATESIZE) / (inSize + 1.0f) * (i + 1.0f) - NOTGATESIZE,
+                                             NOTGATESIZE));
     }
     outputPosition = m_center_position + sf::Vector2f(0.0f, -NOTGATESIZE);
 }
@@ -33,13 +35,14 @@ void NOTGateDrawable::update() {
     m_shape[4].position = m_center_position + sf::Vector2f(-NOTGATESIZE, NOTGATESIZE);
     m_shape[5].position = m_center_position + sf::Vector2f(NOTGATESIZE, NOTGATESIZE);
 
-    for(i = 0; i < inputSize; i++) {
-        inputPositions[i] = (m_center_position + sf::Vector2f((2 * NOTGATESIZE)/(inputSize + 1.0f) *  (i + 1.0f) - NOTGATESIZE, NOTGATESIZE));
+    for (i = 0; i < inputSize; i++) {
+        inputPositions[i] = (m_center_position + sf::Vector2f(
+                                 (2 * NOTGATESIZE) / (inputSize + 1.0f) * (i + 1.0f) - NOTGATESIZE, NOTGATESIZE));
     }
     outputPosition = m_center_position + sf::Vector2f(0.0f, -NOTGATESIZE);
 }
 
-void NOTGateDrawable::draw(sf::RenderTarget& target, sf::RenderStates states) const {
+void NOTGateDrawable::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(m_shape, states);
     //draw name
 }

@@ -6,6 +6,7 @@
 class ORGateLogic final : public ComponentLogic {
 public:
     bool evaluate() override;
+
     string getType() override;
 };
 

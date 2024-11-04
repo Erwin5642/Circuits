@@ -14,8 +14,10 @@
 
 class FileManager {
     string toLowerCase(const std::string &str);
+
 public:
     void loadComponents(LogicManager &logicManager);
+
     void saveComponents(LogicManager &logicManager);
 };
 

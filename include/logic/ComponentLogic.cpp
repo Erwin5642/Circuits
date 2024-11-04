@@ -45,12 +45,11 @@ void ComponentLogic::setInputValue(const unsigned index, const bool value) {
 }
 
 void ComponentLogic::setInputValue(const unsigned index, const pair<int, int> &par) {
-    if(usedInputs < inputSize) {
-        if(par.first == 'e') {
+    if (usedInputs < inputSize) {
+        if (par.first == 'e') {
             inputConnectedTo[index] = pair<int, int>(-1, par.second);
             usedInputs++;
-        }
-        else {
+        } else {
             inputConnectedTo[index] = par;
             usedInputs++;
         }
@@ -59,7 +58,7 @@ void ComponentLogic::setInputValue(const unsigned index, const pair<int, int> &p
 
 void ComponentLogic::setInputValue(const unsigned index, const pair<char, int> &par) {
     if (par.first == 'e') {
-        if(usedInputs < inputSize) {
+        if (usedInputs < inputSize) {
             inputConnectedTo[index] = pair<int, int>(-1, par.second);
             usedInputs++;
         }
@@ -77,12 +76,11 @@ void ComponentLogic::setOutput(const bool value) {
 }
 
 void ComponentLogic::setOutput(const pair<int, int> &par) {
-    if(!isOutputUsed) {
-        if(par.first == 's') {
+    if (!isOutputUsed) {
+        if (par.first == 's') {
             outputConnectedTo = pair<int, int>(9, par.second);
             isOutputUsed = true;
-        }
-        else {
+        } else {
             outputConnectedTo = par;
             isOutputUsed = true;
         }
@@ -91,7 +89,7 @@ void ComponentLogic::setOutput(const pair<int, int> &par) {
 
 void ComponentLogic::setOutput(const pair<char, int> &par) {
     if (par.first == 's') {
-        if(!isOutputUsed) {
+        if (!isOutputUsed) {
             outputConnectedTo = pair<int, int>(9, par.second);;
             isOutputUsed = true;
         }
@@ -104,7 +102,7 @@ bool ComponentLogic::getOutput() const {
 }
 
 void ComponentLogic::connectInputTo(const pair<int, int> &value, const int index) {
-    if(usedInputs < inputSize) {
+    if (usedInputs < inputSize) {
         inputConnectedTo[index] = value;
         usedInputs++;
     }
@@ -115,9 +113,8 @@ pair<int, int> ComponentLogic::getConnectedInputTo(int index) const {
 }
 
 void ComponentLogic::connectOutputTo(const pair<int, int> &value) {
-
-        outputConnectedTo = value;
-        isOutputUsed = true;
+    outputConnectedTo = value;
+    isOutputUsed = true;
 }
 
 pair<int, int> ComponentLogic::getConnectedOutputTo() const {

@@ -1,4 +1,3 @@
-
 #ifndef DRAWABLEMANAGER_H
 #define DRAWABLEMANAGER_H
 
@@ -92,7 +91,7 @@ public:
 
     ComponentDrawable *getComponentReference(unsigned int i) const;
 
-    void draw(sf::RenderWindow&  window) const;
+    void draw(sf::RenderWindow &window) const;
 };
 
 

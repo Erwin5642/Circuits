@@ -1,11 +1,12 @@
 #include "FileManager.h"
 
-std::string FileManager::toLowerCase(const std::string& str) {
+std::string FileManager::toLowerCase(const std::string &str) {
     std::string lowerStr = str;
     std::transform(lowerStr.begin(), lowerStr.end(), lowerStr.begin(),
-                   [](unsigned char c){ return std::tolower(c); });
+                   [](unsigned char c) { return std::tolower(c); });
     return lowerStr;
 }
+
 void FileManager::loadComponents(LogicManager &logicManager) {
     std::string filename;
     cout << "Digite o nome do arquivo a ser carregado:";
@@ -29,23 +30,22 @@ void FileManager::loadComponents(LogicManager &logicManager) {
             auto *wire = new WIRELogic();
             if (input[0] == 'e') {
                 int inputIndex = std::stoi(input.substr(1, 1));
-                wire->connectInputTo(pair<int, int>(-1, inputIndex), 0);  // Entrada 'e'
+                wire->connectInputTo(pair<int, int>(-1, inputIndex), 0); // Entrada 'e'
             } else {
                 int in1 = std::stoi(input.substr(0, 1));
                 int in2 = std::stoi(input.substr(1, 1));
-                wire->connectInputTo(pair<int, int>(in1, in2), 0);  // Conexão direta
+                wire->connectInputTo(pair<int, int>(in1, in2), 0); // Conexão direta
             }
 
             if (output[0] == 's') {
                 int outputIndex = std::stoi(output.substr(1, 1));
-                wire->connectOutputTo(pair<int, int>(9, outputIndex));  // Saída 's'
+                wire->connectOutputTo(pair<int, int>(9, outputIndex)); // Saída 's'
             } else {
                 int out1 = std::stoi(output.substr(0, 1));
                 int out2 = std::stoi(output.substr(1, 1));
-                wire->connectOutputTo(pair<int, int>(out1, out2));  // Conexão direta
+                wire->connectOutputTo(pair<int, int>(out1, out2)); // Conexão direta
             }
             logicManager.insertComponent(wire);
-
         } else if (type == "not") {
             std::string input, output;
             iss >> input >> output;
@@ -53,23 +53,22 @@ void FileManager::loadComponents(LogicManager &logicManager) {
             auto *notGate = new NOTGateLogic();
             if (input[0] == 'e') {
                 int inputIndex = std::stoi(input.substr(1, 1));
-                notGate->connectInputTo(pair<int, int>(-1, inputIndex), 0);  // Entrada 'e'
+                notGate->connectInputTo(pair<int, int>(-1, inputIndex), 0); // Entrada 'e'
             } else {
                 int in1 = std::stoi(input.substr(0, 1));
                 int in2 = std::stoi(input.substr(1, 1));
-                notGate->connectInputTo(pair<int, int>(in1, in2), 0);  // Conexão direta
+                notGate->connectInputTo(pair<int, int>(in1, in2), 0); // Conexão direta
             }
 
             if (output[0] == 's') {
                 int outputIndex = std::stoi(output.substr(1, 1));
-                notGate->connectOutputTo(pair<int, int>(9, outputIndex));  // Saída 's'
+                notGate->connectOutputTo(pair<int, int>(9, outputIndex)); // Saída 's'
             } else {
                 int out1 = std::stoi(output.substr(0, 1));
                 int out2 = std::stoi(output.substr(1, 1));
-                notGate->connectOutputTo(pair<int, int>(out1, out2));  // Conexão direta
+                notGate->connectOutputTo(pair<int, int>(out1, out2)); // Conexão direta
             }
             logicManager.insertComponent(notGate);
-
         } else if (type == "and" || type == "or") {
             string input1, input2;
             std::string output;
@@ -85,30 +84,30 @@ void FileManager::loadComponents(LogicManager &logicManager) {
             // Configuração das entradas
             if (input1[0] == 'e') {
                 int inputIndex = std::stoi(input1.substr(1, 1));
-                gate->connectInputTo(pair<int, int>(-1,inputIndex), 0);  // Entrada 'e'
+                gate->connectInputTo(pair<int, int>(-1, inputIndex), 0); // Entrada 'e'
             } else {
                 int in1 = std::stoi(input1.substr(0, 1));
                 int in2 = std::stoi(input1.substr(1, 1));
-                gate->connectInputTo(pair<int, int>(in1, in2), 0);  // Conexão direta
+                gate->connectInputTo(pair<int, int>(in1, in2), 0); // Conexão direta
             }
 
             if (input2[0] == 'e') {
                 int outputIndex = std::stoi(input2.substr(1, 1));
-                gate->connectInputTo(pair<int, int>(-1, outputIndex), 1);  // Entrada 'e'
+                gate->connectInputTo(pair<int, int>(-1, outputIndex), 1); // Entrada 'e'
             } else {
                 int in1 = std::stoi(input2.substr(0, 1));
                 int in2 = std::stoi(input2.substr(1, 1));
-                gate->connectInputTo(pair<int, int>(in1, in2), 1);  // Conexão direta
+                gate->connectInputTo(pair<int, int>(in1, in2), 1); // Conexão direta
             }
 
             // Configuração da saída
             if (output[0] == 's') {
                 int outputIndex = std::stoi(output.substr(1, 1));
-                gate->connectOutputTo(pair<int ,int>(9, outputIndex));  // Saída 's'
+                gate->connectOutputTo(pair<int, int>(9, outputIndex)); // Saída 's'
             } else {
                 int out1 = std::stoi(output.substr(0, 1));
                 int out2 = std::stoi(output.substr(1, 1));
-                gate->connectOutputTo(pair<int, int>(out1, out2));  // Conexão direta
+                gate->connectOutputTo(pair<int, int>(out1, out2)); // Conexão direta
             }
             logicManager.insertComponent(gate);
         } else {
@@ -117,6 +116,7 @@ void FileManager::loadComponents(LogicManager &logicManager) {
     }
     file.close();
 }
+
 void FileManager::saveComponents(LogicManager &logicManager) {
     std::string filename;
     cout << "Digite o nome do arquivo a ser salvo:";
@@ -126,14 +126,14 @@ void FileManager::saveComponents(LogicManager &logicManager) {
         std::cerr << "Erro ao abrir o arquivo: " << filename << std::endl;
         return;
     }
-    for(int i=0; i<logicManager.getSize(); i++) {
-        if(logicManager.getComponent(i).getType()=="WIRE" && logicManager.getComponent(i).getConnectedInputTo(0) == pair<int, int>(-2, -2)) {
+    for (int i = 0; i < logicManager.getSize(); i++) {
+        if (logicManager.getComponent(i).getType() == "WIRE" && logicManager.getComponent(i).getConnectedInputTo(0) ==
+            pair<int, int>(-2, -2)) {
             continue;
-        }
-        else {
+        } else {
             string line, aux;
             line += toLowerCase(logicManager.getComponent(i).getType());
-            for(int j=0; j<logicManager.getComponent(i).getInputSize(); j++) {
+            for (int j = 0; j < logicManager.getComponent(i).getInputSize(); j++) {
                 string aux2;
                 aux2 += ' ';
                 pair<int, int> pos2 = logicManager.getComponent(i).getConnectedInputTo(j);
@@ -147,7 +147,7 @@ void FileManager::saveComponents(LogicManager &logicManager) {
             }
             pair<int, int> pos = logicManager.getComponent(i).getConnectedOutputTo();
             aux += ' ';
-            if(pos.first == 9) {
+            if (pos.first == 9) {
                 aux += 's';
             } else {
                 aux += to_string(pos.first);

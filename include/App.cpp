@@ -13,16 +13,15 @@ void App::run() {
     while (window.isOpen()) {
         window.clear();
         uiManager.processEvent();
-        if(drawableManager.getNumDrawables() > 0) {
+        if (drawableManager.getNumDrawables() > 0) {
             drawableManager.updateDrawables();
             logicManager.update();
         }
         drawableManager.draw(window);
-        for(int i = 0; i < GRID_SIZE; i++) {
-            if(logicManager.getSaida(i)) {
+        for (int i = 0; i < GRID_SIZE; i++) {
+            if (logicManager.getSaida(i)) {
                 drawableManager.changePointOnOff(i, 3, true);
-            }
-            else {
+            } else {
                 drawableManager.changePointOnOff(i, 3, false);
             }
         }

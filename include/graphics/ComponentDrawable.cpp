@@ -99,15 +99,13 @@ void ComponentDrawable::connectGateOut(ComponentDrawable *outWire) {
 }
 
 void ComponentDrawable::connectGateIn(ComponentDrawable *inWire) {
-    wiresInput[usedInputs-1] = inWire;
+    wiresInput[usedInputs - 1] = inWire;
 }
 
 void ComponentDrawable::connectGateIn(const DotDrawable *inDot) {
-
 }
 
 void ComponentDrawable::connectGateOut(const DotDrawable *outDot) {
-
 }
 
 ComponentDrawable *ComponentDrawable::getWireInput(unsigned int i) const {

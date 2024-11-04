@@ -1,7 +1,3 @@
-//
-// Created by jvgam on 29/10/2024.
-//
-
 #ifndef NOTGATEDRAWABLE_H
 #define NOTGATEDRAWABLE_H
 
@@ -11,7 +7,6 @@
 
 class NOTGateDrawable : public ComponentDrawable {
 public:
-
     NOTGateDrawable(sf::Vector2f pos, int inSize);
 
     void update() override;

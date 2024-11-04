@@ -12,10 +12,9 @@ class App {
     LogicManager logicManager;
     FileManager fileManager;
 
-    int getSize();
-
 public:
     App();
+
     ~App();
 
     void run();

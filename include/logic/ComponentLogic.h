@@ -15,6 +15,7 @@ protected:
     int inputSize;
     int usedInputs;
     bool isOutputUsed;
+
 public:
     ComponentLogic();
 
