@@ -1,6 +1,7 @@
 #ifndef UIMANAGER_H
 #define UIMANAGER_H
 
+#include "FileManager.h"
 #include "graphics/DrawableManager.h"
 #include "logic/LogicManager.h"
 #include "logic/wire/WIRELogic.h"
@@ -11,6 +12,7 @@
 class UIManager {
     DrawableManager &drawableManagerRef;
     LogicManager &logicManagerRef;
+    FileManager &fileManagerRef;
     sf::RenderWindow &windowRef;
     bool inMoveMode;
     bool isHoldingComponent;
@@ -32,7 +34,7 @@ class UIManager {
     void connectComponent(unsigned int i, sf::Vector2f mousePos);
 
 public:
-    UIManager(sf::RenderWindow &window, DrawableManager &drawableManager, LogicManager &logicManager);
+    UIManager(sf::RenderWindow &window, DrawableManager &drawableManager, LogicManager &logicManager, FileManager &fileManager);
 
     void processEvent();
 

@@ -10,15 +10,8 @@
 class App {
     DrawableManager drawableManager;
     LogicManager logicManager;
-    FileManager *fileManager;
-    void insert(const string& c_name);
-    void getIndex();
-    void remove(int index);
-    void insertObj();
-    void leArq();
-    void gravaArq();
-    void printa();
-    void listComps();
+    FileManager fileManager;
+
     int getSize();
 
 public:

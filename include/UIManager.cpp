@@ -160,9 +160,10 @@ void UIManager::connectComponent(unsigned int i, sf::Vector2f mousePos) {
     }
 }
 
-UIManager::UIManager(sf::RenderWindow &window, DrawableManager &drawableManager, LogicManager &logicManager) :
+UIManager::UIManager(sf::RenderWindow &window, DrawableManager &drawableManager, LogicManager &logicManager, FileManager &fileManager) :
     drawableManagerRef(drawableManager),
     logicManagerRef(logicManager),
+    fileManagerRef(fileManager),
     windowRef(window) {
     isConnectingWire = false;
     inMoveMode = true;
@@ -229,6 +230,12 @@ void UIManager::handleKeyPress(const sf::Keyboard::Key key) {
             break;
         case sf::Keyboard::Q:
             inMoveMode = true;
+            break;
+        case sf::Keyboard::A:
+            fileManagerRef.loadComponents(logicManagerRef);
+            break;
+        case sf::Keyboard::S:
+            fileManagerRef.saveComponents(logicManagerRef);
             break;
         default:
             break;

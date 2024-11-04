@@ -6,7 +6,10 @@ std::string FileManager::toLowerCase(const std::string& str) {
                    [](unsigned char c){ return std::tolower(c); });
     return lowerStr;
 }
-void FileManager::loadComponents(const std::string &filename, LogicManager &logicManager) {
+void FileManager::loadComponents(LogicManager &logicManager) {
+    std::string filename;
+    cout << "Digite o nome do arquivo a ser carregado:";
+    cin >> filename;
     std::ifstream file(filename);
     if (!file.is_open()) {
         std::cerr << "Erro ao abrir o arquivo: " << filename << std::endl;
@@ -114,38 +117,46 @@ void FileManager::loadComponents(const std::string &filename, LogicManager &logi
     }
     file.close();
 }
-void FileManager::saveComponents(const std::string &filename, LogicManager &logicManager) {
+void FileManager::saveComponents(LogicManager &logicManager) {
+    std::string filename;
+    cout << "Digite o nome do arquivo a ser salvo:";
+    cin >> filename;
     std::ofstream file(filename);
     if (!file.is_open()) {
         std::cerr << "Erro ao abrir o arquivo: " << filename << std::endl;
         return;
     }
     for(int i=0; i<logicManager.getSize(); i++) {
-        string line, aux;
-        line += toLowerCase(logicManager.getComponent(i).getType());
-        for(int j=0; j<logicManager.getComponent(i).getInputSize(); j++) {
-            string aux2;
-            aux2 += ' ';
-            pair<int, int> pos2 = logicManager.getComponent(i).getConnectedInputTo(j);
-            if (pos2.first == -1) {
-                aux2 += 'e';
-            } else {
-                aux2 += to_string(pos2.first);
+        if(logicManager.getComponent(i).getType()=="WIRE" && logicManager.getComponent(i).getConnectedInputTo(0) == pair<int, int>(-2, -2)) {
+            continue;
+        }
+        else {
+            string line, aux;
+            line += toLowerCase(logicManager.getComponent(i).getType());
+            for(int j=0; j<logicManager.getComponent(i).getInputSize(); j++) {
+                string aux2;
+                aux2 += ' ';
+                pair<int, int> pos2 = logicManager.getComponent(i).getConnectedInputTo(j);
+                if (pos2.first == -1) {
+                    aux2 += 'e';
+                } else {
+                    aux2 += to_string(pos2.first);
+                }
+                aux2 += to_string(pos2.second);
+                line += aux2;
             }
-            aux2 += to_string(pos2.second);
-            line += aux2;
+            pair<int, int> pos = logicManager.getComponent(i).getConnectedOutputTo();
+            aux += ' ';
+            if(pos.first == 9) {
+                aux += 's';
+            } else {
+                aux += to_string(pos.first);
+            }
+            aux += to_string(pos.second);
+            line += aux;
+            cout << line << endl;
+            file << line << endl;
         }
-        pair<int, int> pos = logicManager.getComponent(i).getConnectedOutputTo();
-        aux += ' ';
-        if(pos.first == 9) {
-            aux += 's';
-        } else {
-            aux += to_string(pos.first);
-        }
-        aux += to_string(pos.second);
-        line += aux;
-        cout << line << endl;
-        file << line << endl;
     }
     file.close();
 }
