@@ -368,6 +368,30 @@ include/graphics/wire/WireDrawable.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/wire/WireDrawable.cpp.s
 .PHONY : include/graphics/wire/WireDrawable.cpp.s
 
+include/graphics/xor/XORGateDrawable.obj: include/graphics/xor/XORGateDrawable.cpp.obj
+.PHONY : include/graphics/xor/XORGateDrawable.obj
+
+# target to build an object file
+include/graphics/xor/XORGateDrawable.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/xor/XORGateDrawable.cpp.obj
+.PHONY : include/graphics/xor/XORGateDrawable.cpp.obj
+
+include/graphics/xor/XORGateDrawable.i: include/graphics/xor/XORGateDrawable.cpp.i
+.PHONY : include/graphics/xor/XORGateDrawable.i
+
+# target to preprocess a source file
+include/graphics/xor/XORGateDrawable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/xor/XORGateDrawable.cpp.i
+.PHONY : include/graphics/xor/XORGateDrawable.cpp.i
+
+include/graphics/xor/XORGateDrawable.s: include/graphics/xor/XORGateDrawable.cpp.s
+.PHONY : include/graphics/xor/XORGateDrawable.s
+
+# target to generate assembly for a file
+include/graphics/xor/XORGateDrawable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/graphics/xor/XORGateDrawable.cpp.s
+.PHONY : include/graphics/xor/XORGateDrawable.cpp.s
+
 include/logic/ComponentLogic.obj: include/logic/ComponentLogic.cpp.obj
 .PHONY : include/logic/ComponentLogic.obj
 
@@ -512,6 +536,30 @@ include/logic/wire/WIRELogic.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/wire/WIRELogic.cpp.s
 .PHONY : include/logic/wire/WIRELogic.cpp.s
 
+include/logic/xor/XORGateLogic.obj: include/logic/xor/XORGateLogic.cpp.obj
+.PHONY : include/logic/xor/XORGateLogic.obj
+
+# target to build an object file
+include/logic/xor/XORGateLogic.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/xor/XORGateLogic.cpp.obj
+.PHONY : include/logic/xor/XORGateLogic.cpp.obj
+
+include/logic/xor/XORGateLogic.i: include/logic/xor/XORGateLogic.cpp.i
+.PHONY : include/logic/xor/XORGateLogic.i
+
+# target to preprocess a source file
+include/logic/xor/XORGateLogic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/xor/XORGateLogic.cpp.i
+.PHONY : include/logic/xor/XORGateLogic.cpp.i
+
+include/logic/xor/XORGateLogic.s: include/logic/xor/XORGateLogic.cpp.s
+.PHONY : include/logic/xor/XORGateLogic.s
+
+# target to generate assembly for a file
+include/logic/xor/XORGateLogic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Circuits.dir\build.make CMakeFiles/Circuits.dir/include/logic/xor/XORGateLogic.cpp.s
+.PHONY : include/logic/xor/XORGateLogic.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -575,6 +623,9 @@ help:
 	@echo ... include/graphics/wire/WireDrawable.obj
 	@echo ... include/graphics/wire/WireDrawable.i
 	@echo ... include/graphics/wire/WireDrawable.s
+	@echo ... include/graphics/xor/XORGateDrawable.obj
+	@echo ... include/graphics/xor/XORGateDrawable.i
+	@echo ... include/graphics/xor/XORGateDrawable.s
 	@echo ... include/logic/ComponentLogic.obj
 	@echo ... include/logic/ComponentLogic.i
 	@echo ... include/logic/ComponentLogic.s
@@ -593,6 +644,9 @@ help:
 	@echo ... include/logic/wire/WIRELogic.obj
 	@echo ... include/logic/wire/WIRELogic.i
 	@echo ... include/logic/wire/WIRELogic.s
+	@echo ... include/logic/xor/XORGateLogic.obj
+	@echo ... include/logic/xor/XORGateLogic.i
+	@echo ... include/logic/xor/XORGateLogic.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

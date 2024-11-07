@@ -9,6 +9,7 @@
 #define AND_SPAWN {100, 100}
 #define OR_SPAWN {100, 200}
 #define NOT_SPAWN {100, 300}
+#define XOR_SPAWN {100, 400}
 
 
 #include "ComponentDrawable.h"

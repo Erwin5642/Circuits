@@ -1,6 +1,7 @@
 #include "LogicManager.h"
 #include <iostream>
 #include "and/ANDGateLogic.h"
+#include "xor/XORGateLogic.h"
 #include "not/NOTGateLogic.h"
 #include "or/ORGateLogic.h"
 #include "wire/WIRELogic.h"
@@ -17,6 +18,9 @@ LogicManager::LogicManager() {
 }
 
 LogicManager::~LogicManager() {
+    for (int i=0; i<components.size(); i++) {
+        delete components[i];
+    }
     components.clear();
 }
 
@@ -29,6 +33,9 @@ void LogicManager::deleteComponent(const int index) {
 }
 
 void LogicManager::deleteAllComponents() {
+    for (int i=0; i<components.size(); i++) {
+        delete components[i];
+    }
     components.clear();
 }
 

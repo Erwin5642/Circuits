@@ -4,10 +4,12 @@
 #include "graphics/or/ORGateDrawable.h"
 #include "graphics/not/NOTGateDrawable.h"
 #include "graphics/wire/WireDrawable.h"
+#include "graphics/xor/XORGateDrawable.h"
 #include "logic/and/ANDGateLogic.h"
 #include "logic/not/NOTGateLogic.h"
 #include "logic/or/ORGateLogic.h"
 #include "logic/wire/WIRELogic.h"
+#include "logic/xor/XORGateLogic.h"
 
 bool UIManager::isInsideBoundaries(sf::Vector2f pos, sf::FloatRect bounds) const {
     return bounds.contains(pos);
@@ -206,11 +208,16 @@ void UIManager::handleKeyPress(const sf::Keyboard::Key key) {
     ORGateDrawable tempORD({0, 0}, 2);
     NOTGateDrawable tempNOTD({0, 0}, 1);
     ANDGateDrawable tempANDD({0, 0}, 2);
+    XORGateDrawable tempXORD({0, 0}, 2);
 
     switch (key) {
         case sf::Keyboard::Escape:
             drawableManagerRef.removeAllDrawables();
             logicManagerRef.deleteAllComponents();
+            break;
+        case sf::Keyboard::U:
+            drawableManagerRef.addDrawable(&tempXORD, XOR_SPAWN, 2);
+            logicManagerRef.insertComponent(new XORGateLogic);
             break;
         case sf::Keyboard::I:
             drawableManagerRef.addDrawable(&tempANDD, AND_SPAWN, 2);
