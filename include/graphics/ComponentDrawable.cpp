@@ -3,7 +3,6 @@
 ComponentDrawable::ComponentDrawable(const sf::Vector2f pos, const int inSize) {
     int i;
     m_center_position = pos;
-    positionGrid = sf::Vector2f(-1, -1);
     inputSize = inSize;
     for (i = 0; i < inSize; i++) {
         wiresInput.push_back(nullptr);
@@ -16,21 +15,12 @@ ComponentDrawable::ComponentDrawable(const sf::Vector2f pos, const int inSize) {
 ComponentDrawable::~ComponentDrawable() {
     int i = 0;
     m_center_position = sf::Vector2f(0, 0);
-    positionGrid = sf::Vector2f(-1, -1);
     for (i = 0; i < inputSize; i++) {
         wiresInput[i] = nullptr;
     }
     wireOutput = nullptr;
     inputSize = 0;
     usedInputs = 0;
-}
-
-void ComponentDrawable::setGridPosition(sf::Vector2f pos) {
-    positionGrid = pos;
-}
-
-sf::Vector2f ComponentDrawable::getGridPosition() const {
-    return positionGrid;
 }
 
 void ComponentDrawable::setCenterPosition(sf::Vector2f pos) {

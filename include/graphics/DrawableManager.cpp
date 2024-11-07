@@ -54,14 +54,6 @@ void DrawableManager::updateDrawables()const  {
     }
 }
 
-void DrawableManager::setGridPosition(const unsigned int index, const sf::Vector2f position) const {
-    drawables[index]->setGridPosition(position);
-}
-
-sf::Vector2f DrawableManager::getGridPosition(const unsigned int index) const {
-    return drawables[index]->getGridPosition();
-}
-
 void DrawableManager::setCenterPosition(unsigned int index, sf::Vector2f position) const {
     if(numDrawables > index) {
         drawables[index]->setCenterPosition(position);

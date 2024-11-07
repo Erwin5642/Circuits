@@ -40,10 +40,6 @@ public:
 
     void updateDrawables() const;
 
-    void setGridPosition(unsigned int index, sf::Vector2f position) const;
-
-    sf::Vector2f getGridPosition(unsigned int index) const;
-
     void setCenterPosition(unsigned int index, sf::Vector2f position) const;
 
     sf::Vector2f getCenterPosition(unsigned int index) const;

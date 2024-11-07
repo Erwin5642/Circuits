@@ -17,7 +17,6 @@ protected:
     bool isOutputUsed;
     vector<sf::Vector2f> inputPositions;
     sf::Vector2f outputPosition;
-    sf::Vector2f positionGrid;
     vector<ComponentDrawable*> wiresInput;
     ComponentDrawable *wireOutput;
 
