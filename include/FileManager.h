@@ -7,7 +7,6 @@
 #include "logic/not/NOTGateLogic.h"
 #include "logic/or/ORGateLogic.h"
 #include "logic/wire/WIRELogic.h"
-#include "logic/xor/XORGateLogic.h"
 #include <fstream>
 #include <sstream>
 #include <iostream>

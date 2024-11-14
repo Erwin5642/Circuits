@@ -1,4 +1,5 @@
 #include "FileManager.h"
+#include "logic/xor/XORGateLogic.h"
 
 std::string FileManager::toLowerCase(const std::string &str) {
     std::string lowerStr = str;

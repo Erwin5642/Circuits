@@ -40,6 +40,8 @@ add_executable(Circuits src/main.cpp
         include/App.cpp
         include/App.h
         include/logic/xor/XORGateLogic.cpp
-        include/logic/xor/XORGateLogic.h)
+        include/logic/xor/XORGateLogic.h
+        include/graphics/xor/XORGateDrawable.cpp
+        include/graphics/xor/XORGateDrawable.h)
 target_link_libraries(Circuits -lsfml-system-d -lsfml-window-d -lsfml-graphics-d -lsfml-audio-d)
 

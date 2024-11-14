@@ -1,7 +1,8 @@
 #ifndef XORGATEDRAWABLE_H
 #define XORGATEDRAWABLE_H
 
-#define XORGATESIZE 10.0f
+#define XORGATESIZE 15.0f
+#define XOR_SPAWN {100, 400}
 
 #include "../ComponentDrawable.h"
 
