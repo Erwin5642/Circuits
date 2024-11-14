@@ -206,6 +206,7 @@ void UIManager::handleKeyPress(const sf::Keyboard::Key key) {
     ORGateDrawable tempORD({0, 0}, 2);
     NOTGateDrawable tempNOTD({0, 0}, 1);
     ANDGateDrawable tempANDD({0, 0}, 2);
+    XORGateDrawable tempXORD({0, 0}, 2);
 
     switch (key) {
         case sf::Keyboard::Escape:
@@ -223,6 +224,10 @@ void UIManager::handleKeyPress(const sf::Keyboard::Key key) {
         case sf::Keyboard::P:
             drawableManagerRef.addDrawable(&tempNOTD, NOT_SPAWN, 1);
             logicManagerRef.insertComponent(new NOTGateLogic);
+            break;
+        case sf::Keyboard::U:
+            drawableManagerRef.addDrawable(&tempXORD, XOR_SPAWN, 2);
+            logicManagerRef.insertComponent(new XORGateLogic);
             break;
         case sf::Keyboard::W:
             inMoveMode = false;
