@@ -79,8 +79,7 @@ void FileManager::loadComponents(LogicManager &logicManager) {
                 gate = new ANDGateLogic();
             } else if (type == "or") {
                 gate = new ORGateLogic();
-            }
-            else if (type == "xor") {
+            } else if (type == "xor") {
                 gate = new XORGateLogic();
             }
 
