@@ -69,7 +69,7 @@ void FileManager::loadComponents(LogicManager &logicManager) {
                 notGate->connectOutputTo(pair<int, int>(out1, out2)); // Conexão direta
             }
             logicManager.insertComponent(notGate);
-        } else if (type == "and" || type == "or") {
+        } else if (type == "and" || type == "or" || "xor") {
             string input1, input2;
             std::string output;
             iss >> input1 >> input2 >> output;
@@ -79,6 +79,9 @@ void FileManager::loadComponents(LogicManager &logicManager) {
                 gate = new ANDGateLogic();
             } else if (type == "or") {
                 gate = new ORGateLogic();
+            }
+            else if (type == "xor") {
+                gate = new XORGateLogic();
             }
 
             // Configuração das entradas

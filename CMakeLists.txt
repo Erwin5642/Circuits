@@ -38,6 +38,8 @@ add_executable(Circuits src/main.cpp
         include/FileManager.h
         include/FileManager.cpp
         include/App.cpp
-        include/App.h)
+        include/App.h
+        include/logic/xor/XORGateLogic.cpp
+        include/logic/xor/XORGateLogic.h)
 target_link_libraries(Circuits -lsfml-system-d -lsfml-window-d -lsfml-graphics-d -lsfml-audio-d)
 
